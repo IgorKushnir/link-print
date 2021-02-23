@@ -1,0 +1,36 @@
+.banerWrapper {
+    width: 100%;
+    min-height: 100vh;
+    height: 100vh;
+    max-height: 100vh;
+    background-image: url('./img/jpg/baner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.heading {
+    font-weight: 700;
+    font-size: $font-size-heading;
+    margin-bottom: 40px;
+}
+
+.subheading {
+    margin-bottom: 74px;
+}
+
+.buttonsWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    @extend %button;
+    @extend %buttonBg;
+    background-color: $color-main;
+    color: $color-light;
+
+    &:not(:last-of-type) {
+        margin-right: 10px;
+    }
+}

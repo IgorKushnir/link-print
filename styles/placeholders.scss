@@ -1,0 +1,32 @@
+%button {
+    border-radius: 4px;
+    font-weight: 700;
+    background-color: $color-main;
+}
+
+%buttonSm {
+    padding: 6px 20px;
+}
+
+%buttonMd {
+    padding: 16px 30px;
+}
+
+%buttonBg {
+    padding: 24px 60px;
+    background-color: $color-main;
+}
+
+%buttonDark {
+    background-color: $color-dark;
+    color: $color-light;
+}
+
+%buttonLight {
+    border: 1px solid $color-dark;
+}
+
+%container {
+    max-width: 1200px;
+    margin: 0 auto;
+}

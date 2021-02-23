@@ -1,0 +1,26 @@
+.mainNav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoLink {
+    cursor: pointer;
+}
+
+.logoImg {
+    width: 130px;
+}
+
+.navList {
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+}
+
+.navItem {
+    font-weight: 700;
+    color: $color-light;
+}
