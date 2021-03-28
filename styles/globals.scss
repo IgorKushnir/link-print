@@ -45,4 +45,20 @@ a {
 
 section {
   padding: 120px 0;
+
+  &__header {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 80px;
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }

@@ -14,7 +14,6 @@
 
 %buttonBg {
     padding: 24px 60px;
-    background-color: $color-main;
 }
 
 %buttonDark {
@@ -26,7 +25,24 @@
     border: 1px solid $color-dark;
 }
 
+%buttonColor {
+    background-color: $color-main;
+    color: $color-light;
+}
+
 %container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+%mainTitle {
+    font-size: $font-size-heading;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+%secondaryTitle {
+    font-size: $font-size-subheading;
+    font-weight: 700;
+    margin-bottom: 20px;
 }

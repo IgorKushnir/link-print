@@ -1,0 +1,31 @@
+.item {
+    max-width: 360px;
+    padding: 0px 20px;
+}
+
+.title {
+    @extend %mainTitle;
+    text-align: left;
+}
+
+.featuresList {
+    margin-bottom: 20px;
+}
+
+.featuresItem {
+    margin-bottom: 8px;
+}
+
+.buttonsWrapper {
+    display: flex;
+}
+
+.buttonMore {
+    @extend %buttonMd;
+    @extend %buttonDark;
+}
+
+.buttonSample {
+    @extend %buttonMd;
+    @extend %buttonLight;
+}
