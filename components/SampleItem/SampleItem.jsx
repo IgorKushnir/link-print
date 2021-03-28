@@ -2,9 +2,6 @@ import styles from './SampleItem.module.scss';
 
 export default function SampleItem({sample}) {
 
-    changeImage = ({target}) => {
-        console.log(target);
-    };
 
     return(
         <li className={styles.item}>

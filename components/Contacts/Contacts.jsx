@@ -1,4 +1,4 @@
-import {Link} from 'next/Link';
+import Link from 'next/link';
 
 import styles from './Contacts.module.scss';
 import contacts from '../../pages/api/contacts';
@@ -17,7 +17,7 @@ export default function Contacts() {
             </li>
           ))}
         </ul>
-        <Link to='/privacy-policy' className={styles.link}>
+        <Link href='/privacy-policy' className={styles.link}>
           Политика конфиденциальности
         </Link>
       </div>

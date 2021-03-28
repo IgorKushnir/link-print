@@ -25,7 +25,7 @@ export default function Home() {
         <meta name="keywords" content="Link Print Украина, линк принт Украина, Linkprint, link print, Продажа UV оборудования, Пробный принт, купить уф принтер, купить uv принтер, уф печать, uv печать, uvпечать, уф гибридный принтер, Уф принтер Планшетный" />
         <meta property="og:url" content="https://www.linkprint-uk.com/" />
         <meta property="og:title" content="УФ принтера" />
-        <meta property="og:description" ontent="Продажа UV оборудования. Пробный принт. Заказать пробную печать на принтере" />
+        <meta property="og:description" content="Продажа UV оборудования. Пробный принт. Заказать пробную печать на принтере" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="" />
         <link rel="canonical" href="https://www.linkprint-uk.com/" />
@@ -34,16 +34,16 @@ export default function Home() {
       <main className={styles.main}>
         <Header />
         <Baner />
-        <ProductsList />
-        <Service />
-        <InksList />
-        <ServicesList />
-        <SamplesList />
-        <ContactUs />
-        <ReviewsList />
-        <Rewards />
-        <Characteristics />
-        <Contacts />
+        {/* <ProductsList /> */}
+        {/* <Service /> */}
+        {/* <InksList /> */}
+        {/* <ServicesList /> */}
+        {/* <SamplesList /> */}
+        {/* <ContactUs /> */}
+        {/* <ReviewsList /> */}
+        {/* <Rewards /> */}
+        {/* <Characteristics /> */}
+        {/* <Contacts /> */}
       </main>
     </>
   )
