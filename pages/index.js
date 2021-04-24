@@ -34,11 +34,11 @@ export default function Home() {
       <main className={styles.main}>
         <Header />
         <Baner />
-        {/* <ProductsList /> */}
-        {/* <Service /> */}
-        {/* <InksList /> */}
-        {/* <ServicesList /> */}
-        {/* <SamplesList /> */}
+        <ProductsList />
+        <Service />
+        <InksList />
+        <ServicesList />
+        <SamplesList />
         {/* <ContactUs /> */}
         {/* <ReviewsList /> */}
         {/* <Rewards /> */}

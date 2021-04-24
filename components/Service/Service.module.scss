@@ -4,26 +4,57 @@
 .buttonsWrapper {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-.buttonActive {
+.buttonLeft {
+    @extend %button;
+    @extend %buttonBg;
+    @extend %buttonLight;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.buttonRight {
+    @extend %button;
+    @extend %buttonBg;
+    @extend %buttonLight;
+    border-radius: 0px 4px 4px 0px;
+}
+
+
+.buttonActiveLeft {
+    @extend %button;
     @extend %buttonBg;
     @extend %buttonDark;
     font-weight: 700;
+    border-radius: 4px 0px 0px 4px;
 }
 
-.button {
+.buttonActiveRight {
+    @extend %button;
     @extend %buttonBg;
-    @extend %buttonLight;
+    @extend %buttonDark;
+    font-weight: 700;
+    border-radius: 0px 4px 4px 0px;
 }
 
 .aboutWrapper {
     display: flex;
 }
 
+.text {
+    flex-grow: 3;
+    line-height: 1.5;
+}
+
+.image {
+    margin-right: 44px;
+}
+
 .heading {
     @extend %mainTitle;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 .typesList {
@@ -39,22 +70,26 @@
     &:nth-child(2n) {
         justify-content: flex-end;
     }
-
-    &::before {
-        counter-increment: section;
-        content: '0'counter(section); 
-        font-size: 200px;
-        color: $color-light-grey;
-        user-select: none;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-    }
 }
 
 .itemInnerWrap {
     padding-left: 110px;
     max-width: 560px;
+    position: relative;
+    z-index: 10;
+
+    &::before {
+        counter-increment: section;
+        content: '0'counter(section); 
+        font-size: 200px;
+        font-weight: bold;
+        color: $color-light-grey;
+        user-select: none;
+        position: absolute;
+        top: -104px;
+        left: 0px;
+        z-index: -1;
+    }
 }
 
 .subheading {

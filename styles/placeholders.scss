@@ -4,6 +4,8 @@
     border-radius: 4px;
     font-weight: 700;
     background-color: $color-main;
+    cursor: pointer;
+    letter-spacing: 1.2px;
 }
 
 %buttonSm {
@@ -11,11 +13,12 @@
 }
 
 %buttonMd {
-    padding: 16px 30px;
+    padding: 16px 26px;
 }
 
 %buttonBg {
-    padding: 24px 60px;
+    padding: 20px 50px;
+    text-transform: uppercase;
 }
 
 %buttonDark {
@@ -24,6 +27,7 @@
 }
 
 %buttonLight {
+    background-color: $color-light;
     border: 1px solid $color-dark;
 }
 
@@ -33,6 +37,7 @@
 }
 
 %container {
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }

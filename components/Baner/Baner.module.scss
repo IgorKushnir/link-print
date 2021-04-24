@@ -1,25 +1,37 @@
 @import '../../styles/placeholders.scss';
 @import '../../styles/variables.scss';
 
-.banerWrapper {
+.baner {
     width: 100%;
     min-height: 100vh;
     height: 100vh;
     max-height: 100vh;
+    background-color: #000;
     background-image: url('/img/jpg/baner.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 
+.banerWrapper {
+    @extend %container;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .heading {
+    margin-bottom: 40px;
+    color: $color-light;
     font-weight: 700;
     font-size: $font-size-heading;
-    margin-bottom: 40px;
 }
 
 .subheading {
     margin-bottom: 74px;
+    color: $color-light;
 }
 
 .buttonsWrapper {
