@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import ReactNotification from 'react-notifications-component'
 
 import styles from '../styles/Home.module.scss'
 
@@ -32,6 +33,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <ReactNotification />
         <Header />
         <Baner />
         <ProductsList />
@@ -39,7 +41,7 @@ export default function Home() {
         <InksList />
         <ServicesList />
         <SamplesList />
-        {/* <ContactUs /> */}
+        <ContactUs />
         {/* <ReviewsList /> */}
         {/* <Rewards /> */}
         {/* <Characteristics /> */}

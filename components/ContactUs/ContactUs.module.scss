@@ -1,0 +1,78 @@
+@import '../../styles/placeholders.scss';
+@import '../../styles/variables.scss';
+
+
+.mainWrapper {
+    background: url('/img/jpg/contact_us.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.title {
+ @extend %mainTitle;
+ color: #fff;
+ text-align: center;
+}
+
+.subtitle {
+    @extend %secondaryTitle;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.inputWrapper {
+    display: block;
+    
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.label {
+    font-size: $font-size-subheading;
+    color: #fff;
+    display: block;
+    margin-bottom: 12px;
+    
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.input {
+    display: block;
+    font-size: $font-size-subheading;
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+    width: 240px;
+    height: 56px;
+    padding: 12px;
+}
+
+.button {
+    @extend %button;
+    @extend %buttonMd;
+    display: block;
+    width: 136px;
+    height: 56px;
+    color: #fff;
+}
+
+.errors {
+    display: block;
+    height: 20px;
+    font-size: 14px;
+    color: red;
+}
+
+.errorsPatch {
+    height: 20px;
+}
