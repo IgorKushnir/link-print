@@ -1,0 +1,50 @@
+@import '../../styles/placeholders.scss';
+
+.mainWrapper {
+    background-image: url('/img/jpg/responses.jpg');
+    background-size: cover;
+}
+
+.heading {
+    @extend %mainTitle;
+    color: #fff;
+    text-align: center;
+}
+
+.subtitle {
+    @extend %secondaryTitle;
+    color: #fff;
+    text-align: center;
+}
+
+.paginationList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.paginationItem {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    transition: all 0.25s ease;
+    cursor: pointer;
+
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    &:hover {
+        transform: scale(1.5);
+        background-color: #222;
+    }
+}
+
+.paginationItemActive {
+    transform: scale(1.5);
+    background-color: #fff;
+}

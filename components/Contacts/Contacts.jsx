@@ -5,9 +5,9 @@ import contacts from '../../pages/api/contacts';
 
 export default function Contacts() {
   return (
-    <section>
+    <section className={styles.contacts}>
       <div className='container'>
-        <h2 className='section__header'>Наши контакты</h2>
+        <h2 className={styles.heading}>Наши контакты</h2>
         <ul className={styles.list}>
           {contacts.map((contact, i) => (
             <li key={`contact_${i}`} className={styles.item}>
@@ -17,9 +17,11 @@ export default function Contacts() {
             </li>
           ))}
         </ul>
-        <Link href='/privacy-policy' className={styles.link}>
-          Политика конфиденциальности
-        </Link>
+        <div className={styles.linkWrapper}>
+          <Link href='/privacy-policy'>
+            <p className={styles.link}>Политика конфиденциальности</p>
+          </Link>
+        </div>
       </div>
     </section>
   );

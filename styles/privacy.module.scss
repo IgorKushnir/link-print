@@ -1,0 +1,14 @@
+.heading {
+    margin-bottom: 30px;
+}
+
+.subheading {
+    margin-bottom: 20px;
+}
+
+.list {
+    & li {
+        margin-bottom: 6px;
+        min-height: 20px
+    }
+}

@@ -1,0 +1,11 @@
+@import '../../styles/placeholders.scss';
+
+.subheading {
+@extend %secondaryTitle;
+text-align: center;
+}
+
+.characteristicsList {
+    display: flex;
+    justify-content: space-between;
+}

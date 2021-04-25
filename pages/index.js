@@ -42,10 +42,10 @@ export default function Home() {
         <ServicesList />
         <SamplesList />
         <ContactUs />
-        {/* <ReviewsList /> */}
-        {/* <Rewards /> */}
-        {/* <Characteristics /> */}
-        {/* <Contacts /> */}
+        <ReviewsList />
+        <Rewards />
+        <Characteristics />
+        <Contacts />
       </main>
     </>
   )

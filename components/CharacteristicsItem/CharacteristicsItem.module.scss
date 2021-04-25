@@ -1,0 +1,73 @@
+@import '../../styles/placeholders.scss';
+
+.item {
+    position: relative;
+    flex-basis: 360px;
+    height: 300px;
+    background-position: center center;
+    background-size: cover;
+    cursor:  pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &:hover {
+        transform: scale(1.1);
+
+        & .backdrop {
+            opacity: 0.6;
+        }
+
+        & .textWrapper {
+            top: -40px;
+        }
+
+        & .link {
+            top: 20px;
+            opacity: 1;
+        }
+    }
+}
+
+.backdrop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+}
+
+.textWrapper{
+    position: relative;
+    top: 0;
+    transition: all 0.25s ease;
+}
+
+.heading {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.subheading {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+}
+
+.link {
+    @extend %button;
+    @extend %buttonSm;
+    background-color: #fff;
+    color: #000;
+    position: relative;
+    top: 0;
+    opacity: 0;
+    transition: all 0.25s ease;
+}

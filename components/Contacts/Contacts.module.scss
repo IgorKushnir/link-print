@@ -1,0 +1,35 @@
+@import '../../styles/placeholders.scss';
+
+.contacts {
+    background-color: #212F3D;
+}
+
+.heading {
+    @extend %mainTitle;
+    color: #fff;
+    margin-bottom: 80px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.item {
+    color: #fff;
+}
+
+.linkWrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.link {
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+}

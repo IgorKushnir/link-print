@@ -23,7 +23,6 @@ export default function SampleItem({sample}) {
       <h3 className={styles.title}>{sample.title}</h3>
       {sample.video && (
         <>
-          {' '}
           <ul className={styles.videosList}>
             <li
               key={`${sample.title}_video_${selectedVideo}`}
