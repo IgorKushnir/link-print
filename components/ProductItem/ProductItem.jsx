@@ -1,29 +1,30 @@
 import Link from 'next/link';
 import styles from './ProductItem.module.scss';
 
-export function ProductItem({product: {title, link, images, featuresList,linkVideo}}) {
+export function ProductItem({setPopupProduct, setIsPopupOpened, product}) {
+
+    const openPopup = () => {
+        setIsPopupOpened(true);
+        setPopupProduct(product);
+    }
 
     return(
         <li className={styles.item}>
-             <Link href={link} title={title}>
                 <div className={styles.imagesWrapper}>
-                    <img className={styles.image} src={images[0]} alt={title} />
-                    <img className={styles.imageBack} src={images[1]} alt={title} />
+                    <img className={styles.image} src={product.images[0]} alt={product.title} />
+                    <img className={styles.imageBack} src={product.images[1]} alt={product.title} />
                 </div>
-            </Link>
-            <Link href={link} title={title}>
-                <h3 className={styles.title}>{title}</h3>
-            </Link>
+                <h3 className={styles.title}>{product.title}</h3>
                <ul className={styles.featuresList}>
-                    {featuresList.map ( (feature, i) => (
-                        <li key={`${title}_feature_${i}`} className={styles.featuresItem}>
+                    {product.featuresList.map ( (feature, i) => (
+                        <li key={`${product.title}_feature_${i}`} className={styles.featuresItem}>
                             {feature}
                         </li>
                     ))}
                 </ul>
             <div className={styles.buttonsWrapper}>
-                <Link href={link}><button className={styles.buttonMore}>Подробнее</button></Link>
-                <Link href={linkVideo}><button className={styles.buttonSample} >Примеры работ</button></Link>
+                <button className={styles.buttonMore} onClick={openPopup}>Подробнее</button>
+                <Link href={`#${product.linkVideo}`}><button className={styles.buttonSample} >Примеры работ</button></Link>
             </div> 
         </li>
     )

@@ -48,4 +48,8 @@
     margin: 0 auto;
     max-width: 560px;
     max-height: 860px;
+
+    @media (max-width: 615px) {
+        max-width: 90vw;
+    }
 }

@@ -16,11 +16,18 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 60px;
+
+    @media (max-width: 615px) {
+        padding-left: 40px;
+        justify-content: flex-start;
+    }
 }
 
 .item {
     color: #fff;
+    margin-bottom: 24px;
 }
 
 .linkWrapper {

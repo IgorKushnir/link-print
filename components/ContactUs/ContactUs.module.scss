@@ -5,7 +5,7 @@
 .mainWrapper {
     background: url('/img/jpg/contact_us.jpg');
     background-size: cover;
-    background-position: center center;
+    background-position: center bottom;
 }
 
 .title {
@@ -25,6 +25,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    flex-wrap: wrap;
 }
 
 .inputWrapper {

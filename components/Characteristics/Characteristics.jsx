@@ -3,7 +3,7 @@ import characteristics from '../../pages/api/characteristics';
 import CharacteristicsItem from '../CharacteristicsItem/CharacteristicsItem'
 
 export default function Characteristics () {
-    return (<section>
+    return (<section  id="characteristics">
         <div className="container">
         <h2 className="section__header">Характеристики</h2>
         <h3 className={styles.subheading}>Скачайте полную информацию о нашей стандартной линейке</h3>

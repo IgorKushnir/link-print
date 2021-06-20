@@ -5,7 +5,7 @@ import contacts from '../../pages/api/contacts';
 
 export default function Contacts() {
   return (
-    <section className={styles.contacts}>
+    <section className={styles.contacts} id="contacts">
       <div className='container'>
         <h2 className={styles.heading}>Наши контакты</h2>
         <ul className={styles.list}>

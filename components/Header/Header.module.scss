@@ -14,6 +14,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 768px) {
+        display: none;        
+    }
 }
 
 .logoLink {
@@ -22,6 +26,7 @@
 
 .logoImg {
     width: 130px;
+    height: 35px;
 }
 
 .navList {
@@ -33,4 +38,28 @@
 .navItem {
     font-weight: 700;
     color: $color-light;
+}
+
+.burgerWrapper {
+    width: 100%;
+    padding: 10px 30px;
+    display: none;
+    justify-content: flex-end;
+
+    @media (max-width: 768px) {
+        display: flex;
+    }
+}
+
+.burgerButton {
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.burger {
+    width: 35px;
+    height: 35px;
 }

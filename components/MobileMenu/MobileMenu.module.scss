@@ -1,0 +1,47 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+    position: fixed;
+    z-index: 999999999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 100px 0;;
+}
+
+.closeButton {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.closeIcon {
+    width: 40px;
+    height: 40px;
+}
+
+.navList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navItem {
+    font-size: 24px;
+    font-weight: 700;
+    color: $color-light;
+
+    &:not(:last-of-type) {
+        margin-bottom: 30px;
+    }
+}

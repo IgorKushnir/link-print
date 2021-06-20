@@ -1,12 +1,15 @@
 import Link from 'next/link';
 
-import styles from './Header.module.scss';
+import styles from './MobileMenu.module.scss';
 
-export default function Header({setIsMobileMenuOpened}) {
-  return (
-    <nav className={styles.mainNav}>
-          <div className={styles.navWrapper}>
-              <ul className={styles.navList}>
+export default function MobileMenu({setIsMobileMenuOpened}) {
+    return (
+        <div className={styles.wrapper}>
+            <button type="button" className={styles.closeButton} onClick={() => setIsMobileMenuOpened(false)}>
+                <img className={styles.closeIcon} src="./img/png/cancel_white.png" />
+            </button>
+            <div className="container">
+            <ul className={styles.navList}>
                 <li className={styles.navItem}>
                   <Link href='#servicesList'>Услуги</Link>
                 </li>
@@ -16,15 +19,6 @@ export default function Header({setIsMobileMenuOpened}) {
                 <li className={styles.navItem}>
                   <a href='https://webconstruct.pb.ua/front/create/all_credit_orders/active/?provider=40747052#step/1' target="_blamk" rel="nofollow noreferrer">Лизинг</a>
                 </li>
-              </ul>
-              <Link href='/' className={styles.logoLink}>
-                <img
-                  className={styles.logoImg}
-                  src='./img/png/logo.png'
-                  alt='link print logo'
-                />
-              </Link>
-              <ul className={styles.navList}>
                 <li className={styles.navItem}>
                   <Link href='#inksList'>Чернила/Праймер</Link>
                 </li>
@@ -38,12 +32,7 @@ export default function Header({setIsMobileMenuOpened}) {
                   <Link href='#contacts'>Контакты</Link>
                 </li>
               </ul>
-          </div>
-          <div className={styles.burgerWrapper}>
-            <button className={styles.burgerButton} onClick={() => setIsMobileMenuOpened(true)}>
-              <img src="/img/png/burger.png" className={styles.burger}/>
-              </button>
-          </div>
-    </nav>
-  );
+            </div>
+        </div>
+    )
 }

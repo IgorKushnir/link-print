@@ -54,7 +54,7 @@ export default function ContactUs () {
     })
 
     return (
-        <section className={styles.mainWrapper}>
+        <section className={styles.mainWrapper} id="contactUs">
              <div className="container">
                  <h2 className={styles.title}>Оставьте заявку</h2>
                  <p className={styles.subtitle}>и мы с Вами свяжемся</p>

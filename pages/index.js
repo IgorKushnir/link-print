@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import {useState} from 'react'
 import ReactNotification from 'react-notifications-component'
 
 import styles from '../styles/Home.module.scss'
@@ -15,8 +16,14 @@ import ReviewsList from '../components/ReviewsList/ReviewsList'
 import Rewards from '../components/Rewards/Rewards'
 import Characteristics from '../components/Characteristics/Characteristics'
 import Contacts from '../components/Contacts/Contacts'
+import ProductPopup from '../components/ProductPopup/ProductPopup';
+import MobileMenu from '../components/MobileMenu/MobileMenu';
 
 export default function Home() {
+  const [isPopupOpened, setIsPopupOpened] = useState(false);
+  const [popupProduct, setPopupProduct] = useState(null);
+  const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
+
   return (
     <>
       <Head>
@@ -34,11 +41,13 @@ export default function Home() {
 
       <main className={styles.main}>
         <ReactNotification />
-        <Header />
+        {isPopupOpened && <ProductPopup product={popupProduct} setIsPopupOpened={setIsPopupOpened}/>}
+        {isMobileMenuOpened && <MobileMenu setIsMobileMenuOpened={setIsMobileMenuOpened}/>}
+        <Header setIsMobileMenuOpened={setIsMobileMenuOpened}/>
         <Baner />
-        <ProductsList />
+        <ProductsList setIsPopupOpened={setIsPopupOpened} setPopupProduct={setPopupProduct}/>
         <Service />
-        <InksList />
+        <InksList setIsPopupOpened={setIsPopupOpened} setPopupProduct={setPopupProduct}/>
         <ServicesList />
         <SamplesList />
         <ContactUs />

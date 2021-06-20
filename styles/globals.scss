@@ -32,6 +32,7 @@ body {
   font-size: $font-size-base;
   font-weight: 400;
   color: $color-dark;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -47,7 +48,7 @@ a {
 
 section {
   padding: 120px 0 60px;
-
+  scroll-margin-top: -35px;
 }
 
 img {

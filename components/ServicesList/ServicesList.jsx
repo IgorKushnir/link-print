@@ -4,7 +4,7 @@ import ServiceItem from '../ServiceItem/ServiceItem'
 
 export default function ServicesList () {
     return (
-        <section>
+        <section id="servicesList">
             <div className="container">
                 <h2 className="section__header">Услуги</h2>
                 <ul className={styles.list}>
