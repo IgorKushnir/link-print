@@ -13,7 +13,7 @@ export default function Service () {
                     <button type="button" className={serviceTab === 2 ? styles.buttonActiveRight : styles.buttonRight} onClick={() => setServiceTab(2)}>Больше о сервис</button>
                 </div>
                 {serviceTab === 1 && <div className={styles.aboutWrapper}>
-                    <div class={styles.imageWrapper}><img className={styles.image} src='/img/png/support.png' alt='Сервис' /></div>
+                    <div className={styles.imageWrapper}><img className={styles.image} src='/img/png/support.png' alt='Сервис' /></div>
                     <p className={styles.text}>
                         Сервисная поддержка LinkPrint - это новая технология удаленного сервиса, которая поможет Вам общаться с сервисным инженером в режиме реального времени. Благодаря совместной работе через интерактивную видео конференцию Вы снижаете транспортные расходы, а в некоторых случаях и вовсе устраняете их. Теперь экспертные знания наших специалистов доступны 24/7, что заметно уменьшает время удаления неисправности, а значит сокращает время простоя машины.
                         Нашими инженерами технической поддержки ведется история решения Ваших проблем, благодаря накопленной информации и большому практическому опыту, а также технологии удаленного обслуживания, мы можем оперативно решить большинство стандартных проблем дистанционно, без выезда к клиенту.

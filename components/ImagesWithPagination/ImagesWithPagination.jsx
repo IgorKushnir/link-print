@@ -1,11 +1,38 @@
+import { useState } from 'react';
 import styles from './ImagesWithPagination.module.scss';
 
 
 export default function ImagesWithPagination({sample, selectedImage, setSelectedImage}) {
+  const [touchStart, setTouchStart] = useState(0);
+const [touchEnd, setTouchEnd] = useState(0);
+
+function handleTouchStart(e) {
+    setTouchStart(e.targetTouches[0].clientX);
+}
+
+function handleTouchMove(e) {
+    setTouchEnd(e.targetTouches[0].clientX);
+}
+
+function handleTouchEnd() {
+    if (touchStart - touchEnd > 150) {
+      if (selectedImage === 0) {return}
+      setSelectedImage(selectedImage - 1)
+    }
+
+    if (touchStart - touchEnd < -150) {
+      if (selectedImage === sample.images.length - 1) {return}
+      setSelectedImage(selectedImage - 1)
+    }
+}
+
     return ( <>
         {sample && <>
         <ul className={styles.imagesList}>
           <li
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
             key={`${sample.title}_image_${selectedImage}`}
             className={styles.imagesItem}>
             <img

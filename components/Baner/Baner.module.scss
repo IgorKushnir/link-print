@@ -47,7 +47,9 @@
     color: $color-light;
     margin-bottom: 24px;
 
-    &:not(:last-of-type) {
-        margin-right: 10px;
+    @media (min-width: 550px) {
+        &:not(:last-of-type) {
+            margin-right: 10px;
+        }    
     }
 }
