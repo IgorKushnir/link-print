@@ -15,14 +15,14 @@ function handleTouchMove(e) {
 }
 
 function handleTouchEnd() {
-    if (touchStart - touchEnd > 150) {
-      if (selectedImage === 0) {return}
+    if (touchStart - touchEnd > 75) {
+      if (selectedImage === sample.images.length - 1) {return}
       setSelectedImage(selectedImage - 1)
     }
 
-    if (touchStart - touchEnd < -150) {
-      if (selectedImage === sample.images.length - 1) {return}
-      setSelectedImage(selectedImage - 1)
+    if (touchStart - touchEnd < -75) {
+      if (selectedImage === 0) {return}
+      setSelectedImage(selectedImage + 1)
     }
 }
 
