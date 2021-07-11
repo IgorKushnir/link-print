@@ -8,7 +8,7 @@ const [selectedImage, setSelectedImage] = useState(0);
     return (
         <div className={styles.container}>
             <button type="button" className={styles.closeButton} onClick={() => setIsPopupOpened(false)}>
-                <img className={styles.closeIcon} src="/img/png/cancel.png" />
+                <img className={styles.closeIcon} src="/img/png/Cancel.png" />
             </button>
             <div className={styles.wrapper}>
                 <div className={styles.imagesWrapper}>

@@ -16,10 +16,12 @@ function handleTouchMove(e) {
 
 function handleTouchEnd() {
     if (touchStart - touchEnd > 75) {
+      if (selectedImage === sample.images.length - 1) {return}
       setSelectedImage(prev => prev + 1)
     }
 
     if (touchStart - touchEnd < -75) {
+      if (selectedImage === 0) {return}
       setSelectedImage(prev => prev - 1)
 }
 }
