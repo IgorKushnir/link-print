@@ -22,7 +22,7 @@ function handleTouchEnd() {
     if (touchStart - touchEnd < -75) {
       setSelectedImage(prev => prev - 1)
 }
-
+}
     return ( <>
         {sample && <>
         <ul className={styles.imagesList}>
