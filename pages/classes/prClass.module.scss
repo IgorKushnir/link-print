@@ -1,0 +1,6 @@
+@import '../../styles/placeholders.scss';
+
+.title {
+    @extend %mainTitle;
+    max-width: 860px;
+}

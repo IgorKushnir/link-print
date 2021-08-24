@@ -1,0 +1,58 @@
+@import '../../styles/variables.scss';
+@import '../../styles/placeholders.scss';
+
+.classItem {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.infoWrapper {
+    width: 48%;
+}
+
+.imageWrapper {
+    width: 48%;
+    padding: 20px;
+    margin-right: 24px;
+    border: 1px solid $color-main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.die {
+    @extend %blueDie;
+    margin-bottom: 20px;
+}
+
+.title {
+    @extend %secondaryTitle;
+    margin-bottom: 30px;
+}
+
+.subtitle {
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.printList {
+    margin-bottom: 30px;
+}
+
+.button {
+    @extend %button;
+    @extend %buttonMd;
+    @extend %buttonColor;
+}
+
+.separator {
+    margin-bottom: 50px;
+}

@@ -18,6 +18,7 @@ import Characteristics from '../components/Characteristics/Characteristics'
 import Contacts from '../components/Contacts/Contacts'
 import ProductPopup from '../components/ProductPopup/ProductPopup';
 import MobileMenu from '../components/MobileMenu/MobileMenu';
+import PrinterClasses from '../components/PrinterClasses/PrinterClasses';
 
 export default function Home() {
   const [isPopupOpened, setIsPopupOpened] = useState(false);
@@ -46,6 +47,7 @@ export default function Home() {
         <Header setIsMobileMenuOpened={setIsMobileMenuOpened}/>
         <Baner />
         <ProductsList setIsPopupOpened={setIsPopupOpened} setPopupProduct={setPopupProduct}/>
+        <PrinterClasses />
         <Service />
         <InksList setIsPopupOpened={setIsPopupOpened} setPopupProduct={setPopupProduct}/>
         <ServicesList />

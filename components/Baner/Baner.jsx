@@ -5,9 +5,12 @@ export default function Baner() {
     return(
         <section className={styles.baner}>
             <div className={styles.banerWrapper}>
-                <h2 className={styles.heading}>УФ оборудование для печати на любой поверхности</h2>
+                <h2 className={styles.heading}>Промышленные УФ принтеры</h2>
     
-                <h3 className={styles.subheading}>Продаём и обслуживаем УФ оборудование Link Print</h3>
+                <div className={styles.subheadingWrapper}>
+                    <p className={styles.subheading}>18 готовых моделей принтеров для различных задач в наличии</p>
+                    <p className={styles.subheading}>Спроектируем и разработаем принтер под Ваши задачи</p>
+                </div>
     
                 <div className={styles.buttonsWrapper}>
                     <Link href="#contactUs"><button className={styles.button}>Оставить заявку</button></Link>

@@ -20,7 +20,7 @@ export default function Header({setIsMobileMenuOpened}) {
               <Link href='/' className={styles.logoLink}>
                 <img
                   className={styles.logoImg}
-                  src='./img/png/logo.png'
+                  src='/img/png/logo.png'
                   alt='link print logo'
                 />
               </Link>

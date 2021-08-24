@@ -1,18 +1,42 @@
 @import '../../styles/placeholders.scss';
 
 .item {
-    max-width: 360px;
-    padding: 0px 20px;
+    width: 48%;
+    padding: 40px 30px;
+    border: 1px solid #cecece;
+    border-radius: 6px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 15px;
+        background-color: $color-main;
+        left: 0;
+        top: 45px;
+        z-index: 200;
+    }
+}
+
+.mainWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 60px;
+    margin-bottom: 24px;
 }
 
 .title {
-    @extend %mainTitle;
+    @extend %secondaryTitle;
     text-align: left;
+    text-transform: uppercase;
+    max-width: 230px;
 }
 
 .imagesWrapper {
-    width: 360px;
-    height: 300px;
+    flex-basis: 210px;
+    min-width: 210px;
+    height: 165px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -54,11 +78,16 @@
 
 .featuresList {
     margin-bottom: 20px;
-    min-height: 152px;
 }
 
 .featuresItem {
-    margin-bottom: 8px;
+    margin-bottom: 14px;
+    color: #909090;
+    font-size: 12px;
+}
+
+.description {
+    margin-bottom: 40px;
 }
 
 .buttonsWrapper {
@@ -70,11 +99,11 @@
     @extend %button;
     @extend %buttonMd;
     @extend %buttonDark;
-    margin-right: 6px;
 }
 
 .buttonSample {
     @extend %button;
     @extend %buttonMd;
-    @extend %buttonLight;
+    @extend %buttonColor;
+    margin-right: 20px;
 }

@@ -1,0 +1,19 @@
+@import '../../styles/placeholders.scss';
+@import '../../styles/variables.scss';
+
+
+.titleWrapper {
+    padding: 0 150px;
+}
+
+.titleTop {
+    @extend %mainTitle;
+    text-align: left;
+}
+
+.titleBottom {
+    @extend %mainTitle;
+    text-align: right;
+    margin-bottom: 30px;
+}
+

@@ -3,32 +3,80 @@
 @import 'react-notifications-component/dist/scss/notification.scss';
 
 @font-face {
-font-family: 'Roboto', sans-serif;
-src: url('../public//fonts//Roboto/Roboto-Light.ttf') format('truetype');
-font-weight: 300;
+  font-family: 'Manrope', sans-serif;
+  src: url('../public/fonts/Manrope/Manrope-Light.ttf') format('truetype');
+  font-weight: 300;
 }
 
 @font-face {
-  font-family: 'Roboto', sans-serif;
-  src: url('../public//fonts//Roboto/Roboto-Regular.ttf') format('truetype');
+  font-family: 'Manrope', sans-serif;
+  src: url('../public/fonts/Manrope/Manrope-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Roboto', sans-serif;
-  src: url('../public//fonts//Roboto/Roboto-Medium.ttf') format('truetype');
+  font-family: 'Manrope', sans-serif;
+  src: url('../public/fonts/Manrope/Manrope-Medium.ttf') format('truetype');
   font-weight: 500;
 }
 
 @font-face {
-  font-family: 'Roboto', sans-serif;
-  src: url('../public//fonts//Roboto/Roboto-Bold.ttf') format('truetype');
+  font-family: 'Manrope', sans-serif;
+  src: url('../public/fonts/Manrope/Manrope-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Manrope', sans-serif;
+  src: url('../public/fonts/Manrope/Manrope-Bold.ttf') format('truetype');
   font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Manrope', sans-serif;
+  src: url('../public/fonts/Manrope/Manrope-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url('../public/fonts/Montserrat/Montserrat-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url('../public/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url('../public/fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url('../public/fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url('../public/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url('../public/fonts/Montserrat/Montserrat-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
 }
 
 html,
 body {
-  font-family: Roboto, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: $font-size-base;
   font-weight: 400;
   color: $color-dark;
@@ -65,6 +113,10 @@ button {
   outline: none;
 }
 
+.page__main {
+  padding: 140px 0px;
+}
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -72,8 +124,8 @@ button {
 }
 
 .section__header {
-  font-size: 34px;
-  font-weight:500;
+  font-size: 64px;
+  font-weight: 700;
   margin-bottom: 80px;
   text-align: center;
   text-transform: uppercase;

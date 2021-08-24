@@ -44,12 +44,35 @@
 
 %mainTitle {
     font-size: $font-size-heading;
-    font-weight: 700;
-    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 800;
+    // margin-bottom: 20px;
 }
 
 %secondaryTitle {
     font-size: $font-size-subheading;
     font-weight: 700;
     margin-bottom: 20px;
+}
+
+%blueDiePseudo {
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        background-color: $color-main;
+        width: 60px;
+        height: 10px;
+        position: absolute;
+        top: -20px;
+        left: 0;
+    }
+}
+
+%blueDie {
+        background-color: $color-main;
+        width: 60px;
+        height: 10px;
+
 }
