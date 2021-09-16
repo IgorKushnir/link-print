@@ -1,6 +1,41 @@
+@import '../../styles/variables.scss';
 @import '../../styles/placeholders.scss';
+
+.main {
+    padding: 140px 0 0;
+}
 
 .title {
     @extend %mainTitle;
     max-width: 860px;
+    margin-bottom: 40px;
+}
+
+.infoWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.subTitle {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $color-main;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.infoInnerWrapper {
+    flex-basis: 48%;
+}
+
+.info {
+    flex-basis: 48%;
+    color: #0d0d0d;
+    opacity: 0.6;
+}
+
+.button {
+    @extend %button;
+    @extend %buttonMd;
+    @extend %buttonColor;
 }

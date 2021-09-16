@@ -1,8 +1,7 @@
 import styles from './ProductsList.module.scss';
-import products from '../../pages/api/products';
 import {ProductItem} from '../ProductItem/ProductItem';
 
-export default function ProductsList({setIsPopupOpened, setPopupProduct}) {
+export default function ProductsList({products}) {
 
     return (
         <section>
@@ -10,7 +9,7 @@ export default function ProductsList({setIsPopupOpened, setPopupProduct}) {
                 <h2 className="section__header">Линейка принтеров</h2>
                 <ul className={styles.list}>
                     {products.map( (product, i) => (
-                        <ProductItem setIsPopupOpened={setIsPopupOpened} setPopupProduct={setPopupProduct} key={`product_${i}`} product={product} />
+                        <ProductItem key={`product_${i}`} product={product} />
                     ))}
                 </ul>
             </div>

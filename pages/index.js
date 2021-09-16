@@ -7,6 +7,7 @@ import styles from '../styles/Home.module.scss'
 import Header from '../components/Header/Header'
 import Baner from '../components/Baner/Baner'
 import ProductsList from '../components/ProductsList/ProductsList'
+import products from './api/products';
 import Service from '../components/Service/Service'
 import InksList from '../components/InksList/InksList'
 import ServicesList from '../components/ServicesList/ServicesList'
@@ -19,6 +20,8 @@ import Contacts from '../components/Contacts/Contacts'
 import ProductPopup from '../components/ProductPopup/ProductPopup';
 import MobileMenu from '../components/MobileMenu/MobileMenu';
 import PrinterClasses from '../components/PrinterClasses/PrinterClasses';
+import GetBonus from '../components/GetBonus/GetBonus';
+import Footer from '../components/Footer/Footer';
 
 export default function Home() {
   const [isPopupOpened, setIsPopupOpened] = useState(false);
@@ -32,12 +35,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Продажа UV оборудования. Пробный принт. Заказать пробную печать на принтере" />
         <meta name="keywords" content="Link Print Украина, линк принт Украина, Linkprint, link print, Продажа UV оборудования, Пробный принт, купить уф принтер, купить uv принтер, уф печать, uv печать, uvпечать, уф гибридный принтер, Уф принтер Планшетный" />
-        <meta property="og:url" content="https://www.linkprint-uk.com/" />
+        <meta property="og:url" content="https://www.linkprint.com.ua/" />
         <meta property="og:title" content="УФ принтера" />
         <meta property="og:description" content="Продажа UV оборудования. Пробный принт. Заказать пробную печать на принтере" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="" />
-        <link rel="canonical" href="https://www.linkprint-uk.com/" />
+        <link rel="canonical" href="https://www.linkprint.com.ua/" />
       </Head>
 
       <main className={styles.main}>
@@ -46,8 +49,9 @@ export default function Home() {
         {isMobileMenuOpened && <MobileMenu setIsMobileMenuOpened={setIsMobileMenuOpened}/>}
         <Header setIsMobileMenuOpened={setIsMobileMenuOpened}/>
         <Baner />
-        <ProductsList setIsPopupOpened={setIsPopupOpened} setPopupProduct={setPopupProduct}/>
+        <ProductsList products={products}/>
         <PrinterClasses />
+        <GetBonus />
         <Service />
         <InksList setIsPopupOpened={setIsPopupOpened} setPopupProduct={setPopupProduct}/>
         <ServicesList />
@@ -57,6 +61,7 @@ export default function Home() {
         <Rewards />
         <Characteristics />
         <Contacts />
+        <Footer />
       </main>
     </>
   )

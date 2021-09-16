@@ -17,3 +17,52 @@
     margin-bottom: 30px;
 }
 
+.individualWrapper {
+    padding: 40px 80px;
+    background-color: $color-main;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textWrapper {
+    flex-basis: 48%
+}
+
+.individualHeading {
+    @extend %secondaryTitle;
+    @extend %whiteDiePseudo;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 22px;
+
+    &::before {
+        top: 6px;
+        left: -80px;
+    }
+}
+
+.text {
+    color: #fff;
+}
+
+.buttonsWrapper {
+    display: flex;
+    flex-basis: 48%;
+    justify-content: flex-end
+}
+
+.whiteButton {
+    @extend %button;
+    @extend %buttonMd;
+    @extend %buttonLight;
+    margin-right: 24px;
+}
+
+.transparentButton {
+    @extend %button;
+    @extend %buttonMd;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}

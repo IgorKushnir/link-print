@@ -1,0 +1,65 @@
+@import '../../styles/placeholders.scss';
+@import '../../styles/variables.scss';
+
+.footer {
+    background-color: #000;
+    padding: 80px 0;
+}
+
+.infoWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30%;
+    margin-bottom: 30px;
+}
+
+.heading {
+    @extend %secondaryTitle;
+    color: $color-main;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.listItem {
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.bottomWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoLink {
+    cursor: pointer;
+}
+
+.logoImg {
+    cursor: pointer;
+    width: 130px;
+    height: 35px;
+}
+
+.downloadButton {
+    @extend %button;
+    @extend %buttonBg;
+    @extend %buttonLight;
+}
+
+.infoButton {
+    @extend %button;
+    @extend %buttonBg;
+    @extend %buttonColor;
+}
+
+.phone {
+    @extend %secondaryTitle;
+    color: #fff;
+    text-align: end;
+}
+
+.name {
+    color: #fff;
+    text-align: end;
+}

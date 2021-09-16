@@ -1,0 +1,128 @@
+@import '../../styles/variables.scss';
+@import '../../styles/placeholders.scss';
+
+.main {
+    padding: 140px 0 0;
+}
+
+.title {
+    @extend %mainTitle;
+    color: $color-main;
+    font-size: 3rem;
+    max-width: 860px;
+    margin-bottom: 40px;
+}
+
+.infoWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.headingWrapper {
+    flex-basis: 50%;
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.subTitle {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $color-main;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.button {
+    @extend %button;
+    @extend %buttonMd;
+    @extend %buttonColor;
+    height: 50px;
+}
+
+.mainImg {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.infoTitle {
+    @extend %mainTitle;
+    max-width: 60%;
+    margin-bottom: 40px;
+}
+
+.infoSubtitle {
+    max-width: 40%;
+    margin-bottom: 40px;
+}
+
+.infoList {
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.infoItem {
+    margin-right: 40px;
+}
+
+.descItem {
+    color: #212121;
+    opacity: 0.6;
+}
+
+.countWrap {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color-main;
+    margin-bottom: 40px;
+}
+
+.count {
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.infoItemTitle {
+    margin-bottom: 30px;
+}
+
+.techItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.techImg {
+    flex-basis: 48%;
+    margin-right: 30px;
+    border: 1px solid $color-main;
+}
+
+.techTitle {
+    font-size: 22px;
+    color: $color-main;
+    margin-bottom: 30px;
+}
+
+.videoTitle {
+    @extend %mainTitle;
+    text-align: center;
+    padding-top: 80px;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.videoItem {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}

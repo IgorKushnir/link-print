@@ -6,6 +6,12 @@
     background-color: $color-main;
     cursor: pointer;
     letter-spacing: 1.2px;
+    transform: scale(1);
+    transition: all 0.25s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 %buttonSm {
@@ -28,7 +34,6 @@
 
 %buttonLight {
     background-color: $color-light;
-    border: 1px solid $color-dark;
 }
 
 %buttonColor {
@@ -75,4 +80,19 @@
         width: 60px;
         height: 10px;
 
+}
+
+%whiteDiePseudo {
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        background-color: #fff;
+        width: 60px;
+        height: 10px;
+        position: absolute;
+        top: -20px;
+        left: 0;
+    }
 }
