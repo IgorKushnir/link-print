@@ -44,7 +44,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <ReactNotification />
+      <ReactNotification />
         {isPopupOpened && <ProductPopup product={popupProduct} setIsPopupOpened={setIsPopupOpened}/>}
         {isMobileMenuOpened && <MobileMenu setIsMobileMenuOpened={setIsMobileMenuOpened}/>}
         <Header setIsMobileMenuOpened={setIsMobileMenuOpened}/>
