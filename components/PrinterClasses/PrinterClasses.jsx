@@ -1,8 +1,9 @@
+import Link from "next/link";
 import styles from './PrinterClasses.module.scss';
 import printerClasses from '../../pages/api/printerClasses';
 import PrinterClassesItem from '../PrinterClassesItem/PrinterClassesItem';
 
-export default function PrinterClasses() {
+export default function PrinterClasses({setIsPopupOpened}) {
   return (
     <section>
       <div className='container'>
@@ -28,8 +29,8 @@ export default function PrinterClasses() {
               <p className={styles.text}>С помощью данного конструктора вы можете самостоятельно собрать принтер который подходит под ваши производственные потребности.</p>
               </div>
               <div className={styles.buttonsWrapper}>
-                <button className={styles.whiteButton}>Собрать принтер</button>
-                <button className={styles.transparentButton}>Консультация</button>
+                <Link href="/constructor"><button className={styles.whiteButton}>Собрать принтер</button></Link>
+                <button onClick={() => setIsPopupOpened(true)} className={styles.transparentButton}>Консультация</button>
               </div>
         </div>
       </div>

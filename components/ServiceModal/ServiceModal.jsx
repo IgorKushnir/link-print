@@ -2,14 +2,14 @@ import { useFormik } from "formik";
 
 import { createNotification } from "../Notifications/notifications"
 import { sendContantForm } from "../../pages/api/externalAPI";
-import styles from './ContactModal.module.scss';
+import styles from './ServiceModal.module.scss';
 
-export default function ContactModal ({setIsPopupOpened}) {
+export default function ServiceModal ({setIsServicePopupOpened}) {
 
     const formik = useFormik({
         initialValues: {
           name: "",
-          branch: "",
+          company: "",
           phone: "",
           email: "",
           confirm: true,
@@ -25,7 +25,7 @@ export default function ContactModal ({setIsPopupOpened}) {
                   "Благодарим за Ваше обращение! Мы скоро с Вами свяжемся."
                 );
                 formik.resetForm();
-                setIsPopupOpened(false)
+                setIsServicePopupOpened(false)
               }
             })
             .catch(() => {
@@ -41,12 +41,12 @@ export default function ContactModal ({setIsPopupOpened}) {
     return (
         <div className={styles.backdrop}>
             <div className={styles.container}>
-                <button type="button" className={styles.closeButton} onClick={() => setIsPopupOpened(false)}>
+                <button type="button" className={styles.closeButton} onClick={() => setIsServicePopupOpened(false)}>
                     <img className={styles.closeIcon} src="/img/png/Cancel.png" />
                 </button>
                 <div className={styles.wrapper}>
-                    <h3 className={styles.title}>Получить консультацию</h3>
-                    <p className={styles.description}>Заполните форму ниже и мы свяжемся с вами для уточнения всех деталей</p>
+                    <h3 className={styles.title}>Заявка в сервисный центр</h3>
+                    <p className={styles.description}>Группа сервисных инженеров всегда онлайн в любом из удобных мессенджеров</p>
                     <form onSubmit={formik.handleSubmit}>
                     <div className={styles.infoBlock}>
           <div className={styles.inputWrapper}>
@@ -70,15 +70,15 @@ export default function ContactModal ({setIsPopupOpened}) {
           <div className={styles.inputWrapper}>
             <input
               type="text"
-              name="branch"
+              name="company"
               required
-              placeholder="Ваша сфера деятельности"
+              placeholder="Название компании"
               className={styles.textInput}
-              onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.branch}
+              onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.company}
             />
-            {formik.errors.branch && formik.touched.branch ? (
+            {formik.errors.company && formik.touched.company ? (
               <small className={styles.errors}>
-                {formik.errors.branch}
+                {formik.errors.company}
               </small>
             ) : (
               <div className={styles.errorsPatch}></div>

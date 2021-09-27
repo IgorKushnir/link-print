@@ -12,8 +12,8 @@ export default function PrinterClassesItem ({title, img, print, branches, link})
                     <h3 className={styles.title}>{title}</h3>
                     <p className={styles.subtitle}>Печать</p>
                     <ul className={styles.printList}>
-                        {print.map(p => (
-                            <li className={styles.printItem}>- {p}</li>
+                        {print.map((p, i) => (
+                            <li key={`print_${i}`} className={styles.printItem}>- {p}</li>
                         ))}
                     </ul>
                     <p className={styles.subtitle}>Области производства</p>

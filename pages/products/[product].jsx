@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import YouTube from "react-youtube";
-import ReactNotification from 'react-notifications-component'
+import ReactNotification from 'react-notifications-component';
 
 import products from "../api/products";
 import Header from "../../components/Header/Header";

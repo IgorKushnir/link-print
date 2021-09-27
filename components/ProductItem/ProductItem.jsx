@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styles from './ProductItem.module.scss';
 
-export function ProductItem({ product}) {
+export function ProductItem({ product, setIsPopupOpened}) {
 
 
     return(
@@ -24,7 +24,7 @@ export function ProductItem({ product}) {
                     <p className={styles.description}>{product.description}</p>
                 </div>
             <div className={styles.buttonsWrapper}>
-                <Link href={`#${product.linkVideo}`}><a className={styles.buttonSample} >Примеры работ</a></Link>
+                <button className={styles.buttonSample} onClick={() => setIsPopupOpened(true)}>Получить консультацию</button>
                 <Link href={product.link}><a className={styles.buttonMore}>Подробнее</a></Link>
             </div> 
         </li>

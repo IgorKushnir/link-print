@@ -6,7 +6,13 @@
     padding: 80px 0;
 }
 
-.title {
+.title1 {
+    @extend %mainTitle;
+    color: #fff;
+    padding-left: 35%;
+}
+
+.title2 {
     @extend %mainTitle;
     color: #fff;
     margin-bottom: 40px;
@@ -21,7 +27,6 @@
 
     & span {
         color: $color-main;
-        margin-left: 6px;
     }
 }
 

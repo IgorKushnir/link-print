@@ -8,24 +8,28 @@ import Header from '../components/Header/Header'
 import Baner from '../components/Baner/Baner'
 import ProductsList from '../components/ProductsList/ProductsList'
 import products from './api/products';
-import Service from '../components/Service/Service'
-import InksList from '../components/InksList/InksList'
-import ServicesList from '../components/ServicesList/ServicesList'
-import SamplesList from '../components/SamplesList/SamplesList'
-import ContactUs from '../components/ContactUs/ContactUs'
 import ReviewsList from '../components/ReviewsList/ReviewsList'
 import Rewards from '../components/Rewards/Rewards'
-import Characteristics from '../components/Characteristics/Characteristics'
 import Contacts from '../components/Contacts/Contacts'
-import ProductPopup from '../components/ProductPopup/ProductPopup';
 import MobileMenu from '../components/MobileMenu/MobileMenu';
 import PrinterClasses from '../components/PrinterClasses/PrinterClasses';
 import GetBonus from '../components/GetBonus/GetBonus';
+import GetConsult from '../components/GetConsult/GetConsult';
+import ContactModal from '../components/ContactModal/ContactModal';
+import DownloadModal from '../components/DownloadModal/DownloadModal';
+import Benefits from '../components/Benefits/Benefits';
 import Footer from '../components/Footer/Footer';
+// import Service from '../components/Service/Service'
+// import InksList from '../components/InksList/InksList'
+// import ServicesList from '../components/ServicesList/ServicesList'
+// import SamplesList from '../components/SamplesList/SamplesList'
+// import ContactUs from '../components/ContactUs/ContactUs'
+// import Characteristics from '../components/Characteristics/Characteristics'
+// import ProductPopup from '../components/ProductPopup/ProductPopup';
 
 export default function Home() {
   const [isPopupOpened, setIsPopupOpened] = useState(false);
-  const [popupProduct, setPopupProduct] = useState(null);
+  const [isDownloadPopupOpened, setIsDownloadPopupOpened] = useState(false);
   const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
 
   return (
@@ -45,21 +49,24 @@ export default function Home() {
 
       <main className={styles.main}>
       <ReactNotification />
-        {isPopupOpened && <ProductPopup product={popupProduct} setIsPopupOpened={setIsPopupOpened}/>}
+        {isPopupOpened && <ContactModal setIsPopupOpened={setIsPopupOpened}/>}
+        {isDownloadPopupOpened && <DownloadModal setIsDownloadPopupOpened={setIsDownloadPopupOpened}/>}
         {isMobileMenuOpened && <MobileMenu setIsMobileMenuOpened={setIsMobileMenuOpened}/>}
         <Header setIsMobileMenuOpened={setIsMobileMenuOpened}/>
-        <Baner />
-        <ProductsList products={products}/>
-        <PrinterClasses />
-        <GetBonus />
-        <Service />
-        <InksList setIsPopupOpened={setIsPopupOpened} setPopupProduct={setPopupProduct}/>
-        <ServicesList />
-        <SamplesList />
-        <ContactUs />
+        <Baner setIsPopupOpened={setIsPopupOpened} setIsDownloadPopupOpened={setIsDownloadPopupOpened} />
+        <ProductsList products={products} setIsPopupOpened={setIsPopupOpened}/>
+        <PrinterClasses setIsPopupOpened={setIsPopupOpened} />
+        <GetBonus setIsPopupOpened={setIsPopupOpened}/>
+        <Benefits />
+        {/* <Service /> */}
+        {/* <InksList setIsPopupOpened={setIsPopupOpened} setPopupProduct={setPopupProduct}/> */}
+        {/* <ServicesList /> */}
+        {/* <SamplesList /> */}
+        {/* <ContactUs /> */}
         <ReviewsList />
+        <GetConsult setIsPopupOpened={setIsPopupOpened} />
         <Rewards />
-        <Characteristics />
+        {/* <Characteristics /> */}
         <Contacts />
         <Footer />
       </main>

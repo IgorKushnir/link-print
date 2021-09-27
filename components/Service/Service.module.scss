@@ -1,116 +1,69 @@
 @import '../../styles/placeholders.scss';
 @import '../../styles/variables.scss';
 
-.buttonsWrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.buttonLeft {
-    @extend %button;
-    @extend %buttonBg;
-    @extend %buttonLight;
-    border-radius: 4px 0px 0px 4px;
-}
-
-.buttonRight {
-    @extend %button;
-    @extend %buttonBg;
-    @extend %buttonLight;
-    border-radius: 0px 4px 4px 0px;
-}
-
-
-.buttonActiveLeft {
-    @extend %button;
-    @extend %buttonBg;
-    @extend %buttonDark;
-    font-weight: 700;
-    border-radius: 4px 0px 0px 4px;
-}
-
-.buttonActiveRight {
-    @extend %button;
-    @extend %buttonBg;
-    @extend %buttonDark;
-    font-weight: 700;
-    border-radius: 0px 4px 4px 0px;
-}
-
-.aboutWrapper {
-    display: flex;
-    justify-content: space-between;
-}
-
-.text {
-    flex-grow: 3;
-    line-height: 1.5;
-}
-
-.imageWrapper {
-    margin-right: 44px;
-    min-width: 150px;
-
-    @media (min-width: 769px) {
-        min-width: 350px;
-    }
-
-    @media (max-width: 615px) {
-        display: none;
-    }
-}
-
-.image {
-width: 100%;
-height: auto;
-}
-
 .heading {
     @extend %mainTitle;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.typesList {
-    counter-reset: section; 
-}
-
-.typesItem {
-    display: flex;
-    justify-content: flex-start;
-    position: relative;
-    margin-bottom: 120px;
-
-    &:nth-child(2n) {
-        justify-content: flex-end;
-    }
-}
-
-.itemInnerWrap {
-    padding-left: 110px;
-    max-width: 560px;
-    position: relative;
-    z-index: 10;
-
-    @media (max-width: 768px) {
-        max-width: 450px;
-      }
-
-    &::before {
-        counter-increment: section;
-        content: '0'counter(section); 
-        font-size: 200px;
-        font-weight: bold;
-        color: $color-light-grey;
-        user-select: none;
-        position: absolute;
-        top: -104px;
-        left: 0px;
-        z-index: -1;
-    }
+    margin-bottom: 40px;
+    text-transform: uppercase;
 }
 
 .subheading {
-    @extend %secondaryTitle;
+    color: $color-main;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 40px;
+    position: relative;
+    display: block;
+    width: 130px;
+    padding-left: 16px;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: chartreuse;
+        position: absolute;
+        top: 6px;
+        left: 0;
+    }
+}
+
+.infoWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.leftGroup {
+    flex-basis: 48%;
+}
+
+.innerLeft {
+    max-width: 315px;
+}
+
+.rightGroup {
+    flex-basis: 50%;
+}
+
+.img {
+    max-width: 100%;
+}
+
+.serviceItem {
+    @extend %blueDiePseudo;
+    padding: 20px 0;
+    
+    &::before {
+        top: -4px;
+    }
+}
+
+.button {
+    @extend %button;
+    @extend %buttonMd;
+    @extend %buttonColor;
 }

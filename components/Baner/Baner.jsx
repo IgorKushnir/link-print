@@ -1,7 +1,7 @@
 import styles from './Baner.module.scss';
 import Link from 'next/link';
 
-export default function Baner() {
+export default function Baner({setIsDownloadPopupOpened, setIsPopupOpened}) {
     return(
         <section className={styles.baner}>
             <div className={styles.banerWrapper}>
@@ -13,8 +13,8 @@ export default function Baner() {
                 </div>
     
                 <div className={styles.buttonsWrapper}>
-                    <Link href="#contactUs"><button className={styles.button}>Оставить заявку</button></Link>
-                    <Link href="#characteristics"><button className={styles.button}>Тех информация</button></Link>
+                    <button className={styles.button} onClick={() => setIsDownloadPopupOpened(true)}>Скачать каталог</button>
+                    <button className={styles.button} onClick={() => setIsPopupOpened(true)}>Получить консультацию</button>
                 </div>
             </div>
         </section>

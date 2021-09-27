@@ -8,10 +8,10 @@ export default function Header({setIsMobileMenuOpened}) {
           <div className={styles.navWrapper}>
               <ul className={styles.navList}>
                 <li className={styles.navItem}>
-                  <Link href='#servicesList'>Услуги</Link>
+                  <Link href='/classes'>Каталог</Link>
                 </li>
                 <li className={styles.navItem}>
-                  <Link href='#rewards'>Награды</Link>
+                  <Link href='/research'>Разработка</Link>
                 </li>
                 <li className={styles.navItem}>
                   <a href='https://webconstruct.pb.ua/front/create/all_credit_orders/active/?provider=40747052#step/1' target="_blamk" rel="nofollow noreferrer">Лизинг</a>
@@ -26,16 +26,13 @@ export default function Header({setIsMobileMenuOpened}) {
               </Link>
               <ul className={styles.navList}>
                 <li className={styles.navItem}>
-                  <Link href='#inksList'>Чернила/Праймер</Link>
+                  <Link href='/about'>О компании</Link>
                 </li>
                 <li className={styles.navItem}>
-                  <Link href='#service'>Сервис</Link>
+                  <Link href='/service'>Сервис</Link>
                 </li>
                 <li className={styles.navItem}>
-                  <Link href='#reviewsList'>Отзывы</Link>
-                </li>
-                <li className={styles.navItem}>
-                  <Link href='#contacts'>Контакты</Link>
+                  <Link href='/contacts'>Контакты</Link>
                 </li>
               </ul>
           </div>
