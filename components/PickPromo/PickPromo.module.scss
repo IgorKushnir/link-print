@@ -20,6 +20,10 @@
     @extend %mainTitle;
     color: #fff;
     padding-left: 30%;
+
+    @media (max-width: 615px) {
+        padding-left: 0;
+    }
 }
 
 .subTitle {
@@ -31,6 +35,10 @@
 
     & span {
         color: $color-main;
+    }
+
+    @media (max-width: 615px) {
+        width: 100%;
     }
 }
 

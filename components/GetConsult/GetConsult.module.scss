@@ -10,6 +10,10 @@
     @extend %mainTitle;
     color: #fff;
     padding-left: 35%;
+
+    @media (max-width: 768px) {
+        padding-left: 0;
+    }
 }
 
 .title2 {
@@ -27,6 +31,10 @@
 
     & span {
         color: $color-main;
+    }
+
+    @media (max-width: 615px) {
+        width: 100%;
     }
 }
 

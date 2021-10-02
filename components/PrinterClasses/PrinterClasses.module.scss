@@ -4,6 +4,10 @@
 
 .titleWrapper {
     padding: 0 150px;
+
+    @media (max-width: 768px) {
+        padding: 0;
+    }
 }
 
 .titleTop {
@@ -15,6 +19,10 @@
     @extend %mainTitle;
     text-align: right;
     margin-bottom: 30px;
+
+    @media (max-width: 615px) {
+        text-align: left;
+    }
 }
 
 .individualWrapper {
@@ -23,10 +31,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 615px) {
+     flex-wrap: wrap;   
+    }
 }
 
 .textWrapper {
-    flex-basis: 48%
+    flex-basis: 48%;
+
+    @media (max-width: 615px) {
+        flex-basis: 100%;
+        margin-bottom: 20px;   
+    }
 }
 
 .individualHeading {
@@ -49,7 +66,12 @@
 .buttonsWrapper {
     display: flex;
     flex-basis: 48%;
-    justify-content: flex-end
+    justify-content: flex-end;
+
+    @media (max-width: 615px) {
+        flex-wrap: wrap;   
+        justify-content: flex-start;
+    }
 }
 
 .whiteButton {
@@ -57,6 +79,10 @@
     @extend %buttonMd;
     @extend %buttonLight;
     margin-right: 24px;
+
+    @media (max-width: 615px) {
+        margin-bottom: 20px;   
+    }
 }
 
 .transparentButton {

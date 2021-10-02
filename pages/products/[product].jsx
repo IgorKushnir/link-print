@@ -15,6 +15,7 @@ import Footer from "../../components/Footer/Footer";
 import styles from "./product.module.scss";
 import ProductConstructor from "../../components/ProductConstructor/ProductConstructor";
 import ContactModal from "../../components/ContactModal/ContactModal";
+import DownloadModal from '../../components/DownloadModal/DownloadModal';
 
 const useStyles = makeStyles((theme) => ({
   tabs: {
@@ -39,6 +40,8 @@ export default function ProductPage() {
   const [value, setValue] = useState(0);
   const [opts, setOpts] = useState(null);
   const [isPopupOpened, setIsPopupOpened] = useState(false)
+  const [isDownloadPopupOpened, setIsDownloadPopupOpened] = useState(false);
+  const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
 
   const classes = useStyles();
   const container = useRef(null);
@@ -75,6 +78,8 @@ export default function ProductPage() {
     <>
     <ReactNotification />
     {isPopupOpened && <ContactModal setIsPopupOpened={setIsPopupOpened} />}
+    {isDownloadPopupOpened && <DownloadModal setIsDownloadPopupOpened={setIsDownloadPopupOpened}/>}
+        {isMobileMenuOpened && <MobileMenu setIsMobileMenuOpened={setIsMobileMenuOpened}/>}
       <Header />
       {currentProduct && Object.values(currentProduct).length > 0 && (
         <main className={styles.main}>
@@ -98,6 +103,8 @@ export default function ProductPage() {
               value={value}
               onChange={handleChange}
               indicatorColor="primary"
+              variant="scrollable"
+  scrollButtons="auto"
               textColor="primary"
               aria-label="simple tabs example"
             >
@@ -126,7 +133,7 @@ export default function ProductPage() {
                   {currentProduct?.infoList?.map((item, i) => (
                     <li key={`infoList_${i}`} className={styles.infoItem}>
                       <div className={styles.countWrap}>
-                        <p className={styles.count}>0{i}</p>
+                        <p className={styles.count}>0{i + 1}</p>
                       </div>
                       <h4 className={styles.infoItemTitle}>{item?.title}</h4>
                       <ul>
@@ -146,7 +153,7 @@ export default function ProductPage() {
                   <ul>
                     {currentProduct?.technologies?.map((tech, i) => (
                       <li key={`tech_${i}`} className={styles.techItem}>
-                        <img src={tech.img} className={styles.techImg} />
+                        <div><img src={tech.img} className={styles.techImg} /></div>
                         <div>
                           <h4 className={styles.techTitle}>{tech.title}</h4>
                           <p>{tech.info}</p>
@@ -157,7 +164,7 @@ export default function ProductPage() {
                 </>
               )}
             </div>
-            <GetBonus />
+            <GetBonus setIsPopupOpened={setIsPopupOpened} />
 
             {currentProduct?.videos?.length > 0 && (
               <div className="container">
@@ -165,13 +172,13 @@ export default function ProductPage() {
                 <ul>
                   {currentProduct?.videos?.map((video, i) => (
                     <li key={`video_${i}`} className={styles.videoItem}>
-                      <YouTube videoId={video} opts={opts} onReady={onReady} />
+                      <YouTube videoId={video} opts={opts} onReady={onReady} className={styles.video} />
                     </li>
                   ))}
                 </ul>
               </div>
             )}
-            <PickPromo />
+            <PickPromo setIsPopupOpened={setIsPopupOpened} />
           </TabPanel>
 {currentProduct?.characteristics &&          <TabPanel value={value} index={1}>
             <div className="container">
@@ -304,7 +311,7 @@ export default function ProductPage() {
                     <ProductConstructor currentProduct={currentProduct} />
             </div>
           </TabPanel>}
-          <Footer />
+          <Footer setIsDownloadPopupOpened={setIsDownloadPopupOpened} setIsPopupOpened={setIsPopupOpened} />
         </main>
       )}
     </>

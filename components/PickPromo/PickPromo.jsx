@@ -1,6 +1,6 @@
 import styles from './PickPromo.module.scss'
 
-export default function PickPromo () {
+export default function PickPromo ({setIsPopupOpened}) {
     return (
         <div className={styles.section}>
             <div className="container">
@@ -15,7 +15,7 @@ export default function PickPromo () {
                 <p className={styles.subTitle}>
                 Оставьте заявку на бесплатную консультацию и подбор принтера, свяжемся с вами в течение нескольких минут
                 </p>
-                <button className={styles.button}>Оставить заявку</button>
+                <button className={styles.button} onClick={() => setIsPopupOpened(true)}>Оставить заявку</button>
             </div>
         </div>
     )

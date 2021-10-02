@@ -8,10 +8,12 @@ import research from './api/research'
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import ContactModal from "../components/ContactModal/ContactModal";
+import DownloadModal from '../components/DownloadModal/DownloadModal';
 
 export default function ResearchPage() {
   const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
   const [isPopupOpened, setIsPopupOpened] = useState(false);
+  const [isDownloadPopupOpened, setIsDownloadPopupOpened] = useState(false);
 
   return (
     <>
@@ -39,6 +41,7 @@ export default function ResearchPage() {
 
       <main className={styles.main}>
       {isPopupOpened && <ContactModal setIsPopupOpened={setIsPopupOpened} />}
+      {isDownloadPopupOpened && <DownloadModal setIsDownloadPopupOpened={setIsDownloadPopupOpened}/>}
         {isMobileMenuOpened && (
           <MobileMenu setIsMobileMenuOpened={setIsMobileMenuOpened} />
         )}
@@ -50,8 +53,8 @@ export default function ResearchPage() {
               <div className={styles.leftPart}>
                 <p className={styles.spec}>СПЕЦИАЛЬНОГО ПЕЧАТНОГО ОБОРУДОВАНИЯ</p>
                 <div className={styles.buttonsTopWrapper}>
-                  <Link href="/constructor"><button className={styles.button}>Перейти в конструктор</button></Link>
-                  <button className={styles.button} onClick={() => setIsPopupOpened(true)}>Получить консультацию</button>
+                  <Link href="/constructor"><button className={styles.buttonBig}>Перейти в конструктор</button></Link>
+                  <button className={styles.buttonBig} onClick={() => setIsPopupOpened(true)}>Получить консультацию</button>
                 </div>
               </div>
               <div className={styles.rightPart}>
@@ -77,7 +80,7 @@ export default function ResearchPage() {
                 <div className={styles.individualWrapper}>
             <div className={styles.textWrapper}>
               <h3 className={styles.individualHeading}>Собрать свой принтер</h3>
-              <p className={styles.text}>С помощью данного конструктора вы можете самостоятельно собрать принтер который подходит под ваши производственные потребности.</p>
+              <p className={styles.textWhite}>С помощью данного конструктора вы можете самостоятельно собрать принтер который подходит под ваши производственные потребности.</p>
               </div>
               <div className={styles.buttonsWrapper}>
                 <Link href="/constructor"><button className={styles.whiteButton}>Собрать принтер</button></Link>
@@ -87,7 +90,7 @@ export default function ResearchPage() {
 
           </div>
         </section>
-        <Footer />
+        <Footer setIsDownloadPopupOpened={setIsDownloadPopupOpened} setIsPopupOpened={setIsPopupOpened} />
       </main>
     </>
   );

@@ -11,16 +11,35 @@
     font-size: 3rem;
     max-width: 860px;
     margin-bottom: 40px;
+
+    @media (max-width: 615px) {
+        font-size: 1.5rem;
+    }
+}
+
+.tabs {
+    @media (max-width: 615px) {
+        flex-wrap: wrap; 
+        overflow: auto;  
+    }
 }
 
 .infoWrapper {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+
+    @media (max-width: 615px) {
+        flex-wrap: wrap;
+    }
 }
 
 .headingWrapper {
     flex-basis: 50%;
+
+    @media (max-width: 615px) {
+        flex-basis: 100%;
+    }
 }
 
 .buttonWrapper {
@@ -54,11 +73,19 @@
     @extend %mainTitle;
     max-width: 60%;
     margin-bottom: 40px;
+
+    @media (max-width: 615px) {
+        max-width: 100%;
+    }
 }
 
 .infoSubtitle {
     max-width: 40%;
     margin-bottom: 40px;
+
+    @media (max-width: 615px) {
+        max-width: 100%;
+    }
 }
 
 .infoList {
@@ -72,6 +99,10 @@
     margin-right: 40px;
     margin-bottom: 30px;
     width: 200px;
+
+    @media (max-width: 615px) {
+     width: 100%;   
+    }
 }
 
 .descItem {
@@ -87,6 +118,10 @@
     align-items: center;
     background: $color-main;
     margin-bottom: 40px;
+
+    & p {
+        text-align: center;
+    }
 }
 
 .count {
@@ -103,12 +138,20 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+
+    @media (max-width: 615px) {
+     flex-wrap: wrap;   
+    }
 }
 
 .techImg {
     flex-basis: 48%;
     margin-right: 30px;
     border: 1px solid $color-main;
+
+    @media (max-width: 615px) {
+        max-width: 100%; 
+       }
 }
 
 .techTitle {
@@ -130,12 +173,21 @@
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    max-width: 100%;
 }
+
+.video {width: 100%;}
 
 .infoSpan {
     font-size: 20px;
     font-weight: 600;
     margin-right: 12px;
+
+    @media (max-width: 615px) {
+        display: block;
+        margin-bottom: 10px;
+       }
+    
 }
 
 .infoBlock {
@@ -151,6 +203,10 @@
 .characteristicsItem {
     flex-basis: 50%;
     margin-bottom: 6px;
+
+    @media (max-width: 615px) {
+        flex-basis: 100%;
+       }
 }
 
 .constructHeading {
@@ -170,6 +226,11 @@
     font-size: 20px;
     font-weight: 600;
     margin: 0 12px;
+
+    @media (max-width: 615px) {
+        display: block;
+        margin-bottom: 10px;
+       }
 }
 
 .constructSubheading {
@@ -180,6 +241,10 @@
 
 .radioLabel {
     margin: 0px 12px;
+
+    @media (max-width: 615px) {
+        display: block;
+       }
 }
 
 .radioWrap {

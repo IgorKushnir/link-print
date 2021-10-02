@@ -21,6 +21,10 @@
         top: 45px;
         z-index: 200;
     }
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 }
 
 .mainWrapper {
@@ -28,6 +32,10 @@
     justify-content: space-between;
     padding-left: 60px;
     margin-bottom: 24px;
+
+    @media (max-width: 615px) {
+        flex-wrap: wrap;   
+    }
 }
 
 .title {
@@ -96,6 +104,10 @@
 
 .buttonsWrapper {
     display: flex;
+
+    @media (max-width: 615px) {
+        flex-wrap: wrap;   
+    }
 }
 
 
@@ -110,4 +122,8 @@
     @extend %buttonMd;
     @extend %buttonColor;
     margin-right: 20px;
+
+    @media (max-width: 615px) {
+        margin-bottom: 20px;
+    }
 }

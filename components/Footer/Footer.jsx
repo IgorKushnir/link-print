@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import styles from './Footer.module.scss';
 
-export default function Footer() {
+export default function Footer({setIsDownloadPopupOpened, setIsPopupOpened}) {
   return (
     <footer className={styles.footer}>
       <div className='container'>
@@ -14,16 +14,13 @@ export default function Footer() {
                 <Link href='/'>Главная</Link>
               </li>
               <li className={styles.listItem}>
-                <Link href='/'>Каталог</Link>
+                <Link href='/classes'>Каталог</Link>
               </li>
               <li className={styles.listItem}>
-                <Link href='/'>Разработка</Link>
+                <Link href='/research'>Разработка</Link>
               </li>
               <li className={styles.listItem}>
-                <Link href='/'>Кейсы</Link>
-              </li>
-              <li className={styles.listItem}>
-                <Link href='/'>Контакты</Link>
+              <a href='https://webconstruct.pb.ua/front/create/all_credit_orders/active/?provider=40747052#step/1' target="_blamk" rel="nofollow noreferrer">Лизинг</a>
               </li>
             </ul>
           </div>
@@ -48,13 +45,13 @@ export default function Footer() {
             <h2 className={styles.heading}>О компании</h2>
             <ul>
               <li className={styles.listItem}>
-                <Link href=''>О нас</Link>
+                <Link href='/about'>О нас</Link>
               </li>
               <li className={styles.listItem}>
-                <Link href=''>Сервис</Link>
+                <Link href='/service'>Сервис</Link>
               </li>
               <li className={styles.listItem}>
-                <Link href=''>Контакты</Link>
+                <Link href='/contacts'>Контакты</Link>
               </li>
             </ul>
           </div>
@@ -67,8 +64,8 @@ export default function Footer() {
                   alt='link print logo'
                 />
               </Link>
-              <button className={styles.downloadButton}>Скачать каталог</button>
-              <button className={styles.infoButton}>Получить консультацию</button>
+              <button onClick={() => setIsDownloadPopupOpened(true)} className={styles.downloadButton}>Скачать каталог</button>
+              <button onClick={() => setIsPopupOpened(true)} className={styles.infoButton}>Получить консультацию</button>
               <div className={styles.phoneWrapper}>
                   <p className={styles.phone}>+380 99 188 16 89</p>
                   <p className={styles.name}>Елена</p>

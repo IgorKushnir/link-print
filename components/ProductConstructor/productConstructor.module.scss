@@ -5,6 +5,11 @@
     font-size: 20px;
     font-weight: 600;
     margin-right: 12px;
+
+    @media (max-width: 615px) {
+        display: block; 
+        margin-bottom: 10px;
+       }
 }
 
 .infoBlock {
@@ -39,6 +44,11 @@
     font-size: 20px;
     font-weight: 600;
     margin: 0 12px;
+
+    @media (max-width: 615px) {
+        display: block;
+        margin-bottom: 10px;  
+       }
 }
 
 .constructSubheading {

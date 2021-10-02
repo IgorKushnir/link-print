@@ -11,6 +11,10 @@
     justify-content: space-between;
     padding-right: 30%;
     margin-bottom: 30px;
+
+    @media (max-width: 615px) {
+        flex-wrap: wrap;
+    }
 }
 
 .heading {
@@ -29,6 +33,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 615px) {
+        flex-wrap: wrap;
+    }
 }
 
 .logoLink {
@@ -39,18 +47,30 @@
     cursor: pointer;
     width: 130px;
     height: 35px;
+
+    @media (max-width: 615px) {
+        margin-bottom: 20px;
+    }
 }
 
 .downloadButton {
     @extend %button;
     @extend %buttonBg;
     @extend %buttonLight;
+
+    @media (max-width: 615px) {
+        margin-bottom: 20px;
+    }
 }
 
 .infoButton {
     @extend %button;
     @extend %buttonBg;
     @extend %buttonColor;
+
+    @media (max-width: 615px) {
+        margin-bottom: 20px;
+    }
 }
 
 .phone {

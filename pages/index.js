@@ -68,7 +68,7 @@ export default function Home() {
         <Rewards />
         {/* <Characteristics /> */}
         <Contacts />
-        <Footer />
+        <Footer setIsDownloadPopupOpened={setIsDownloadPopupOpened} setIsPopupOpened={setIsPopupOpened} />
       </main>
     </>
   )

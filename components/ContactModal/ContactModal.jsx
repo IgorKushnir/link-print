@@ -120,6 +120,17 @@ export default function ContactModal ({setIsPopupOpened}) {
               <div className={styles.errorsPatch}></div>
             )}
           </div>
+          <div className={styles.checkboxLabel}>
+              <label>
+                <input
+                  className={styles.checkboxInput}
+                  type="checkbox"
+                  name="confirm"
+                  onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.confirm}
+                />
+                <p>Нажимая кнопку "Отправить" вы соглашаетесь с политикой конфиденциальности</p>
+              </label>
+            </div>
         </div>
         <div className={styles.inputWrapper}>
         <button type="submit" className={styles.button}>Отправить</button>

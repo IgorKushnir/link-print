@@ -129,4 +129,8 @@ button {
   margin-bottom: 80px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (max-width: 615px) {
+        font-size: 1.5rem;
+  }
 }

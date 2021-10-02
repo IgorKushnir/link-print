@@ -9,9 +9,11 @@ import PrinterClasses from '../components/PrinterClasses/PrinterClasses';
 import GetBonus from '../components/GetBonus/GetBonus';
 import Footer from '../components/Footer/Footer';
 import ContactModal from '../components/ContactModal/ContactModal';
+import DownloadModal from '../components/DownloadModal/DownloadModal';
 
 export default function ClassesPage() {
     const [isPopupOpened, setIsPopupOpened] = useState(false);
+    const [isDownloadPopupOpened, setIsDownloadPopupOpened] = useState(false);
     const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
 
     return (
@@ -32,6 +34,7 @@ export default function ClassesPage() {
           <main className={styles.main}>
           <ReactNotification />
             {isPopupOpened && <ContactModal setIsPopupOpened={setIsPopupOpened}/>}
+            {isDownloadPopupOpened && <DownloadModal setIsDownloadPopupOpened={setIsDownloadPopupOpened}/>}
             {isMobileMenuOpened && <MobileMenu setIsMobileMenuOpened={setIsMobileMenuOpened}/>}
             <Header setIsMobileMenuOpened={setIsMobileMenuOpened}/>
             <PrinterClasses setIsPopupOpened={setIsPopupOpened} />
