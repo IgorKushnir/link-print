@@ -9,6 +9,7 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import ContactModal from "../components/ContactModal/ContactModal";
 import DownloadModal from '../components/DownloadModal/DownloadModal';
+import MobileMenu from '../components/MobileMenu/MobileMenu'
 
 export default function ResearchPage() {
   const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);

@@ -28,14 +28,18 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+    flex-wrap: wrap;
 
-    @media (max-width: 615px) {
-        flex-wrap: wrap;
+    & p {
+        @media (max-width: 768px) {
+        margin-bottom: 24px;
+        }
     }
+
 }
 
 .headingWrapper {
-    flex-basis: 50%;
+    flex-basis: 49%;
 
     @media (max-width: 615px) {
         flex-basis: 100%;
@@ -96,7 +100,7 @@
 }
 
 .infoItem {
-    margin-right: 40px;
+    margin-right: 30px;
     margin-bottom: 30px;
     width: 200px;
 
@@ -138,10 +142,8 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+    flex-wrap: wrap;   
 
-    @media (max-width: 615px) {
-     flex-wrap: wrap;   
-    }
 }
 
 .techImg {
@@ -176,7 +178,11 @@
     max-width: 100%;
 }
 
-.video {width: 100%;}
+.video {
+    @media (max-width: 767px) {
+    width: 100%;
+}
+}
 
 .infoSpan {
     font-size: 20px;

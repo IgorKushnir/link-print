@@ -16,6 +16,7 @@ import styles from "./product.module.scss";
 import ProductConstructor from "../../components/ProductConstructor/ProductConstructor";
 import ContactModal from "../../components/ContactModal/ContactModal";
 import DownloadModal from '../../components/DownloadModal/DownloadModal';
+import MobileMenu from '../../components/MobileMenu/MobileMenu'
 
 const useStyles = makeStyles((theme) => ({
   tabs: {
@@ -80,7 +81,7 @@ export default function ProductPage() {
     {isPopupOpened && <ContactModal setIsPopupOpened={setIsPopupOpened} />}
     {isDownloadPopupOpened && <DownloadModal setIsDownloadPopupOpened={setIsDownloadPopupOpened}/>}
         {isMobileMenuOpened && <MobileMenu setIsMobileMenuOpened={setIsMobileMenuOpened}/>}
-      <Header />
+      <Header setIsMobileMenuOpened={setIsMobileMenuOpened} />
       {currentProduct && Object.values(currentProduct).length > 0 && (
         <main className={styles.main}>
           <div ref={container} className="container">

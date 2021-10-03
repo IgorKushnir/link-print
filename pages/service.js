@@ -10,6 +10,7 @@ import GetConsult from '../components/GetConsult/GetConsult';
 import Footer from '../components/Footer/Footer';
 import ContactModal from '../components/ContactModal/ContactModal';
 import DownloadModal from '../components/DownloadModal/DownloadModal';
+import MobileMenu from '../components/MobileMenu/MobileMenu'
 
 export default function ServicePage() {
     const [isPopupOpened, setIsPopupOpened] = useState(false);

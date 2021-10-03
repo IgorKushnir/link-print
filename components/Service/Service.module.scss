@@ -35,10 +35,16 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 24px;
+    flex-wrap: wrap;
 }
 
 .leftGroup {
     flex-basis: 48%;
+
+    @media (max-width: 615px) {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
 }
 
 .innerLeft {
@@ -47,6 +53,10 @@
 
 .rightGroup {
     flex-basis: 50%;
+
+    @media (max-width: 615px) {
+        flex-basis: 100%;
+    }
 }
 
 .img {

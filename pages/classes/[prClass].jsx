@@ -7,6 +7,7 @@ import prClasses from '../api/classes'
 import GetBonus from '../../components/GetBonus/GetBonus'
 import ContactModal from '../../components/ContactModal/ContactModal';
 import DownloadModal from '../../components/DownloadModal/DownloadModal';
+import MobileMenu from '../../components/MobileMenu/MobileMenu'
 import Footer from '../../components/Footer/Footer';
 import styles from './prClass.module.scss'
 

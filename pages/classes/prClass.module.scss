@@ -14,6 +14,7 @@
 .infoWrapper {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .subTitle {
@@ -26,12 +27,21 @@
 
 .infoInnerWrapper {
     flex-basis: 48%;
+
+    @media (max-width: 615px) {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
 }
 
 .info {
     flex-basis: 48%;
     color: #0d0d0d;
     opacity: 0.6;
+
+    @media (max-width: 615px) {
+        flex-basis: 100%;
+    }
 }
 
 .button {
