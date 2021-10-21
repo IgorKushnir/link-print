@@ -11,6 +11,24 @@ import MobileMenu from '../../components/MobileMenu/MobileMenu'
 import Footer from '../../components/Footer/Footer';
 import styles from './prClass.module.scss'
 
+export async function getStaticProps(context) {
+    return {
+      props: {},
+    }
+  }
+
+export async function getStaticPaths() {
+    return {
+      paths: [
+        { params: {prClass: 'hybrid'} },
+        { params: {prClass: 'table'} },
+        { params: {prClass: 'panels'} },
+        { params: {prClass: 'cylindric'} },
+      ],
+      fallback: false
+    };
+  }
+
 export default function PrClassPage () {
     const router = useRouter()
     const [currentClass, setCurrentClass] = useState(null)

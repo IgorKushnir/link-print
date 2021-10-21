@@ -34,6 +34,20 @@ function onReady(event) {
   event.target.pauseVideo();
 }
 
+export async function getStaticProps(context) {
+  return {
+    props: {},
+  }
+}
+
+export async function getStaticPaths() {
+  return {
+    paths: products.map(pr => ({ params: {product: pr.linkVideo} })),
+    fallback: false
+  };
+}
+
+
 export default function ProductPage() {
   const router = useRouter();
 

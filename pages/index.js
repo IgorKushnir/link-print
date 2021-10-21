@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import {useState} from 'react'
 import ReactNotification from 'react-notifications-component'
+import YouTube from 'react-youtube';
 
 import styles from '../styles/Home.module.scss'
 
