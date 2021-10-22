@@ -1,5 +1,4 @@
 import { useEffect, useState, useRef } from "react";
-import { useRouter } from "next/router";
 import { makeStyles } from "@material-ui/core/styles";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
@@ -35,8 +34,11 @@ function onReady(event) {
 }
 
 export async function getStaticProps(context) {
+  const currentProduct = products.find(
+    (pr) => pr.linkVideo.toLocaleLowerCase() === context.params.product
+  )
   return {
-    props: {},
+    props: {currentProduct},
   }
 }
 
@@ -48,10 +50,8 @@ export async function getStaticPaths() {
 }
 
 
-export default function ProductPage() {
-  const router = useRouter();
+export default function ProductPage({currentProduct}) {
 
-  const [currentProduct, setCurrentProduct] = useState(null);
   const [value, setValue] = useState(0);
   const [opts, setOpts] = useState(null);
   const [isPopupOpened, setIsPopupOpened] = useState(false)
@@ -61,20 +61,10 @@ export default function ProductPage() {
   const classes = useStyles();
   const container = useRef(null);
 
-
   useEffect(() => {
-    setCurrentProduct(
-      products.find(
-        (pr) => pr.linkVideo.toLocaleLowerCase() === router.query.product
-      )
-    );
-  }, [router.query.product]);
 
-  useEffect(() => {
-    const windowWidth = container?.clientWidth;
-
-    const width = "750 vw";
-    const height = "450 vw";
+    const width = "75 vw";
+    const height = "45 vw";
 
     setOpts({
       height,
@@ -187,7 +177,7 @@ export default function ProductPage() {
                 <ul>
                   {currentProduct?.videos?.map((video, i) => (
                     <li key={`video_${i}`} className={styles.videoItem}>
-                      <YouTube videoId={video} opts={opts} onReady={onReady} className={styles.video} />
+                      {opts && <YouTube videoId={video} opts={opts} onReady={onReady} className={styles.video} />}
                     </li>
                   ))}
                 </ul>

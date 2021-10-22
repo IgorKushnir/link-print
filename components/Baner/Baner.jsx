@@ -32,7 +32,12 @@ export default function Baner({setIsDownloadPopupOpened, setIsPopupOpened}) {
                 opts={opts}
               />} */}
             <div className={styles.banerWrapper}>
-                <h2 className={styles.heading}>Промышленные УФ принтеры</h2>
+              <div className={styles.infoWrapper}>
+                <Link href="/"><a className={styles.info}>Производство</a></Link>
+                <Link href="/research"><a className={styles.info}>Разработка</a></Link>
+                <Link href="/classes"><a className={styles.info}>Продажа</a></Link>
+              </div>
+                <div className={styles.headingWrapper}><h2 className={styles.heading}>Промышленные</h2><h2 className={styles.heading}>УФ принтеры</h2></div>
     
                 <div className={styles.subheadingWrapper}>
                     <p className={styles.subheading}>18 готовых моделей принтеров для различных задач в наличии</p>

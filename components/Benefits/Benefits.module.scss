@@ -4,6 +4,10 @@
 .title {
     @extend %mainTitle;
     margin-bottom: 40px;
+
+    @media (max-width: 615px) {
+        text-align: center;
+    }
 }
 
 .subheading {

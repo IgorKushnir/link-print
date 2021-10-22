@@ -189,9 +189,9 @@ export default [
         {name: "Рекомендованная влажность", value: "40%-60%"},
       ],
     },
-    link: "/products/fb690r",
+    link: "/products/fb690",
     videos: ["p3L3x0pnNB8", "KS4matSRE_s"],
-    linkVideo: "fb690r",
+    linkVideo: "fb690",
     images: [
       "/img/png/fb690-1.png",
       "/img/png/fb690-2.png",

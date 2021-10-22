@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from 'react'
+import { useState } from 'react'
 import {useRouter} from 'next/router'
 
 import Header from '../../components/Header/Header'
@@ -12,8 +12,9 @@ import Footer from '../../components/Footer/Footer';
 import styles from './prClass.module.scss'
 
 export async function getStaticProps(context) {
+    const currentClass = prClasses[context.params.prClass];
     return {
-      props: {},
+      props: {currentClass},
     }
   }
 
@@ -29,16 +30,11 @@ export async function getStaticPaths() {
     };
   }
 
-export default function PrClassPage () {
+export default function PrClassPage ({currentClass}) {
     const router = useRouter()
-    const [currentClass, setCurrentClass] = useState(null)
     const [isPopupOpened, setIsPopupOpened] = useState(false);
   const [isDownloadPopupOpened, setIsDownloadPopupOpened] = useState(false);
   const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
-
-    useLayoutEffect(() => {
-            setCurrentClass(prClasses[router.query.prClass])
-    }, [router.query.prClass])
 
     return (
         <>
