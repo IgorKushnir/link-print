@@ -27,13 +27,13 @@ export default function Rewards() {
     return (
         <section>
             <div className="container">
-                <h2 className={styles.heading}>Видео отзывы</h2>
+                {/* <h2 className={styles.heading}>Видео отзывы</h2>
                 {opts && <YouTube
                 className={styles.video}
                 videoId="J8-VMaDOXqs"
                 opts={opts}
                 onReady={onReady}
-              />}
+              />} */}
                 <h2 className={styles.heading} style={{scrollMarginTop: 85}} id="rewards">Наши награды</h2>
                 <p className={styles.text}>Мы получили бронзовую медаль на Варшавской выставке RemaDays, за инновационный продукт</p>
                 <img className={styles.image} src="/img/png/prize.png" alt="Remadays prize" />
