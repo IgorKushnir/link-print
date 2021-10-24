@@ -6,11 +6,15 @@
     min-height: 100vh;
     height: 100vh;
     max-height: 100vh;
-    background-image:  url('/img/jpg/banner4.jpg');
+    background-image:  url('/img/jpg/banner5.jpg');
     background-size: cover;
     background-position: center top;
     position: relative;
     padding: 0;
+
+    @media (max-width: 615px) {
+        background-position: 43% 0%;
+    }
 }
 
 .banerWrapper {
