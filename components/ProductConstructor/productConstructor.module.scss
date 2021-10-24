@@ -61,6 +61,8 @@
     width: 1px;
     height: 1px;
     position: relative;
+    appearance: none;
+    cursor: pointer;
 
     &::before {
         content: '';
