@@ -8,9 +8,11 @@ import GetBonus from "../components/GetBonus/GetBonus";
 import Footer from "../components/Footer/Footer";
 import ContactModal from "../components/ContactModal/ContactModal";
 import DownloadModal from '../components/DownloadModal/DownloadModal';
-import MobileMenu from '../components/MobileMenu/MobileMenu'
+import MobileMenu from '../components/MobileMenu/MobileMenu';
+import SurveyModal from '../components/SurveyModal/SurveyModal';
 
 export default function AboutPage() {
+  const [isSurveyPopupOpened, setIsSurveyPopupOpened] = useState(false);
   const [isPopupOpened, setIsPopupOpened] = useState(false);
   const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
   const [isDownloadPopupOpened, setIsDownloadPopupOpened] = useState(false);
@@ -41,6 +43,7 @@ export default function AboutPage() {
 
       <main className={styles.main}>
         {isPopupOpened && <ContactModal setIsPopupOpened={setIsPopupOpened} />}
+        {isSurveyPopupOpened && <SurveyModal setIsSurveyPopupOpened={setIsSurveyPopupOpened}/>}
         {isDownloadPopupOpened && <DownloadModal setIsDownloadPopupOpened={setIsDownloadPopupOpened}/>}
         {isMobileMenuOpened && (
           <MobileMenu setIsMobileMenuOpened={setIsMobileMenuOpened} />
@@ -367,7 +370,7 @@ export default function AboutPage() {
             <p className={styles.text}>Запрошуємо до спільної роботи!</p>
           </div>
         </section>
-        <GetBonus setIsPopupOpened={setIsPopupOpened} />
+        <GetBonus setIsSurveyPopupOpened={setIsSurveyPopupOpened} />
         <Footer setIsDownloadPopupOpened={setIsDownloadPopupOpened} setIsPopupOpened={setIsPopupOpened} />
       </main>
     </>

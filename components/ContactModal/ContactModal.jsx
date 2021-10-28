@@ -38,8 +38,14 @@ export default function ContactModal ({setIsPopupOpened}) {
         },
       });
 
+      const closeModal = (e) => {
+        if (e.target === e.currentTarget) {
+          setIsPopupOpened(false)
+        }
+      }
+
     return (
-        <div className={styles.backdrop}>
+        <div className={styles.backdrop} onClick={closeModal}>
             <div className={styles.container}>
                 <button type="button" className={styles.closeButton} onClick={() => setIsPopupOpened(false)}>
                     <img className={styles.closeIcon} src="/img/png/Cancel.png" />

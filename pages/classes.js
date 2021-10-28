@@ -11,9 +11,11 @@ import Footer from '../components/Footer/Footer';
 import ContactModal from '../components/ContactModal/ContactModal';
 import DownloadModal from '../components/DownloadModal/DownloadModal';
 import MobileMenu from '../components/MobileMenu/MobileMenu'
+import SurveyModal from '../components/SurveyModal/SurveyModal';
 
 export default function ClassesPage() {
     const [isPopupOpened, setIsPopupOpened] = useState(false);
+    const [isSurveyPopupOpened, setIsSurveyPopupOpened] = useState(false);
     const [isDownloadPopupOpened, setIsDownloadPopupOpened] = useState(false);
     const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
 
@@ -35,11 +37,12 @@ export default function ClassesPage() {
           <main className={styles.main}>
           <ReactNotification />
             {isPopupOpened && <ContactModal setIsPopupOpened={setIsPopupOpened}/>}
+            {isSurveyPopupOpened && <SurveyModal setIsSurveyPopupOpened={setIsSurveyPopupOpened}/>}
             {isDownloadPopupOpened && <DownloadModal setIsDownloadPopupOpened={setIsDownloadPopupOpened}/>}
             {isMobileMenuOpened && <MobileMenu setIsMobileMenuOpened={setIsMobileMenuOpened}/>}
             <Header setIsMobileMenuOpened={setIsMobileMenuOpened}/>
             <PrinterClasses setIsPopupOpened={setIsPopupOpened} />
-        <GetBonus setIsPopupOpened={setIsPopupOpened}/>
+        <GetBonus setIsSurveyPopupOpened={setIsSurveyPopupOpened}/>
         <Footer />
             </main>
         </>

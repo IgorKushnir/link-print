@@ -15,7 +15,8 @@ import styles from "./product.module.scss";
 import ProductConstructor from "../../components/ProductConstructor/ProductConstructor";
 import ContactModal from "../../components/ContactModal/ContactModal";
 import DownloadModal from '../../components/DownloadModal/DownloadModal';
-import MobileMenu from '../../components/MobileMenu/MobileMenu'
+import MobileMenu from '../../components/MobileMenu/MobileMenu';
+import SurveyModal from '../../components/SurveyModal/SurveyModal';
 
 const useStyles = makeStyles((theme) => ({
   tabs: {
@@ -54,7 +55,8 @@ export default function ProductPage({currentProduct}) {
 
   const [value, setValue] = useState(0);
   const [opts, setOpts] = useState(null);
-  const [isPopupOpened, setIsPopupOpened] = useState(false)
+  const [isPopupOpened, setIsPopupOpened] = useState(false);
+  const [isSurveyPopupOpened, setIsSurveyPopupOpened] = useState(false);
   const [isDownloadPopupOpened, setIsDownloadPopupOpened] = useState(false);
   const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
 
@@ -83,6 +85,7 @@ export default function ProductPage({currentProduct}) {
     <>
     <ReactNotification />
     {isPopupOpened && <ContactModal setIsPopupOpened={setIsPopupOpened} />}
+    {isSurveyPopupOpened && <SurveyModal setIsSurveyPopupOpened={setIsSurveyPopupOpened}/>}
     {isDownloadPopupOpened && <DownloadModal setIsDownloadPopupOpened={setIsDownloadPopupOpened}/>}
         {isMobileMenuOpened && <MobileMenu setIsMobileMenuOpened={setIsMobileMenuOpened}/>}
       <Header setIsMobileMenuOpened={setIsMobileMenuOpened} />
@@ -169,7 +172,7 @@ export default function ProductPage({currentProduct}) {
                 </>
               )}
             </div>
-            <GetBonus setIsPopupOpened={setIsPopupOpened} />
+            <GetBonus setIsSurveyPopupOpened={setIsSurveyPopupOpened} />
 
             {currentProduct?.videos?.length > 0 && (
               <div className="container">

@@ -157,6 +157,7 @@
     @extend %buttonColor;
     margin-bottom: 24px;
     width: 270px;
+    height: 80px;
 
     @media (min-width: 550px) {
         &:not(:last-of-type) {

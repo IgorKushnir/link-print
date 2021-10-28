@@ -7,6 +7,7 @@ import prClasses from '../api/classes'
 import GetBonus from '../../components/GetBonus/GetBonus'
 import ContactModal from '../../components/ContactModal/ContactModal';
 import DownloadModal from '../../components/DownloadModal/DownloadModal';
+import SurveyModal from '../../components/SurveyModal/SurveyModal';
 import MobileMenu from '../../components/MobileMenu/MobileMenu'
 import Footer from '../../components/Footer/Footer';
 import styles from './prClass.module.scss'
@@ -33,6 +34,7 @@ export async function getStaticPaths() {
 export default function PrClassPage ({currentClass}) {
     const router = useRouter()
     const [isPopupOpened, setIsPopupOpened] = useState(false);
+    const [isSurveyPopupOpened, setIsSurveyPopupOpened] = useState(false);
   const [isDownloadPopupOpened, setIsDownloadPopupOpened] = useState(false);
   const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
 
@@ -40,6 +42,7 @@ export default function PrClassPage ({currentClass}) {
         <>
         <Header setIsMobileMenuOpened={setIsMobileMenuOpened} />
         {isPopupOpened && <ContactModal setIsPopupOpened={setIsPopupOpened}/>}
+        {isSurveyPopupOpened && <SurveyModal setIsSurveyPopupOpened={setIsSurveyPopupOpened}/>}
         {isDownloadPopupOpened && <DownloadModal setIsDownloadPopupOpened={setIsDownloadPopupOpened}/>}
         {isMobileMenuOpened && <MobileMenu setIsMobileMenuOpened={setIsMobileMenuOpened}/>}
             {currentClass && <main className={styles.main}>
@@ -54,7 +57,7 @@ export default function PrClassPage ({currentClass}) {
                     </div>
                     <ProductsList products={currentClass.printers} setIsPopupOpened={setIsPopupOpened} />
                     </div>
-                    <GetBonus setIsPopupOpened={setIsPopupOpened} />
+                    <GetBonus setIsSurveyPopupOpened={setIsSurveyPopupOpened} />
                     <Footer setIsDownloadPopupOpened={setIsDownloadPopupOpened} setIsPopupOpened={setIsPopupOpened} />
             </main>}
         </>

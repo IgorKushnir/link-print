@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import {useState} from 'react'
 import ReactNotification from 'react-notifications-component'
-import YouTube from 'react-youtube';
 
 import styles from '../styles/Home.module.scss'
 
@@ -18,6 +17,7 @@ import GetBonus from '../components/GetBonus/GetBonus';
 import GetConsult from '../components/GetConsult/GetConsult';
 import ContactModal from '../components/ContactModal/ContactModal';
 import DownloadModal from '../components/DownloadModal/DownloadModal';
+import SurveyModal from '../components/SurveyModal/SurveyModal';
 import Benefits from '../components/Benefits/Benefits';
 import Footer from '../components/Footer/Footer';
 // import Service from '../components/Service/Service'
@@ -31,6 +31,7 @@ import Footer from '../components/Footer/Footer';
 export default function Home() {
   const [isPopupOpened, setIsPopupOpened] = useState(false);
   const [isDownloadPopupOpened, setIsDownloadPopupOpened] = useState(false);
+  const [isSurveyPopupOpened, setIsSurveyPopupOpened] = useState(false);
   const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
 
   return (
@@ -51,13 +52,14 @@ export default function Home() {
       <main className={styles.main}>
       <ReactNotification />
         {isPopupOpened && <ContactModal setIsPopupOpened={setIsPopupOpened}/>}
+        {isSurveyPopupOpened && <SurveyModal setIsSurveyPopupOpened={setIsSurveyPopupOpened}/>}
         {isDownloadPopupOpened && <DownloadModal setIsDownloadPopupOpened={setIsDownloadPopupOpened}/>}
         {isMobileMenuOpened && <MobileMenu setIsMobileMenuOpened={setIsMobileMenuOpened}/>}
         <Header setIsMobileMenuOpened={setIsMobileMenuOpened}/>
         <Baner setIsPopupOpened={setIsPopupOpened} setIsDownloadPopupOpened={setIsDownloadPopupOpened} />
         <ProductsList products={products} setIsPopupOpened={setIsPopupOpened}/>
         <PrinterClasses setIsPopupOpened={setIsPopupOpened} />
-        <GetBonus setIsPopupOpened={setIsPopupOpened}/>
+        <GetBonus setIsSurveyPopupOpened={setIsSurveyPopupOpened}/>
         <Benefits />
         {/* <Service /> */}
         {/* <InksList setIsPopupOpened={setIsPopupOpened} setPopupProduct={setPopupProduct}/> */}

@@ -1,35 +1,25 @@
-import Head from "next/head";
-import { useState } from "react";
 import { useFormik } from "formik";
 
-import styles from "../styles/Home.module.scss";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
-import constructor from "./api/constructor";
-import ContactModal from "../components/ContactModal/ContactModal";
-import DownloadModal from "../components/DownloadModal/DownloadModal";
-import MobileMenu from "../components/MobileMenu/MobileMenu";
+import { createNotification } from "../Notifications/notifications";
+import { sendContantForm } from "../../pages/api/externalAPI";
+import styles from "./SurveyModal.module.scss";
+import constructor from "../../pages/api/constructor";
 
-export default function ResearchPage() {
-  const [isPopupOpened, setIsPopupOpened] = useState(false);
-  const [isDownloadPopupOpened, setIsDownloadPopupOpened] = useState(false);
-  const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
+export default function SurveyModal({ setIsSurveyPopupOpened }) {
 
-  const formik = useFormik({
-    initialValues: {
-      printType: "",
-      materialType: "",
-      headType: "",
-      printSpeed: 0,
-      colorModel: "",
-      inkType: "",
-      maxGabarity: "",
-      material: "",
-      comments: "",
-      clientName: "",
-      clientPhone: "",
-      clientEmail: "",
-    },
+    const formik = useFormik({
+        initialValues: {
+          printType: "",
+          materialType: "",
+          printSpeed: 0,
+          maxGabarity: "",
+          minGabarity: "",
+          material: "",
+          comments: "",
+          clientName: "",
+          clientPhone: "",
+          clientEmail: "",
+        },
 
     onSubmit: (values) => {
       sendContantForm(values)
@@ -40,7 +30,8 @@ export default function ResearchPage() {
               "success",
               "Благодарим за Ваше обращение! Мы скоро с Вами свяжемся."
             );
-            // formik.resetForm();
+            formik.resetForm();
+            setIsPopupOpened(false);
           }
         })
         .catch(() => {
@@ -53,58 +44,32 @@ export default function ResearchPage() {
     },
   });
 
-  return (
-    <>
-      <Head>
-        <title>УФ принтера Link Print</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Продажа UV оборудования. Пробный принт. Заказать пробную печать на принтере"
-        />
-        <meta
-          name="keywords"
-          content="Link Print Украина, линк принт Украина, Linkprint, link print, Продажа UV оборудования, Пробный принт, купить уф принтер, купить uv принтер, уф печать, uv печать, uvпечать, уф гибридный принтер, Уф принтер Планшетный"
-        />
-        <meta property="og:url" content="https://www.linkprint.com.ua/" />
-        <meta property="og:title" content="УФ принтера" />
-        <meta
-          property="og:description"
-          content="Продажа UV оборудования. Пробный принт. Заказать пробную печать на принтере"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="" />
-        <link rel="canonical" href="https://www.linkprint.com.ua/" />
-      </Head>
+  const closeModal = (e) => {
+    if (e.target === e.currentTarget) {
+      setIsSurveyPopupOpened(false)
+    }
+  }
 
-      <main className={styles.main}>
-        {isPopupOpened && <ContactModal setIsPopupOpened={setIsPopupOpened} />}
-        {isDownloadPopupOpened && (
-          <DownloadModal setIsDownloadPopupOpened={setIsDownloadPopupOpened} />
-        )}
-        {isMobileMenuOpened && (
-          <MobileMenu setIsMobileMenuOpened={setIsMobileMenuOpened} />
-        )}
-        <Header setIsMobileMenuOpened={setIsMobileMenuOpened} />
-        <section className={styles.contacts} id="contacts">
-          <div className="container">
-            <h2 className={styles.heading}>КОНСТРУКТОР ПРИНТЕРА</h2>
-            <div className={styles.headingWrap}>
-              <div className={styles.leftPart}>
-                <p className={styles.spec}>
-                  ПОСТРОЙТЕ ВМЕСТЕ С НАМИ ПРИНТЕР, КОТОРЫЙ РЕШАЕТ ИМЕННО ВАШИ
-                  ЗАДАЧИ
-                </p>
-              </div>
-              <div className={styles.rightPart}>
-                <p>
-                  С помощью данного конструктора вы можете самостоятельно
-                  собрать принтер который подходит под ваши производственные
-                  потребности
-                </p>
-              </div>
-            </div>
-            <form onSubmit={formik.handleSubmit}>
+  return (
+    <div className={styles.backdrop} onClick={closeModal}>
+      <div className={styles.container}>
+        <button
+          type="button"
+          className={styles.closeButton}
+          onClick={() => setIsSurveyPopupOpened(false)}
+        >
+          <img className={styles.closeIcon} src="/img/png/Cancel.png" />
+        </button>
+        <div className={styles.wrapper}>
+          <h3 className={styles.title}>
+            ПОЛУЧИТЬ СТАРТОВЫЙ КОМПЛЕКТ КРАСКИ БЕСПЛАТНО
+          </h3>
+          <p className={styles.description}>
+            Ответьте на 10 вопросов и соберите свою модификацию принтера,
+            которая решит задачи вашего производства получите стартовый комплект
+            краски бесплатно
+          </p>
+          <form onSubmit={formik.handleSubmit}>
               <div className={styles.infoBlock}>
                 <ul>
                   {constructor?.info1?.map((e, i) => (
@@ -172,7 +137,6 @@ export default function ResearchPage() {
                   <input
                     type="text"
                     name="maxGabarity"
-                    required
                     placeholder="Максимальные габариты изделия"
                     className={styles.textInput}
                     onChange={formik.handleChange}
@@ -182,6 +146,28 @@ export default function ResearchPage() {
                   {formik.errors.maxGabarity && formik.touched.maxGabarity ? (
                     <small className={styles.errors}>
                       {formik.errors.maxGabarity}
+                    </small>
+                  ) : (
+                    <div className={styles.errorsPatch}></div>
+                  )}
+                </div>
+
+                <div className={styles.inputWrapper}>
+                  <label htmlFor="minGabarity" className={styles.textLabel}>
+                    Минимальные габариты изделия
+                  </label>
+                  <input
+                    type="text"
+                    name="minGabarity"
+                    placeholder="Минимальные габариты изделия"
+                    className={styles.textInput}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.minGabarity}
+                  />
+                  {formik.errors.minGabarity && formik.touched.minGabarity ? (
+                    <small className={styles.errors}>
+                      {formik.errors.minGabarity}
                     </small>
                   ) : (
                     <div className={styles.errorsPatch}></div>
@@ -213,26 +199,6 @@ export default function ResearchPage() {
               </div>
 
               <div className={styles.infoBlock}>
-                <h4 className={styles.constructSubheading}>Тип голов</h4>
-                {constructor?.headType?.map((e, i) => (
-                  <div key={`headType_${i}`} className={styles.radioWrap}>
-                    <input
-                      type="radio"
-                      name="headType"
-                      onChange={formik.handleChange}
-                      onBlur={formik.handleBlur}
-                      value={e.value}
-                      id={e.value}
-                      className={styles.radio}
-                    />
-                    <label className={styles.radioLabel} htmlFor={e.value}>
-                      {e.name}
-                    </label>
-                  </div>
-                ))}
-              </div>
-
-              <div className={styles.infoBlock}>
                 <h4 className={styles.constructSubheading}>Скорость печати</h4>
 
                 <div className={styles.radioWrap}>
@@ -258,61 +224,6 @@ export default function ResearchPage() {
                     </p>
                   </div>
                 </div>
-              </div>
-
-              <div className={styles.infoBlock}>
-                <h4 className={styles.constructSubheading}>Цветовая модель</h4>
-                {constructor?.colorModel?.map((e, i) => (
-                  <div key={`headType_${i}`} className={styles.radioWrap}>
-                    <input
-                      type="radio"
-                      name="colorModel"
-                      onChange={formik.handleChange}
-                      onBlur={formik.handleBlur}
-                      value={e.value}
-                      id={e.value}
-                      className={styles.radio}
-                    />
-                    <label className={styles.radioLabel} htmlFor={e.value}>
-                      {e.name}
-                    </label>
-                  </div>
-                ))}
-              </div>
-
-              <div className={styles.infoBlock}>
-                <ul>
-                  {constructor?.info2?.map((e, i) => (
-                    <li key={`info2_${i}`}>
-                      <p>
-                        {e?.name}:{" "}
-                        <span className={styles.infoSpan2}>{e?.value}</span>
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className={styles.infoBlock}>
-                <h4 className={styles.constructSubheading}>
-                  Типы используемых чернил
-                </h4>
-                {constructor?.inkType?.map((e, i) => (
-                  <div key={`inkType_${i}`} className={styles.radioWrap}>
-                    <input
-                      type="radio"
-                      name="inkType"
-                      onChange={formik.handleChange}
-                      onBlur={formik.handleBlur}
-                      value={e.value}
-                      id={e.value}
-                      className={styles.radio}
-                    />
-                    <label className={styles.radioLabel} htmlFor={e.value}>
-                      {e.name}
-                    </label>
-                  </div>
-                ))}
               </div>
 
               <div className={styles.infoBlock}>
@@ -414,13 +325,8 @@ export default function ResearchPage() {
                 </button>
               </div>
             </form>
-          </div>
-        </section>
-        <Footer
-          setIsDownloadPopupOpened={setIsDownloadPopupOpened}
-          setIsPopupOpened={setIsPopupOpened}
-        />
-      </main>
-    </>
+        </div>
+      </div>
+    </div>
   );
 }
