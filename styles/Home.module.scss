@@ -52,6 +52,11 @@ width: 100%;
 
 .rightPart {
     flex-basis: 49%;
+
+    @media (max-width: 615px) {
+        flex-basis: 100%;
+        text-align: center;
+    }
 }
 
 .spec {
@@ -62,6 +67,10 @@ width: 100%;
 
     @media (max-width: 768px) {
         margin-bottom: 24px;
+    }
+
+    @media (max-width: 615px) {
+        text-align: center;
     }
 }
 
@@ -83,6 +92,11 @@ width: 100%;
     max-width: 60%;
     padding-top: 40px;
     margin-bottom: 40px;
+
+    @media (max-width: 615px) {
+        max-width: 100%;
+        text-align: center;
+    }
 }
 
 
@@ -115,6 +129,7 @@ width: 100%;
     flex-wrap: wrap;
 
     @media (max-width: 615px) {
+        justify-content: center;
         padding: 40px 20px;
     }
 }
@@ -125,6 +140,7 @@ width: 100%;
     @media (max-width: 615px) {
         flex-basis: 90%;
         margin-bottom: 20px;
+        text-align: center;
     }
 }
 
@@ -152,6 +168,9 @@ width: 100%;
 
     @media (max-width: 615px) {
         flex-basis: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 }
 
@@ -160,6 +179,10 @@ width: 100%;
     flex-basis: 48%;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @media (max-width: 615px) {
+        justify-content: center;
+    }
 }
 
 .whiteButton {
@@ -167,6 +190,10 @@ width: 100%;
     @extend %buttonMd;
     @extend %buttonLight;
     margin-right: 24px;
+
+    @media (max-width: 615px) {
+        margin-right: 0;
+    }
 }
 
 .transparentButton {

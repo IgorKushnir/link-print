@@ -15,6 +15,9 @@ export default function SurveyModal({ setIsSurveyPopupOpened }) {
           maxGabarity: "",
           minGabarity: "",
           material: "",
+          headType: "",
+          colorModel: "",
+          inkType: "",
           comments: "",
           clientName: "",
           clientPhone: "",
@@ -198,6 +201,27 @@ export default function SurveyModal({ setIsSurveyPopupOpened }) {
                 </div>
               </div>
 
+              
+              <div className={styles.infoBlock}>
+                <h4 className={styles.constructSubheading}>Тип голов</h4>
+                {constructor?.headType?.map((e, i) => (
+                  <div key={`headType_${i}`} className={styles.radioWrap}>
+                    <input
+                      type="radio"
+                      name="headType"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={e.value}
+                      id={e.value}
+                      className={styles.radio}
+                    />
+                    <label className={styles.radioLabel} htmlFor={e.value}>
+                      {e.name}
+                    </label>
+                  </div>
+                ))}
+              </div>
+
               <div className={styles.infoBlock}>
                 <h4 className={styles.constructSubheading}>Скорость печати</h4>
 
@@ -225,6 +249,49 @@ export default function SurveyModal({ setIsSurveyPopupOpened }) {
                   </div>
                 </div>
               </div>
+
+              <div className={styles.infoBlock}>
+                <h4 className={styles.constructSubheading}>Цветовая модель</h4>
+                {constructor?.colorModel?.map((e, i) => (
+                  <div key={`headType_${i}`} className={styles.radioWrap}>
+                    <input
+                      type="radio"
+                      name="colorModel"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={e.value}
+                      id={e.value}
+                      className={styles.radio}
+                    />
+                    <label className={styles.radioLabel} htmlFor={e.value}>
+                      {e.name}
+                    </label>
+                  </div>
+                ))}
+              </div>
+
+              <div className={styles.infoBlock}>
+                <h4 className={styles.constructSubheading}>
+                  Типы используемых чернил
+                </h4>
+                {constructor?.inkType?.map((e, i) => (
+                  <div key={`inkType_${i}`} className={styles.radioWrap}>
+                    <input
+                      type="radio"
+                      name="inkType"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={e.value}
+                      id={e.value}
+                      className={styles.radio}
+                    />
+                    <label className={styles.radioLabel} htmlFor={e.value}>
+                      {e.name}
+                    </label>
+                  </div>
+                ))}
+              </div>
+
 
               <div className={styles.infoBlock}>
                 <div className={styles.inputWrapper}>

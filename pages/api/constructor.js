@@ -37,6 +37,9 @@ export default {
         {name: "RICOH GEN6 (MH5320/5440 - 5pl)", value: "RICOH GEN6 (MH5320/5440 - 5pl)"},
         {name: "RICOH Gen5s (MH5220 - 2.5pl)", value: "RICOH Gen5s (MH5220 - 2.5pl)"},
         {name: "RICOH GH2220 (GH2220 3pl)", value: "RICOH GH2220 (GH2220 3pl)"},
+        {name: "KM1024i (6pl)", value: "KM1024i (6pl)"},
+        {name: "KM1024i (13pl)", value: "KM1024i (13pl)"},
+        {name: "KM1800i (3,5pl)", value: "KM1800i (3,5pl)"},
       ],
       printSpeedMax: 1500,
       colorModel: [

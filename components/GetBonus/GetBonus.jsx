@@ -8,7 +8,7 @@ export default function GetBonus ({setIsSurveyPopupOpened}) {
                     ПОЛУЧИТЬ СТАРТОВЫЙ КОМПЛЕКТ КРАСКИ БЕСПЛАТНО
                 </h2>
                 <p className={styles.subTitle}>
-                    Cоберите свою модификацию принтера, которая решит задачи вашего производства и 
+                Ответьте на 10 вопросов, соберите свою модификацию принтера, которая решит задачи вашего производства и 
                     <span>получите стартовый комплект краски бесплатно</span>
                 </p>
                 <button className={styles.button} onClick={() => setIsSurveyPopupOpened(true)}>Ответить на вопросы и получить комплект краски бесплатно</button>

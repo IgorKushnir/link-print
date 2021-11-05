@@ -24,6 +24,10 @@ text-align: center;
 .item {
     flex-basis: 48%;
     margin-bottom: 40px;
+
+    @media (max-width: 615px) {
+        flex-basis: 100%;
+    }
 }
 
 .titleWrap {

@@ -14,12 +14,20 @@
     @media (max-width: 768px) {
         padding-left: 0;
     }
+
+    @media (max-width: 615px) {
+        text-align: center;
+    }
 }
 
 .title2 {
     @extend %mainTitle;
     color: #fff;
     margin-bottom: 40px;
+
+    @media (max-width: 615px) {
+        text-align: center;
+    }
 }
 
 .subTitle {
@@ -35,6 +43,7 @@
 
     @media (max-width: 615px) {
         width: 100%;
+        text-align: center;
     }
 }
 

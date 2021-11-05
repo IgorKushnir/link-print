@@ -9,6 +9,10 @@
     @extend %mainTitle;
     max-width: 860px;
     margin-bottom: 40px;
+
+    @media (max-width: 615px) {
+        text-align: center;
+    }
 }
 
 .infoWrapper {
@@ -23,6 +27,10 @@
     color: $color-main;
     font-weight: 700;
     margin-bottom: 40px;
+
+    @media (max-width: 615px) {
+        text-align: center;
+    }
 }
 
 .infoInnerWrapper {
@@ -48,4 +56,8 @@
     @extend %button;
     @extend %buttonMd;
     @extend %buttonColor;
+
+    @media (max-width: 615px) {
+        margin: 0 auto;
+    }
 }

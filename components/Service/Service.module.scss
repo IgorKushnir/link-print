@@ -5,6 +5,10 @@
     @extend %mainTitle;
     margin-bottom: 40px;
     text-transform: uppercase;
+
+    @media (max-width: 615px) {
+        text-align: center;
+    }
 }
 
 .subheading {
@@ -76,4 +80,8 @@
     @extend %button;
     @extend %buttonMd;
     @extend %buttonColor;
+
+    @media (max-width: 615px) {
+        margin: 0 auto;
+    }
 }
