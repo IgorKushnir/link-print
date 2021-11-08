@@ -1,16 +1,28 @@
+@import '../../styles/variables.scss';
+
+
+.item {
+    &:nth-of-type(2n) {
+        padding-left: 100px;
+    }
+    
+    &:not(:last-of-type) {
+        margin-bottom: 60px;
+    }
+}
+
 .text {
     line-height: 1.4;
-    color: #fff;
-    text-align: center;
     margin-bottom: 30px;
 }
 
 .author {
-    color: #fff;
-    text-align: center;
+    color: $color-main;
+    margin-bottom: 6px;
 }
 
 .location {
-    color: #fff;
-    text-align: center;
+    color: $color-main;
+    margin-bottom: 20px;
+    font-size: 14px;
 }

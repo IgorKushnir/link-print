@@ -1,3 +1,489 @@
+@import './placeholders.scss';
+@import './variables.scss';
+
+
+.heading {
+    @extend %mainTitle;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+}
+
+.subheading {
+    margin-bottom: 36px;
+}
+
+.text {
+    margin-bottom: 24px;
+
+    & span {
+        font-weight: 600;
+    }
+}
+
+.span {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.img {
+    max-width: 80%;
+}
+
+
 .main {
 width: 100%;
+}
+
+.headingWrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.leftPart {
+    flex-basis: 49%;
+
+    @media (max-width: 615px) {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.rightPart {
+    flex-basis: 49%;
+
+    @media (max-width: 615px) {
+        flex-basis: 100%;
+        text-align: center;
+    }
+}
+
+.spec {
+    color: $color-main;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 80px;
+
+    @media (max-width: 768px) {
+        margin-bottom: 24px;
+    }
+
+    @media (max-width: 615px) {
+        text-align: center;
+    }
+}
+
+.buttonsWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    @extend %button;
+    @extend %buttonMd;
+    @extend %buttonColor;
+}
+
+
+.infoTitle {
+    @extend %mainTitle;
+    max-width: 60%;
+    padding-top: 40px;
+    margin-bottom: 40px;
+
+    @media (max-width: 615px) {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+
+.techItem {
+    display: flex;
+    margin-bottom: 40px;
+
+    @media (max-width: 615px) {
+        flex-wrap: wrap;
+    }
+}
+
+.techImg {
+    width: 50%;
+    margin-right: 30px;
+}
+
+.techTitle {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+
+.individualWrapper {
+    padding: 40px 80px;
+    background-color: $color-main;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media (max-width: 615px) {
+        justify-content: center;
+        padding: 40px 20px;
+    }
+}
+
+.textWrapper {
+    flex-basis: 48%; 
+
+    @media (max-width: 615px) {
+        flex-basis: 90%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+.individualHeading {
+    @extend %secondaryTitle;
+    @extend %whiteDiePseudo;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 22px;
+
+    &::before {
+        top: 6px;
+        left: -80px;
+    }
+}
+
+.textWhite {
+    color: #fff;
+}
+
+.buttonsWrapper {
+    display: flex;
+    flex-basis: 48%;
+    justify-content: flex-end;
+
+    @media (max-width: 615px) {
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+.buttonsTopWrapper {
+    display: flex;
+    flex-basis: 48%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (max-width: 615px) {
+        justify-content: center;
+    }
+}
+
+.whiteButton {
+    @extend %button;
+    @extend %buttonMd;
+    @extend %buttonLight;
+    margin-right: 24px;
+
+    @media (max-width: 615px) {
+        margin-right: 0;
+    }
+}
+
+.transparentButton {
+    @extend %button;
+    @extend %buttonMd;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.infoSpan {
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 12px;
+}
+
+.infoBlock {
+    margin-bottom: 40px;
+}
+
+.characteristicsList {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.characteristicsItem {
+    flex-basis: 50%;
+    margin-bottom: 6px;
+}
+
+.constructHeading {
+    font-size: 24px;
+    font-weight: 500;
+    max-width: 500px;
+    text-align: center;
+    margin: 40px auto 60px;
+}
+
+.constructName {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.infoSpan2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 12px;
+}
+
+.constructSubheading {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.radio {
+    width: 1px;
+    height: 1px;
+    position: relative;
+    appearance: none;
+    cursor: pointer;
+
+    &::before {
+        content: '';
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 1px solid #000;
+        position: absolute;
+        top: -15px;
+        left: -5px;
+    }
+
+    &:checked {
+        &::after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #000;
+            position: absolute;
+            top: -11px;
+            left: -1px;
+        }
+    }
+}
+
+.radioLabel {
+    margin: 0px 12px;
+    position: relative;
+    padding-left: 12px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.radioWrap {
+    margin-bottom: 8px;
+}
+
+.rangeInput {
+    width: 100%;
+    appearance: none;
+    background-color: #636363;
+
+    &::-webkit-slider-runnable-track {
+        border-radius: 2px;
+        height: 2px;
+        background-color: #000;
+      }
+      &::-webkit-slider-thumb {
+        background: #000;
+        border-radius: 50%;
+        cursor: pointer;
+        width:20px;
+        height: 20px;
+        -webkit-appearance: none;
+        transform: translateY(-50%);
+      }
+  
+      &::-moz-range-track {
+        border-radius: 2px;
+        height: 2px;
+        background-color: #000;
+      }
+     &::-moz-range-thumb {
+          background: #000;
+          border-radius: 50%;
+          cursor: pointer;
+          width:20px;
+        height: 20px;
+        transform: translateY(-50%);
+      }
+}
+
+.rangeInfoWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0px;
+}
+
+.rangeMainInfoWrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 12px;
+}
+
+.checkboxLabel {
+    margin-bottom: 12px;
+
+    & p {
+padding-left: 30px;
+    }
+}
+
+.checkboxInput {
+    width: 1px;
+    height: 1px;
+    margin-right: 12px;
+    position: relative;
+
+    &::before {
+        content: '';position: absolute;
+        top: 3px; left: 0px; 
+        border: 2px solid #000;
+        width: 14px; height: 14px;
+    }
+
+    &:checked {
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 7px;
+            top: 6px;
+            width: 3px;
+            height: 8px;
+            border: solid #000;
+            border-width: 0 2px 2px 0;transform: rotate(45deg);
+        }
+    }
+}
+
+.ripImg {
+    width: 350px;
+    max-height: 400px;
+    margin-top: 16px;
+}
+
+.ripWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.labelRip {
+    font-size: 20px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+.checkboxRip {
+    width: 1px;
+    height: 1px;
+}
+
+.checkboxRip:checked {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 30px;
+        left: 10px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #212121;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 40px;
+        left: 17px;
+        display: block;
+        width: 18px;
+        height: 13px;
+        background-image: url('/img/svg/check.svg');
+    }
+}
+
+
+.inputWrapper {
+    display: block;
+    
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.textLabel {
+    font-size: $font-size-subheading;
+    display: block;
+    margin-bottom: 20px;
+    
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.textInput {
+    display: block;
+    font-size: $font-size-subheading;
+    background: transparent;
+    border: 1px solid #000;
+    border-radius: 10px;
+    width: 100%;
+    height: 56px;
+    padding: 12px;
+}
+
+.button {
+    @extend %button;
+    @extend %buttonMd;
+    display: block;
+    width: 136px;
+    color: #fff;
+}
+
+.buttonBig {
+    @extend %button;
+    @extend %buttonMd;
+    display: block;
+    color: #fff;
+
+    @media (max-width: 768px) {
+        &:not(:last-of-type) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.errors {
+    display: block;
+    height: 20px;
+    font-size: 14px;
+    color: red;
+}
+
+.errorsPatch {
+    height: 20px;
 }

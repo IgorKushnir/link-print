@@ -1,9 +1,10 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { store } from 'react-notifications-component';
+
 
 import styles from './ContactUs.module.scss';
 import {sendContantForm} from '../../pages/api/externalAPI';
+import {createNotification} from '../../components/Notifications/notifications'
 
 const ContactSchema = Yup.object().shape({
     name: Yup.string().min(2, 'Имя слишком короткое')
@@ -14,23 +15,6 @@ const ContactSchema = Yup.object().shape({
 })
 
 export default function ContactUs () {
-
-    const createNotification = (title, type, text) => {
-        
-        store.addNotification({
-            title: title,
-            message: text,
-            type: type,
-            insert: "top",
-            container: "top-right",
-            animationIn: ["animate__animated", "animate__fadeIn"],
-            animationOut: ["animate__animated", "animate__fadeOut"],
-            dismiss: {
-              duration: 3000,
-              onScreen: true
-            }
-          });
-    }
 
     const formik = useFormik({
         initialValues: {

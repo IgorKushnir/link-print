@@ -1,20 +1,24 @@
 @import '../../styles/placeholders.scss';
+@import '../../styles/variables.scss';
 
-.contacts {
-    background-color: #212F3D;
-}
 
 .heading {
     @extend %mainTitle;
-    color: #fff;
     margin-bottom: 80px;
-    text-align: center;
     text-transform: uppercase;
+    text-align: center;
+}
+
+.subheading {
+    color: $color-main;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 40px;
 }
 
 .list {
     display: flex;
-    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 60px;
@@ -26,7 +30,6 @@
 }
 
 .item {
-    color: #fff;
     margin-bottom: 24px;
 }
 
@@ -36,7 +39,17 @@
 }
 
 .link {
-    color: #fff;
     text-decoration: underline;
     cursor: pointer;
+}
+
+.text {
+    margin-bottom: 12px;
+
+    & span {
+        display: inline-block;
+        color: $color-main;
+        font-weight: 600;
+        width: 100px;
+    }
 }

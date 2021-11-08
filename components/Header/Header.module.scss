@@ -14,6 +14,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $color-light;
 
     @media (max-width: 768px) {
         display: none;        
@@ -25,6 +27,7 @@
 }
 
 .logoImg {
+    cursor: pointer;
     width: 130px;
     height: 35px;
 }

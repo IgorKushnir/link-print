@@ -1,42 +1,47 @@
 import styles from './Service.module.scss';
 import {useState} from 'react';
-import service from '../../pages/api/service';
+
+import ServiceModal from '../../components/ServiceModal/ServiceModal'
 
 export default function Service () {
-    const [serviceTab, setServiceTab] = useState(1);
+    const [isServicePopupOpened, setIsServicePopupOpened] = useState(false);
 
     return (
         <section id="service">
+            {isServicePopupOpened && <ServiceModal setIsServicePopupOpened={setIsServicePopupOpened} />}
             <div className="container">
-                <div className={styles.buttonsWrapper}>
-                    <button type="button" className={serviceTab === 1 ? styles.buttonActiveLeft : styles.buttonLeft} onClick={() => setServiceTab(1)}>Сервис</button>
-                    <button type="button" className={serviceTab === 2 ? styles.buttonActiveRight : styles.buttonRight} onClick={() => setServiceTab(2)}>Больше о сервис</button>
+                <h2 className={styles.heading}>Сервисная поддержка</h2>
+                <div className={styles.infoWrapper}>
+                    <div className={styles.leftGroup}>
+                       <div className={styles.innerLeft}>
+                            <p className={styles.subheading}>Всегда Online</p>
+                            <p>Группа сервисных инженеров всегда онлайн в любом из удобных мессенджеров</p>
+                       </div>
+                    </div>
+                    <div className={styles.rightGroup}>
+                        <p>Сервисная поддержка LinkPrint - это новая технология удаленного сервиса, которая поможет Вам общаться командой сервисных инженеров в режиме реального времени. Для решения возникшей проблемы, наши специалисты готовы подключиться к вашему производству в любую секунду, даже ночью.
+Теперь экспертные знания наших специалистов доступны 24/7. Вам всегда оперативно окажут необходимую помощь и проконсультируют. Тем самым вы избежите простоя оборудования, срывов сроков, недовольных клиентов и других неприятностей. В случае необходимости команда наших инженеров готова выехать на ваше производство лично.</p>
+                    </div>
                 </div>
-                {serviceTab === 1 && <div className={styles.aboutWrapper}>
-                    <div className={styles.imageWrapper}><img className={styles.image} src='/img/png/support.png' alt='Сервис' /></div>
-                    <p className={styles.text}>
-                        Сервисная поддержка LinkPrint - это новая технология удаленного сервиса, которая поможет Вам общаться с сервисным инженером в режиме реального времени. Благодаря совместной работе через интерактивную видео конференцию Вы снижаете транспортные расходы, а в некоторых случаях и вовсе устраняете их. Теперь экспертные знания наших специалистов доступны 24/7, что заметно уменьшает время удаления неисправности, а значит сокращает время простоя машины.
-                        Нашими инженерами технической поддержки ведется история решения Ваших проблем, благодаря накопленной информации и большому практическому опыту, а также технологии удаленного обслуживания, мы можем оперативно решить большинство стандартных проблем дистанционно, без выезда к клиенту.
-                        Помимо этого, мы располагаем собственным производством машин, поэтому у нас всегда есть запчасти. В нашем офисе на постоянной основе работает команда опытных инженеров. Каждый из них принимает непосредственное участие в сборке и конструировании машин, а это значит, что Вам всегда оперативно окажут необходимую помощь и проконсультируют при необходимости. Тем самым Вы избежите простоя оборудования, срывов сроков, недовольных клиентов и других неприятностей.
-                    </p>
-                </div>}
-                {serviceTab === 2 && <div className={styles.moreWrapper}>
-                    <h2 className={styles.heading}>Мы различаем 4 вида сервисной поддержки</h2>
-                    <ul className={styles.typesList}>
-                        {service.map( (item, i) => (
-                            <li key={`service_${i}`} className={styles.typesItem}>
-                                <div className={styles.itemInnerWrap}>
-                                    <h3 className={styles.subheading}>{item.title}</h3>
-                                    <ul className={styles.subList}>
-                                        {item.content.map((item, i) => (
-                                            <li key={`${item.title}_feature_&{i}`} className={styles.subItem}>{item}</li>
-                                        ))}
-                                    </ul>
-                                </div>
+                <div className={styles.infoWrapper}>
+                    <div className={styles.leftGroup}>
+<img src="/img/jpg/service.jpg" className={styles.img} />
+                    </div>
+                    <div className={styles.rightGroup}>
+                        <ul>
+                            <li className={styles.serviceItem}>
+                                <h3 className={styles.serviceText}>ОБУЧЕНИЕ ИСПОЛЬЗОВАНИЮ ПРИНТЕРА</h3>
                             </li>
-                        ))}
-                    </ul>
-                </div>}
+                            <li className={styles.serviceItem}>
+                                <h3 className={styles.serviceText}>НАСТРОЙКА ПАРАМЕТРОВ ПЕЧАТИ</h3>
+                            </li>
+                            <li className={styles.serviceItem}>
+                                <h3 className={styles.serviceText}>ПОСТРОЕНИЕ ЦВЕТОВЫХ ПРОФИЛЕЙ</h3>
+                            </li>
+                        </ul>
+                        <button className={styles.button} onClick={() => setIsServicePopupOpened(true)}>Заявка в сервисный центр</button>
+                    </div>
+                </div>
             </div>
         </section>
     )

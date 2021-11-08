@@ -1,0 +1,58 @@
+@import '../../styles/placeholders.scss';
+@import '../../styles/variables.scss';
+
+.title {
+    @extend %mainTitle;
+    margin-bottom: 40px;
+
+    @media (max-width: 615px) {
+        text-align: center;
+    }
+}
+
+.subheading {
+@extend %secondaryTitle;
+text-align: center;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.item {
+    flex-basis: 48%;
+    margin-bottom: 40px;
+
+    @media (max-width: 615px) {
+        flex-basis: 100%;
+    }
+}
+
+.titleWrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.imgWrap {
+    width: 80px;
+    height: 80px;
+    background-color: $color-main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 24px;
+    flex-grow: 1;
+}
+
+.img {
+    width: 32px;
+    height: 32px;
+}
+
+.subtitle {
+    font-size: 15px;
+    flex-grow: 0;
+}

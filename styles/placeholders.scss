@@ -1,23 +1,35 @@
 @import './variables.scss';
 
 %button {
-    border-radius: 4px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    border-radius: 20px;
     font-weight: 700;
     background-color: $color-main;
     cursor: pointer;
     letter-spacing: 1.2px;
+    transform: scale(1);
+    transition: all 0.25s;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 %buttonSm {
-    padding: 6px 20px;
+    padding: 20px;
 }
 
 %buttonMd {
-    padding: 16px 26px;
+    padding: 26px;
 }
 
 %buttonBg {
-    padding: 20px 50px;
+    padding: 26px;
     text-transform: uppercase;
 }
 
@@ -28,7 +40,6 @@
 
 %buttonLight {
     background-color: $color-light;
-    border: 1px solid $color-dark;
 }
 
 %buttonColor {
@@ -43,13 +54,62 @@
 }
 
 %mainTitle {
+    font-family: 'Prosto One', sans-serif;
     font-size: $font-size-heading;
+    text-transform: uppercase;
     font-weight: 700;
-    margin-bottom: 20px;
+    letter-spacing: 4px;
+    // margin-bottom: 20px;
+
+    @media (max-width: 615px) {
+        font-size: 1.5rem;
+    }
 }
 
 %secondaryTitle {
+    font-family: 'Prosto One', sans-serif;
     font-size: $font-size-subheading;
     font-weight: 700;
     margin-bottom: 20px;
+
+    @media (max-width: 615px) {
+        font-size: 1.2rem;
+    }
+}
+
+%blueDiePseudo {
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        background-color: $color-main;
+        width: 60px;
+        height: 10px;
+        position: absolute;
+        top: -20px;
+        left: 0;
+    }
+}
+
+%blueDie {
+        background-color: $color-main;
+        width: 60px;
+        height: 10px;
+
+}
+
+%whiteDiePseudo {
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        background-color: #fff;
+        width: 60px;
+        height: 10px;
+        position: absolute;
+        top: -20px;
+        left: 0;
+    }
 }

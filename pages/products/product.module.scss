@@ -1,0 +1,368 @@
+@import '../../styles/variables.scss';
+@import '../../styles/placeholders.scss';
+
+.main {
+    padding: 140px 0 0;
+}
+
+.title {
+    @extend %mainTitle;
+    color: $color-main;
+    font-size: 3rem;
+    max-width: 860px;
+    margin-bottom: 40px;
+
+    @media (max-width: 615px) {
+        font-size: 1.5rem;
+    }
+}
+
+.tabs {
+    @media (max-width: 615px) {
+        flex-wrap: wrap; 
+        overflow: auto;  
+    }
+}
+
+.infoWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+
+    & p {
+        @media (max-width: 768px) {
+        margin-bottom: 24px;
+        }
+    }
+
+}
+
+.headingWrapper {
+    flex-basis: 49%;
+
+    @media (max-width: 615px) {
+        flex-basis: 100%;
+    }
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.subTitle {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $color-main;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.buttonMain {
+    @extend %button;
+    @extend %buttonMd;
+    height: 50px;
+    width: max-content;
+    color: #fff;
+}
+
+.mainImg {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.infoTitle {
+    @extend %mainTitle;
+    max-width: 60%;
+    margin-bottom: 40px;
+
+    @media (max-width: 615px) {
+        max-width: 100%;
+    }
+}
+
+.infoSubtitle {
+    max-width: 40%;
+    margin-bottom: 40px;
+
+    @media (max-width: 615px) {
+        max-width: 100%;
+    }
+}
+
+.infoList {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.infoItem {
+    margin-right: 30px;
+    margin-bottom: 30px;
+    width: 200px;
+
+    @media (max-width: 615px) {
+     width: 100%;   
+    }
+}
+
+.descItem {
+    color: #212121;
+    opacity: 0.6;
+}
+
+.countWrap {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color-main;
+    margin-bottom: 40px;
+
+    & p {
+        text-align: center;
+    }
+}
+
+.count {
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.infoItemTitle {
+    margin-bottom: 30px;
+}
+
+.techItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    flex-wrap: wrap;   
+
+}
+
+.techImg {
+    flex-basis: 48%;
+    margin-right: 30px;
+    border: 1px solid $color-main;
+
+    @media (max-width: 615px) {
+        max-width: 100%; 
+       }
+}
+
+.techTitle {
+    font-size: 22px;
+    color: $color-main;
+    margin-bottom: 30px;
+}
+
+.videoTitle {
+    @extend %mainTitle;
+    text-align: center;
+    padding-top: 80px;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.videoItem {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.video {
+    @media (max-width: 767px) {
+    width: 100%;
+}
+}
+
+.infoSpan {
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 12px;
+
+    @media (max-width: 615px) {
+        display: block;
+        margin-bottom: 10px;
+       }
+    
+}
+
+.infoBlock {
+    margin-bottom: 40px;
+}
+
+.characteristicsList {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.characteristicsItem {
+    flex-basis: 50%;
+    margin-bottom: 6px;
+
+    @media (max-width: 615px) {
+        flex-basis: 100%;
+       }
+}
+
+.constructHeading {
+    font-size: 24px;
+    font-weight: 500;
+    max-width: 500px;
+    text-align: center;
+    margin: 40px auto 60px;
+}
+
+.constructName {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.infoSpan2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 12px;
+
+    @media (max-width: 615px) {
+        display: block;
+        margin-bottom: 10px;
+       }
+}
+
+.constructSubheading {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.radioLabel {
+    margin: 0px 12px;
+
+    @media (max-width: 615px) {
+        display: block;
+       }
+}
+
+.radioWrap {
+    margin-bottom: 8px;
+}
+
+.rangeInput {
+    width: 100%;
+}
+
+.checkboxLabel {
+    margin-bottom: 12px;
+}
+
+.checkboxInput {
+    margin-right: 12px;
+}
+
+.ripImg {
+    width: 350px;
+    max-height: 400px;
+    margin-top: 16px;
+}
+
+.ripWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.labelRip {
+    font-size: 20px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+.checkboxRip {
+    width: 1px;
+    height: 1px;
+}
+
+.checkboxRip:checked {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 30px;
+        left: 10px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #212121;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 40px;
+        left: 17px;
+        display: block;
+        width: 18px;
+        height: 13px;
+        background-image: url('/img/svg/check.svg');
+    }
+}
+
+
+.inputWrapper {
+    display: block;
+    
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.textLabel {
+    font-size: $font-size-subheading;
+    display: block;
+    margin-bottom: 20px;
+    
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.textInput {
+    display: block;
+    font-size: $font-size-subheading;
+    background: transparent;
+    border: 1px solid #000;
+    border-radius: 10px;
+    width: 100%;
+    height: 56px;
+    padding: 12px;
+}
+
+.button {
+    @extend %button;
+    @extend %buttonMd;
+    display: block;
+    width: 136px;
+    color: #fff;
+}
+
+.errors {
+    display: block;
+    height: 20px;
+    font-size: 14px;
+    color: red;
+}
+
+.errorsPatch {
+    height: 20px;
+}

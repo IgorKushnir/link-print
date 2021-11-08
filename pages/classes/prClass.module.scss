@@ -1,0 +1,63 @@
+@import '../../styles/variables.scss';
+@import '../../styles/placeholders.scss';
+
+.main {
+    padding: 140px 0 0;
+}
+
+.title {
+    @extend %mainTitle;
+    max-width: 860px;
+    margin-bottom: 40px;
+
+    @media (max-width: 615px) {
+        text-align: center;
+    }
+}
+
+.infoWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.subTitle {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $color-main;
+    font-weight: 700;
+    margin-bottom: 40px;
+
+    @media (max-width: 615px) {
+        text-align: center;
+    }
+}
+
+.infoInnerWrapper {
+    flex-basis: 48%;
+
+    @media (max-width: 615px) {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.info {
+    flex-basis: 48%;
+    color: #0d0d0d;
+    opacity: 0.6;
+
+    @media (max-width: 615px) {
+        flex-basis: 100%;
+    }
+}
+
+.button {
+    @extend %button;
+    @extend %buttonMd;
+    @extend %buttonColor;
+
+    @media (max-width: 615px) {
+        margin: 0 auto;
+    }
+}

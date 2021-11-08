@@ -14,26 +14,23 @@ export default function MobileMenu({setIsMobileMenuOpened}) {
             </button>
             <div className="container">
             <ul className={styles.navList}>
-                <li className={styles.navItem}>
-                  <Link href='#servicesList'><p onClick={closeMenu}>Услуги</p></Link>
+            <li className={styles.navItem}>
+                  <Link href='/classes'>Каталог</Link>
                 </li>
                 <li className={styles.navItem}>
-                  <Link href='#rewards'><p onClick={closeMenu}>Награды</p></Link>
+                  <Link href='/research'>Разработка</Link>
                 </li>
                 <li className={styles.navItem}>
                   <a onClick={closeMenu} href='https://webconstruct.pb.ua/front/create/all_credit_orders/active/?provider=40747052#step/1' target="_blamk" rel="nofollow noreferrer">Лизинг</a>
                 </li>
                 <li className={styles.navItem}>
-                  <Link href='#inksList'><p onClick={closeMenu}>Чернила/Праймер</p></Link>
+                  <Link href='/about'>О компании</Link>
                 </li>
                 <li className={styles.navItem}>
-                  <Link href='#service'><p onClick={closeMenu}>Сервис</p></Link>
+                  <Link href='/service'>Сервис</Link>
                 </li>
                 <li className={styles.navItem}>
-                  <Link href='#reviewsList'><p onClick={closeMenu}>Отзывы</p></Link>
-                </li>
-                <li className={styles.navItem}>
-                  <Link href='#contacts'><p onClick={closeMenu}>Контакты</p></Link>
+                  <Link href='/contacts'>Контакты</Link>
                 </li>
               </ul>
             </div>

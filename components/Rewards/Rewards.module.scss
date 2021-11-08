@@ -1,6 +1,15 @@
+@import '../../styles/placeholders.scss';
+
+.heading {
+    @extend %mainTitle;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 .video {
     display: block;
     margin: 0 auto 30px;
+    max-width: 100%;
 }
 
 .text {
