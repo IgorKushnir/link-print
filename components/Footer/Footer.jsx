@@ -67,7 +67,7 @@ export default function Footer({setIsDownloadPopupOpened, setIsPopupOpened}) {
               <button onClick={() => setIsDownloadPopupOpened(true)} className={styles.downloadButton}>Скачать каталог</button>
               <button onClick={() => setIsPopupOpened(true)} className={styles.infoButton}>Получить консультацию</button>
               <div className={styles.phoneWrapper}>
-                  <p className={styles.phone}>+380 99 188 16 89</p>
+                  <p className={styles.phone}>+380 99 188 16 89, <br /> +380 96 383 03 11</p>
                   <p className={styles.name}>Елена</p>
               </div>
         </div>
