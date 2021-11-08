@@ -12,9 +12,23 @@ export default function Contacts() {
         <ul className={styles.list}>
           {contacts.map((contact, i) => (
             <li key={`contact_${i}`} className={styles.item}>
-              <p className={styles.text}><span>Имя:</span> {contact.name}</p>
-              <p className={styles.text}><span>Телефон:</span> {contact.phone}</p>
-              <p className={styles.text}><span>E-mail:</span> <a href={`mailto:${contact.email}`}>{contact.email}</a></p>
+              <table classNam={styles.table}>
+                <tr>
+                  <td><span className={styles.span}>Имя:</span></td>
+                  <td><p className={styles.text}>{contact.name}</p></td>
+                </tr>
+                <tr>
+                  <td><span className={styles.span}>Телефон:</span></td>
+                  <td><p className={styles.text}>{contact.phone1}</p><p className={styles.text}>{contact.phone2}</p></td>
+                </tr>
+                <tr>
+                  <td><span className={styles.span}>E-mail:</span></td>
+                  <td><p className={styles.text}><a href={`mailto:${contact.email}`}>{contact.email}</a></p></td>
+                </tr>
+              </table>
+              
+              
+              
             </li>
           ))}
         </ul>

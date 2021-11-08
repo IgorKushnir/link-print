@@ -47,16 +47,16 @@ export default {
             name: 'CMYK', value: 'cmyk',
         },
         {
-            name: 'CMYK+W', value: 'cmyk+w',
+            name: 'CMYK + W', value: 'cmyk+w',
         },
         {
-            name: 'CMYK+W+Vr', value: 'cmyk+w+vr',
+            name: 'CMYK + W + Vr', value: 'cmyk+w+vr',
         },
         {
-            name: 'CMYK+W+Vr+PR', value: 'cmyk+w+vr+pr',
+            name: 'CMYK + W + Vr + PR', value: 'cmyk+w+vr+pr',
         },
         {
-            name: 'CMYK+Spot1+Spot2+Spot3+Spot4', value: 'cmyk+spot1+spot2+spot3+spot4',
+            name: 'CMYK + Spot1 + Spot2 + Spot3 + Spot4', value: 'cmyk+spot1+spot2+spot3+spot4',
         },
       ],
       info2: [

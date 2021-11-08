@@ -43,7 +43,7 @@
 .infoSpan2 {
     font-size: 20px;
     font-weight: 600;
-    margin: 0 12px;
+    
 
     @media (max-width: 615px) {
         display: block;
@@ -93,8 +93,11 @@
     margin: 0px 12px;
     position: relative;
     padding-left: 12px;
-    display: inline-block;
     cursor: pointer;
+
+    @media (max-width: 615px) {
+        font-size: 12px;
+    }
 }
 
 .radioWrap {
@@ -261,6 +264,10 @@ padding-left: 30px;
     width: 100%;
     height: 56px;
     padding: 12px;
+
+    @media (max-width: 615px) {
+        font-size: 12px;
+    }
 }
 
 .button {

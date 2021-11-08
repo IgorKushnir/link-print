@@ -79,7 +79,7 @@ export default function SurveyModal({ setIsSurveyPopupOpened }) {
                     <li key={`info1_${i}`}>
                       <p>
                         {e?.name}:{" "}
-                        <span className={styles.infoSpan2}>{e?.value}</span>
+                        {e?.value}
                       </p>
                     </li>
                   ))}

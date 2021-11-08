@@ -231,7 +231,7 @@
 .infoSpan2 {
     font-size: 20px;
     font-weight: 600;
-    margin: 0 12px;
+    
 
     @media (max-width: 615px) {
         display: block;
@@ -250,6 +250,7 @@
 
     @media (max-width: 615px) {
         display: block;
+        font-size: 12px;
        }
 }
 
@@ -346,6 +347,10 @@
     width: 100%;
     height: 56px;
     padding: 12px;
+
+    @media (max-width: 615px) {
+        font-size: 12px;
+    }
 }
 
 .button {
