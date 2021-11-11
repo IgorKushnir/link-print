@@ -1,10 +1,12 @@
 import { useFormik } from "formik";
+import { useRouter } from 'next/router'
 
 import { createNotification } from "../Notifications/notifications"
 import { sendContantForm } from "../../pages/api/externalAPI";
 import styles from './ServiceModal.module.scss';
 
 export default function ServiceModal ({setIsServicePopupOpened}) {
+  const router = useRouter()
 
     const formik = useFormik({
         initialValues: {
@@ -19,13 +21,9 @@ export default function ServiceModal ({setIsServicePopupOpened}) {
           sendContantForm(values)
             .then(({ data }) => {
               if (data.ok) {
-                createNotification(
-                  "Спасибо!",
-                  "success",
-                  "Благодарим за Ваше обращение! Мы скоро с Вами свяжемся."
-                );
                 formik.resetForm();
                 setIsServicePopupOpened(false)
+                router.push('/thank-you.html')
               }
             })
             .catch(() => {

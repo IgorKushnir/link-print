@@ -1,10 +1,12 @@
 import { useFormik } from "formik";
+import { useRouter } from 'next/router'
 
 import { createNotification } from "../Notifications/notifications"
 import { sendContantForm } from "../../pages/api/externalAPI";
 import styles from './DownloadModal.module.scss';
 
 export default function DownloadModal ({setIsDownloadPopupOpened}) {
+  const router = useRouter()
 
     const formik = useFormik({
         initialValues: {
@@ -19,13 +21,9 @@ export default function DownloadModal ({setIsDownloadPopupOpened}) {
           sendContantForm(values)
             .then(({ data }) => {
               if (data.ok) {
-                createNotification(
-                  "Спасибо!",
-                  "success",
-                  "Благодарим за Ваше обращение! Мы скоро с Вами свяжемся."
-                );
                 formik.resetForm();
                 setIsDownloadPopupOpened(false)
+                router.push('/thank-you.html')
               }
             })
             .catch(() => {

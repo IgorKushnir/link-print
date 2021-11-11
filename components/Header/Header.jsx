@@ -36,6 +36,9 @@ export default function Header({setIsMobileMenuOpened}) {
                 </li>
               </ul>
           </div>
+          <div className={styles.telWrapper}>
+            <a href="tel:+380 99 188 16 89">+380 99 188 16 89</a>
+          </div>
           <div className={styles.burgerWrapper}>
             <button className={styles.burgerButton} onClick={() => setIsMobileMenuOpened(true)}>
               <img src="/img/png/burger.png" className={styles.burger}/>

@@ -1,4 +1,5 @@
 import { useFormik } from "formik";
+import { useRouter } from 'next/router'
 
 import { createNotification } from "../Notifications/notifications";
 import { sendContantForm } from "../../pages/api/externalAPI";
@@ -6,6 +7,7 @@ import styles from "./SurveyModal.module.scss";
 import constructor from "../../pages/api/constructor";
 
 export default function SurveyModal({ setIsSurveyPopupOpened }) {
+  const router = useRouter()
 
     const formik = useFormik({
         initialValues: {
@@ -28,13 +30,9 @@ export default function SurveyModal({ setIsSurveyPopupOpened }) {
       sendContantForm(values)
         .then(({ data }) => {
           if (data.ok) {
-            createNotification(
-              "Спасибо!",
-              "success",
-              "Благодарим за Ваше обращение! Мы скоро с Вами свяжемся."
-            );
             formik.resetForm();
             setIsPopupOpened(false);
+            router.push('/thank-you.html')
           }
         })
         .catch(() => {

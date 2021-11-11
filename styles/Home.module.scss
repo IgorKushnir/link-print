@@ -507,3 +507,20 @@ padding-left: 30px;
 .errorsPatch {
     height: 20px;
 }
+
+.thnWrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    .thnHeader {
+        margin-bottom: 30px;
+    }
+
+    .thnLink {
+        cursor: pointer;
+    }

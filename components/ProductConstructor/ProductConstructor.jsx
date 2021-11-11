@@ -1,10 +1,12 @@
 import { useFormik } from "formik";
+import { useRouter } from 'next/router'
 
 import { createNotification } from "../Notifications/notifications"
 import { sendContantForm } from "../../pages/api/externalAPI";
 import styles from "./productConstructor.module.scss";
 
 export default function ProductConstructor ({currentProduct}) {
+  const router = useRouter()
 
     const formik = useFormik({
         initialValues: {
@@ -31,12 +33,7 @@ export default function ProductConstructor ({currentProduct}) {
           sendContantForm(values)
             .then(({ data }) => {
               if (data.ok) {
-                createNotification(
-                  "Спасибо!",
-                  "success",
-                  "Благодарим за Ваше обращение! Мы скоро с Вами свяжемся."
-                );
-                // formik.resetForm();
+                router.push('/thank-you.html')
               }
             })
             .catch(() => {

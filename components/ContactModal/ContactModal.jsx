@@ -1,4 +1,5 @@
 import { useFormik } from "formik";
+import { useRouter } from 'next/router'
 
 import { createNotification } from "../Notifications/notifications"
 import { sendContantForm } from "../../pages/api/externalAPI";
@@ -6,12 +7,12 @@ import styles from './ContactModal.module.scss';
 
 export default function ContactModal ({setIsPopupOpened}) {
 
+  const router = useRouter()
+
     const formik = useFormik({
         initialValues: {
           name: "",
           branch: "",
-          phone: "",
-          email: "",
           confirm: true,
         },
 
@@ -19,13 +20,8 @@ export default function ContactModal ({setIsPopupOpened}) {
           sendContantForm(values)
             .then(({ data }) => {
               if (data.ok) {
-                createNotification(
-                  "Спасибо!",
-                  "success",
-                  "Благодарим за Ваше обращение! Мы скоро с Вами свяжемся."
-                );
-                formik.resetForm();
                 setIsPopupOpened(false)
+                router.push('/thank-you.html')
               }
             })
             .catch(() => {
@@ -72,43 +68,6 @@ export default function ContactModal ({setIsPopupOpened}) {
               <div className={styles.errorsPatch}></div>
             )}
           </div>
-
-          <div className={styles.inputWrapper}>
-            <input
-              type="text"
-              name="branch"
-              required
-              placeholder="Ваша сфера деятельности"
-              className={styles.textInput}
-              onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.branch}
-            />
-            {formik.errors.branch && formik.touched.branch ? (
-              <small className={styles.errors}>
-                {formik.errors.branch}
-              </small>
-            ) : (
-              <div className={styles.errorsPatch}></div>
-            )}
-          </div>
-
-          <div className={styles.inputWrapper}>
-            <input
-              type="email"
-              name="email"
-              required
-              placeholder="Введите Вашу почту"
-              className={styles.textInput}
-              onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.email}
-            />
-            {formik.errors.email && formik.touched.email ? (
-              <small className={styles.errors}>
-                {formik.errors.email}
-              </small>
-            ) : (
-              <div className={styles.errorsPatch}></div>
-            )}
-          </div>
-
           <div className={styles.inputWrapper}>
             <input
               type="text"

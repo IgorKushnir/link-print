@@ -1,6 +1,6 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-
+import { useRouter } from 'next/router'
 
 import styles from './ContactUs.module.scss';
 import {sendContantForm} from '../../pages/api/externalAPI';
@@ -15,6 +15,7 @@ const ContactSchema = Yup.object().shape({
 })
 
 export default function ContactUs () {
+    const router = useRouter()
 
     const formik = useFormik({
         initialValues: {
@@ -27,8 +28,8 @@ export default function ContactUs () {
             sendContantForm(values)
             .then(({data}) => {
                 if(data.ok) {
-                    createNotification('Спасибо!' ,'success', 'Благодарим за Ваше обращение! Мы скоро с Вами свяжемся.')
                     formik.resetForm();
+                    router.push('/thank-you.html')
             }})
             .catch(
                 () => {createNotification('Ошибка!' ,'error', 'Что-то пошло не так. Пожалуйста, повторите попытку позже.');

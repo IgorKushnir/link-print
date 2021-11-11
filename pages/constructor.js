@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
 import { useFormik } from "formik";
+import { useRouter } from 'next/router'
 
 import styles from "../styles/Home.module.scss";
 import Header from "../components/Header/Header";
@@ -11,6 +12,8 @@ import DownloadModal from "../components/DownloadModal/DownloadModal";
 import MobileMenu from "../components/MobileMenu/MobileMenu";
 
 export default function ResearchPage() {
+  const router = useRouter()
+
   const [isPopupOpened, setIsPopupOpened] = useState(false);
   const [isDownloadPopupOpened, setIsDownloadPopupOpened] = useState(false);
   const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
@@ -35,12 +38,7 @@ export default function ResearchPage() {
       sendContantForm(values)
         .then(({ data }) => {
           if (data.ok) {
-            createNotification(
-              "Спасибо!",
-              "success",
-              "Благодарим за Ваше обращение! Мы скоро с Вами свяжемся."
-            );
-            // formik.resetForm();
+            router.push('/thank-you.html')
           }
         })
         .catch(() => {

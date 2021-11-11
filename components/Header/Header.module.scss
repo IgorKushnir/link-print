@@ -7,6 +7,12 @@
     padding: 10px 0px;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 90;
+
+    @media (max-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 .navWrapper {
@@ -43,8 +49,22 @@
     color: $color-light;
 }
 
+.telWrapper {
+    flex-grow: 1;
+    display: none;
+    color: #fff;
+
+    & a {
+        padding-left: 94px;
+    }
+
+    @media (max-width: 768px) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
 .burgerWrapper {
-    width: 100%;
     padding: 10px 30px;
     display: none;
     justify-content: flex-end;
