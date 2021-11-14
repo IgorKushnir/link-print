@@ -20,21 +20,21 @@ export default function AboutPage() {
   return (
     <>
       <Head>
-        <title>УФ принтера Link Print</title>
+        <title>О компании Link Print</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Продажа UV оборудования. Пробный принт. Заказать пробную печать на принтере"
+          content="LinkPrint. О нашей компании"
         />
         <meta
           name="keywords"
           content="Link Print Украина, линк принт Украина, Linkprint, link print, Продажа UV оборудования, Пробный принт, купить уф принтер, купить uv принтер, уф печать, uv печать, uvпечать, уф гибридный принтер, Уф принтер Планшетный"
         />
         <meta property="og:url" content="https://www.linkprint.com.ua/" />
-        <meta property="og:title" content="УФ принтера" />
+        <meta property="og:title" content="LinkPrint. О нашей компании" />
         <meta
           property="og:description"
-          content="Продажа UV оборудования. Пробный принт. Заказать пробную печать на принтере"
+          content="О компании LinkPrint"
         />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="" />
