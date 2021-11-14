@@ -9,7 +9,7 @@
 .title1 {
     @extend %mainTitle;
     color: #fff;
-    padding-left: 35%;
+    padding-left: 33%;
 
     @media (max-width: 768px) {
         padding-left: 0;
@@ -24,6 +24,7 @@
     @extend %mainTitle;
     color: #fff;
     margin-bottom: 40px;
+    padding-left: 5%;
 
     @media (max-width: 615px) {
         text-align: center;
