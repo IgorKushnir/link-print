@@ -1,26 +1,32 @@
-import Link from 'next/link';
+import Link from "next/link";
 
-import styles from './Footer.module.scss';
+import styles from "./Footer.module.scss";
 
-export default function Footer({setIsDownloadPopupOpened, setIsPopupOpened}) {
+export default function Footer({ setIsDownloadPopupOpened, setIsPopupOpened }) {
   return (
     <footer className={styles.footer}>
-      <div className='container'>
+      <div className="container">
         <div className={styles.infoWrapper}>
           <div className={styles.menuWrapper}>
             <h2 className={styles.heading}>Меню</h2>
             <ul>
               <li className={styles.listItem}>
-                <Link href='/'>Главная</Link>
+                <Link href="/index.html">Главная</Link>
               </li>
               <li className={styles.listItem}>
-                <Link href='/classes'>Каталог</Link>
+                <Link href="/classes.html">Каталог</Link>
               </li>
               <li className={styles.listItem}>
-                <Link href='/research'>Разработка</Link>
+                <Link href="/research.html">Разработка</Link>
               </li>
               <li className={styles.listItem}>
-              <a href='https://webconstruct.pb.ua/front/create/all_credit_orders/active/?provider=40747052#step/1' target="_blamk" rel="nofollow noreferrer">Лизинг</a>
+                <a
+                  href="https://webconstruct.pb.ua/front/create/all_credit_orders/active/?provider=40747052#step/1"
+                  target="_blamk"
+                  rel="nofollow noreferrer"
+                >
+                  Лизинг
+                </a>
               </li>
             </ul>
           </div>
@@ -28,16 +34,16 @@ export default function Footer({setIsDownloadPopupOpened, setIsPopupOpened}) {
             <h2 className={styles.heading}>Принтеры</h2>
             <ul>
               <li className={styles.listItem}>
-                <Link href='/classes/hybrid'>Гибридные</Link>
+                <Link href="/classes/hybrid.html">Гибридные</Link>
               </li>
               <li className={styles.listItem}>
-                <Link href='/classes/table'>Планшетные</Link>
+                <Link href="/classes/table.html">Планшетные</Link>
               </li>
               <li className={styles.listItem}>
-                <Link href='/classes/cylindric'>Цилиндрические</Link>
+                <Link href="/classes/cylindric.html">Цилиндрические</Link>
               </li>
               <li className={styles.listItem}>
-                <Link href='/classes/panels'>Для печати на панелях</Link>
+                <Link href="/classes/panels.html">Для печати на панелях</Link>
               </li>
             </ul>
           </div>
@@ -45,13 +51,13 @@ export default function Footer({setIsDownloadPopupOpened, setIsPopupOpened}) {
             <h2 className={styles.heading}>О компании</h2>
             <ul>
               <li className={styles.listItem}>
-                <Link href='/about'>О нас</Link>
+                <Link href="/about.html">О нас</Link>
               </li>
               <li className={styles.listItem}>
-                <Link href='/service'>Сервис</Link>
+                <Link href="/service.html">Сервис</Link>
               </li>
               <li className={styles.listItem}>
-                <Link href='/contacts'>Контакты</Link>
+                <Link href="/contacts.html">Контакты</Link>
               </li>
             </ul>
           </div>

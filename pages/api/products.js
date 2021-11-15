@@ -148,10 +148,22 @@ export default [
         { name: "Высота подъема каретки", value: "350 мм" },
       ],
       headType: [
-        {name:"RICOH GEN5 (MH5420/5440 - 7pl)", value: "RICOH GEN5 (MH5420/5440 - 7pl)"},
-        {name: "RICOH GEN6 (MH5320/5440 - 5pl)", value: "RICOH GEN6 (MH5320/5440 - 5pl)"},
-        {name: "RICOH Gen5s (MH5220 - 2.5pl)", value: "RICOH Gen5s (MH5220 - 2.5pl)"},
-        {name: "RICOH GH2220 (GH2220 3pl)", value: "RICOH GH2220 (GH2220 3pl)"},
+        {
+          name: "RICOH GEN5 (MH5420/5440 - 7pl)",
+          value: "RICOH GEN5 (MH5420/5440 - 7pl)",
+        },
+        {
+          name: "RICOH GEN6 (MH5320/5440 - 5pl)",
+          value: "RICOH GEN6 (MH5320/5440 - 5pl)",
+        },
+        {
+          name: "RICOH Gen5s (MH5220 - 2.5pl)",
+          value: "RICOH Gen5s (MH5220 - 2.5pl)",
+        },
+        {
+          name: "RICOH GH2220 (GH2220 3pl)",
+          value: "RICOH GH2220 (GH2220 3pl)",
+        },
       ],
       headsQuantityMax: 8,
       info2: [
@@ -170,26 +182,49 @@ export default [
         { name: "Защита от столкновения", value: "датчик удара на каретке" },
       ],
       features: [
-        {name: "Защита от статического заряда, ионизатор на каретке", value: "ionizatorNaKaretke"},
-        {name: "Датчик определения высоты материала", value: "datchikVisoty"},
+        {
+          name: "Защита от статического заряда, ионизатор на каретке",
+          value: "ionizatorNaKaretke",
+        },
+        { name: "Датчик определения высоты материала", value: "datchikVisoty" },
       ],
       rip: [
-        {name: "ONYX PosterShop", value: "ONYXPosterShop", img: "/img/png/onyx.png"},
-        {name: "Caldera COPYRIP", value: "CalderaCOPYRIP", img: "/img/jpg/caldera.jpg"},
-        {name: "Механическая система печати на цилиндрах KEBAB", value: "KEBAB", img: "/img/png/kebab.png"},
-        {name: "Система с сервоприводом для печати на цилиндрах", value: "servoForCylinder", img: "/img/png/servo.png"},
-        {name: "Рабочая станция для RIP (опционально)", value: 'workstation', img: "/img/jpg/workstation.jpg"},
+        {
+          name: "ONYX PosterShop",
+          value: "ONYXPosterShop",
+          img: "/img/png/onyx.png",
+        },
+        {
+          name: "Caldera COPYRIP",
+          value: "CalderaCOPYRIP",
+          img: "/img/jpg/caldera.jpg",
+        },
+        {
+          name: "Механическая система печати на цилиндрах KEBAB",
+          value: "KEBAB",
+          img: "/img/png/kebab.png",
+        },
+        {
+          name: "Система с сервоприводом для печати на цилиндрах",
+          value: "servoForCylinder",
+          img: "/img/png/servo.png",
+        },
+        {
+          name: "Рабочая станция для RIP (опционально)",
+          value: "workstation",
+          img: "/img/jpg/workstation.jpg",
+        },
       ],
       info3: [
-        {name: "Требования к сети", value: "50/60 Гц 220 В"},
-        {name: "Мощность, Вт", value: "до 1,5 кВт"},
-        {name: "Габариты (ШхГхВ), мм", value: "1600×1850×1050"},
-        {name: "Вес, кг", value: "180 кг"},
-        {name: "Рабочая температура, С", value: "до 15-28 С"},
-        {name: "Рекомендованная влажность", value: "40%-60%"},
+        { name: "Требования к сети", value: "50/60 Гц 220 В" },
+        { name: "Мощность, Вт", value: "до 1,5 кВт" },
+        { name: "Габариты (ШхГхВ), мм", value: "1600×1850×1050" },
+        { name: "Вес, кг", value: "180 кг" },
+        { name: "Рабочая температура, С", value: "до 15-28 С" },
+        { name: "Рекомендованная влажность", value: "40%-60%" },
       ],
     },
-    link: "/products/fb690",
+    link: "/products/fb690.html",
     videos: ["p3L3x0pnNB8", "KS4matSRE_s"],
     linkVideo: "fb690",
     images: [
@@ -216,8 +251,9 @@ export default [
     infoList: [
       {
         title: "УНИВЕРСАЛЬНОСТЬ",
-        desc:
-          ["Печать на коже, дереве, пвх, картоне, металле, композите и многом другом"],
+        desc: [
+          "Печать на коже, дереве, пвх, картоне, металле, композите и многом другом",
+        ],
       },
       {
         title: "ВЫСОКАЯ СКОРОСТЬ",
@@ -225,23 +261,27 @@ export default [
       },
       {
         title: "8 - ЦВЕТОВАЯ МОДЕЛЬ",
-        desc:
-          ["В дополнение к стандартному набору CMYK+W+V могут быть использованы праймеры, флуорисцентные и любые другие краски"],
+        desc: [
+          "В дополнение к стандартному набору CMYK+W+V могут быть использованы праймеры, флуорисцентные и любые другие краски",
+        ],
       },
       {
         title: "КРУГЛОСУТОЧНАЯ ПОДДЕРЖКА",
-        desc:
-          ["Онлайн поддержка в круглосуточном режиме группой сервисных инженеров"],
+        desc: [
+          "Онлайн поддержка в круглосуточном режиме группой сервисных инженеров",
+        ],
       },
       {
         title: "АДАПТАЦИЯ КОНСТРУКЦИИ",
-        desc:
-          ["Конструкция и технические параметры принтера могут быть настроены для решения специальных задач"]
+        desc: [
+          "Конструкция и технические параметры принтера могут быть настроены для решения специальных задач",
+        ],
       },
       {
         title: "ДОСТУПНАЯ ЦЕНА",
-        desc:
-          ["Стоимость принтеров LINKPINT не превышает китайские аналоги и значительно комфортнее с учетом доставки и обслуживания"]
+        desc: [
+          "Стоимость принтеров LINKPINT не превышает китайские аналоги и значительно комфортнее с учетом доставки и обслуживания",
+        ],
       },
     ],
     technologies: [
@@ -347,12 +387,21 @@ export default [
         { name: "Высота подъема каретки", value: "100 мм" },
       ],
       headType: [
-        {name: "RICOH GEN5 (MH5420/5440 - 7pl)", value: "RICOH GEN5 (MH5420/5440 - 7pl)"},
-        {name: "RICOH Gen5s (MH5220 - 2.5pl)", value: "RICOH Gen5s (MH5220 - 2.5pl)"},
-        {name: "RICOH Gen6 (MH5320 - 5pl)", value: "RICOH Gen6 (MH5320 - 5pl)"},
-        {name: "KM1024i (6pl)", value: "KM1024i (6pl)"},
-        {name: "KM1024i (13pl)", value: "KM1024i (13pl)"},
-        {name: "KM1800i (3,5pl)", value: "KM1800i (3,5pl)"},
+        {
+          name: "RICOH GEN5 (MH5420/5440 - 7pl)",
+          value: "RICOH GEN5 (MH5420/5440 - 7pl)",
+        },
+        {
+          name: "RICOH Gen5s (MH5220 - 2.5pl)",
+          value: "RICOH Gen5s (MH5220 - 2.5pl)",
+        },
+        {
+          name: "RICOH Gen6 (MH5320 - 5pl)",
+          value: "RICOH Gen6 (MH5320 - 5pl)",
+        },
+        { name: "KM1024i (6pl)", value: "KM1024i (6pl)" },
+        { name: "KM1024i (13pl)", value: "KM1024i (13pl)" },
+        { name: "KM1800i (3,5pl)", value: "KM1800i (3,5pl)" },
       ],
       headsQuantityMax: 18,
       info2: [
@@ -371,27 +420,45 @@ export default [
         { name: "Защита от столкновения", value: "датчик удара на каретке" },
       ],
       features: [
-        {name: "Защита от статического заряда, ионизатор на каретке", value: "ionizatorNaKaretke"},
-        {name: "Датчик определения высоты материала", value: "datchikVisoty"},
-        {name: "Система автоматической чистки голов", value: "autoHeadCleaner"},
+        {
+          name: "Защита от статического заряда, ионизатор на каретке",
+          value: "ionizatorNaKaretke",
+        },
+        { name: "Датчик определения высоты материала", value: "datchikVisoty" },
+        {
+          name: "Система автоматической чистки голов",
+          value: "autoHeadCleaner",
+        },
       ],
       rip: [
-        {name: "ONYX PosterShop", value: "ONYXPosterShop", img: "/img/png/onyx.png"},
-        {name: "Caldera COPYRIP", value: "CalderaCOPYRIP", img: "/img/jpg/caldera.jpg"},
-        {name: "Рабочая станция для RIP (опционально)", value: 'workstation', img: "/img/jpg/workstation.jpg"},
+        {
+          name: "ONYX PosterShop",
+          value: "ONYXPosterShop",
+          img: "/img/png/onyx.png",
+        },
+        {
+          name: "Caldera COPYRIP",
+          value: "CalderaCOPYRIP",
+          img: "/img/jpg/caldera.jpg",
+        },
+        {
+          name: "Рабочая станция для RIP (опционально)",
+          value: "workstation",
+          img: "/img/jpg/workstation.jpg",
+        },
       ],
       info3: [
-        {name: "Требования к сети", value: "50/60 Гц 220 В"},
-        {name: "Мощность, Вт", value: "до 2,9 кВт"},
-        {name: "Габариты (ШхГхВ), мм", value: "3800×3510×1200"},
-        {name: "Вес, кг", value: "1470 кг"},
-        {name: "Рабочая температура, С", value: "до 15-28 С"},
-        {name: "Рекомендованная влажность", value: "40%-60%"},
+        { name: "Требования к сети", value: "50/60 Гц 220 В" },
+        { name: "Мощность, Вт", value: "до 2,9 кВт" },
+        { name: "Габариты (ШхГхВ), мм", value: "3800×3510×1200" },
+        { name: "Вес, кг", value: "1470 кг" },
+        { name: "Рабочая температура, С", value: "до 15-28 С" },
+        { name: "Рекомендованная влажность", value: "40%-60%" },
       ],
     },
     description:
       "Печать практически на всех видах плоских материалов, вакуумный стол надежно фиксирует даже самые тонкие материалы. Обе модели сочетают в себе великолепное качество интерьерной печати на мощной базе промышленного принтера и высокую скорость печати по демократичной ценой. \n \n Цветовая схема: CMYK + Белый + Лак+ПраймерИспользование белого и лака значительно расширяет диапазон дизайнерских решений. Возможность печатать в несколько слоев-это способ получить уникальные эффекты и рельеф. Использование лака придает изделию глянцевый вид, трехмерность. Одновременная печать CMYK + белый + CMYK. Использование специального праймера особенно важно при печати по акрилу, праймер наносится только под изображение его расход полностью оптимизирован и дальнейшая обработка не требуется.",
-    link: "/products/fb320",
+    link: "/products/fb320.html",
     linkVideo: "fb320",
     bigImg: "/img/png/fb320-1.png",
     images: ["/img/png/fb320-1.png", "/img/png/fb320-2.png"],
@@ -548,15 +615,26 @@ export default [
         },
         { name: "Высота подъема каретки", value: "100 мм" },
       ],
-      printWidth: [{name:"2100 mm", value: "2100mm"},
-      {name:"3200 mm", value: "3200mm"}],
+      printWidth: [
+        { name: "2100 mm", value: "2100mm" },
+        { name: "3200 mm", value: "3200mm" },
+      ],
       headType: [
-        {name: "RICOH GEN5 (MH5420/5440 - 7pl)", value: "RICOH GEN5 (MH5420/5440 - 7pl)"},
-        {name: "RICOH Gen5s (MH5220 - 2.5pl)", value: "RICOH Gen5s (MH5220 - 2.5pl)"},
-        {name: "RICOH Gen6 (MH5320 - 5pl)", value: "RICOH Gen6 (MH5320 - 5pl)"},
-        {name: "KM1024i (6pl)", value: "KM1024i (6pl)"},
-        {name: "KM1024i (13pl)", value: "KM1024i (13pl)"},
-        {name: "KM1800i (3,5pl)", value: "KM1800i (3,5pl)"},
+        {
+          name: "RICOH GEN5 (MH5420/5440 - 7pl)",
+          value: "RICOH GEN5 (MH5420/5440 - 7pl)",
+        },
+        {
+          name: "RICOH Gen5s (MH5220 - 2.5pl)",
+          value: "RICOH Gen5s (MH5220 - 2.5pl)",
+        },
+        {
+          name: "RICOH Gen6 (MH5320 - 5pl)",
+          value: "RICOH Gen6 (MH5320 - 5pl)",
+        },
+        { name: "KM1024i (6pl)", value: "KM1024i (6pl)" },
+        { name: "KM1024i (13pl)", value: "KM1024i (13pl)" },
+        { name: "KM1800i (3,5pl)", value: "KM1800i (3,5pl)" },
       ],
       headsQuantityMax: 18,
       info2: [
@@ -575,27 +653,53 @@ export default [
         { name: "Защита от столкновения", value: "датчик удара на каретке" },
       ],
       features: [
-        {name: "Защита от статического заряда, ионизатор на каретке", value: "ionizatorNaKaretke"},
-        {name: "Подкатные столы для подачи-приемки материала", value: "podkatniyStol"},
-        {name: "Подмотка для рулонных материалов", value: "podmotkaRulonov"},
+        {
+          name: "Защита от статического заряда, ионизатор на каретке",
+          value: "ionizatorNaKaretke",
+        },
+        {
+          name: "Подкатные столы для подачи-приемки материала",
+          value: "podkatniyStol",
+        },
+        { name: "Подмотка для рулонных материалов", value: "podmotkaRulonov" },
       ],
       rip: [
-        {name: "ONYX PosterShop", value: "ONYXPosterShop", img: "/img/png/onyx.png"},
-        {name: "Caldera COPYRIP", value: "CalderaCOPYRIP", img: "/img/jpg/caldera.jpg"},
-        {name: "Система автоматической чистки голов", value: 'autoHeadCleaning', img: "/img/png/autocleaning.png"},
-        {name: "Рабочая станция для RIP (опционально)", value: 'workstation', img: "/img/jpg/workstation.jpg"},
-        {name: "Дополнительный стол для планшетной печати DUO (опционально)", value: 'DUOtable', img: "/img/png/duotable.png"}
+        {
+          name: "ONYX PosterShop",
+          value: "ONYXPosterShop",
+          img: "/img/png/onyx.png",
+        },
+        {
+          name: "Caldera COPYRIP",
+          value: "CalderaCOPYRIP",
+          img: "/img/jpg/caldera.jpg",
+        },
+        {
+          name: "Система автоматической чистки голов",
+          value: "autoHeadCleaning",
+          img: "/img/png/autocleaning.png",
+        },
+        {
+          name: "Рабочая станция для RIP (опционально)",
+          value: "workstation",
+          img: "/img/jpg/workstation.jpg",
+        },
+        {
+          name: "Дополнительный стол для планшетной печати DUO (опционально)",
+          value: "DUOtable",
+          img: "/img/png/duotable.png",
+        },
       ],
       info3: [
-        {name: "Требования к сети", value: "50/60 Гц 220 В"},
-        {name: "Мощность, Вт", value: "до 2,5 кВт"},
-        {name: "Габариты (ШхГхВ), мм", value: "3650×800×1300"},
-        {name: "Вес, кг", value: "690 кг"},
-        {name: "Рабочая температура, С", value: "до 15-28 С"},
-        {name: "Рекомендованная влажность", value: "40%-60%"},
+        { name: "Требования к сети", value: "50/60 Гц 220 В" },
+        { name: "Мощность, Вт", value: "до 2,5 кВт" },
+        { name: "Габариты (ШхГхВ), мм", value: "3650×800×1300" },
+        { name: "Вес, кг", value: "690 кг" },
+        { name: "Рабочая температура, С", value: "до 15-28 С" },
+        { name: "Рекомендованная влажность", value: "40%-60%" },
       ],
     },
-    link: "/products/p200",
+    link: "/products/p200.html",
     linkVideo: "p200",
     videos: ["KSwlg17HRpw"],
     images: [
@@ -753,15 +857,26 @@ export default [
         },
         { name: "Высота подъема каретки", value: "100 мм" },
       ],
-      printWidth: [{name:"2100 mm", value: "2100mm"},
-      {name:"3200 mm", value: "3200mm"}],
+      printWidth: [
+        { name: "2100 mm", value: "2100mm" },
+        { name: "3200 mm", value: "3200mm" },
+      ],
       headType: [
-        {name: "RICOH GEN5 (MH5420/5440 - 7pl)", value: "RICOH GEN5 (MH5420/5440 - 7pl)"},
-        {name: "RICOH Gen5s (MH5220 - 2.5pl)", value: "RICOH Gen5s (MH5220 - 2.5pl)"},
-        {name: "RICOH Gen6 (MH5320 - 5pl)", value: "RICOH Gen6 (MH5320 - 5pl)"},
-        {name: "KM1024i (6pl)", value: "KM1024i (6pl)"},
-        {name: "KM1024i (13pl)", value: "KM1024i (13pl)"},
-        {name: "KM1800i (3,5pl)", value: "KM1800i (3,5pl)"},
+        {
+          name: "RICOH GEN5 (MH5420/5440 - 7pl)",
+          value: "RICOH GEN5 (MH5420/5440 - 7pl)",
+        },
+        {
+          name: "RICOH Gen5s (MH5220 - 2.5pl)",
+          value: "RICOH Gen5s (MH5220 - 2.5pl)",
+        },
+        {
+          name: "RICOH Gen6 (MH5320 - 5pl)",
+          value: "RICOH Gen6 (MH5320 - 5pl)",
+        },
+        { name: "KM1024i (6pl)", value: "KM1024i (6pl)" },
+        { name: "KM1024i (13pl)", value: "KM1024i (13pl)" },
+        { name: "KM1800i (3,5pl)", value: "KM1800i (3,5pl)" },
       ],
       headsQuantityMax: 18,
       info2: [
@@ -779,29 +894,55 @@ export default [
         { name: "Защита от столкновения", value: "датчик удара на каретке" },
       ],
       features: [
-        {name: "Защита от статического заряда, ионизатор на каретке", value: "ionizatorNaKaretke"},
-        {name: "Подкатные столы для подачи-приемки материала", value: "podkatniyStol"},
-        {name: "Подмотка для рулонных материалов", value: "podmotkaRulonov"},
+        {
+          name: "Защита от статического заряда, ионизатор на каретке",
+          value: "ionizatorNaKaretke",
+        },
+        {
+          name: "Подкатные столы для подачи-приемки материала",
+          value: "podkatniyStol",
+        },
+        { name: "Подмотка для рулонных материалов", value: "podmotkaRulonov" },
       ],
       rip: [
-        {name: "ONYX PosterShop", value: "ONYXPosterShop", img: "/img/png/onyx.png"},
-        {name: "Caldera COPYRIP", value: "CalderaCOPYRIP", img: "/img/jpg/caldera.jpg"},
-        {name: "Система автоматической чистки голов", value: 'autoHeadCleaning', img: "/img/png/autocleaning.png"},
-        {name: "Рабочая станция для RIP (опционально)", value: 'workstation', img: "/img/jpg/workstation.jpg"},
-        {name: "Дополнительный стол для планшетной печати DUO (опционально)", value: 'DUOtable', img: "/img/png/duotable.png"}
+        {
+          name: "ONYX PosterShop",
+          value: "ONYXPosterShop",
+          img: "/img/png/onyx.png",
+        },
+        {
+          name: "Caldera COPYRIP",
+          value: "CalderaCOPYRIP",
+          img: "/img/jpg/caldera.jpg",
+        },
+        {
+          name: "Система автоматической чистки голов",
+          value: "autoHeadCleaning",
+          img: "/img/png/autocleaning.png",
+        },
+        {
+          name: "Рабочая станция для RIP (опционально)",
+          value: "workstation",
+          img: "/img/jpg/workstation.jpg",
+        },
+        {
+          name: "Дополнительный стол для планшетной печати DUO (опционально)",
+          value: "DUOtable",
+          img: "/img/png/duotable.png",
+        },
       ],
       info3: [
-        {name: "Требования к сети", value: "50/60 Гц 220 В"},
-        {name: "Мощность, Вт", value: "до 2,5 кВт"},
-        {name: "Габариты (ШхГхВ), мм", value: "3650×800×1300"},
-        {name: "Вес, кг", value: "690 кг"},
-        {name: "Рабочая температура, С", value: "до 15-28 С"},
-        {name: "Рекомендованная влажность", value: "40%-60%"},
+        { name: "Требования к сети", value: "50/60 Гц 220 В" },
+        { name: "Мощность, Вт", value: "до 2,5 кВт" },
+        { name: "Габариты (ШхГхВ), мм", value: "3650×800×1300" },
+        { name: "Вес, кг", value: "690 кг" },
+        { name: "Рабочая температура, С", value: "до 15-28 С" },
+        { name: "Рекомендованная влажность", value: "40%-60%" },
       ],
     },
     description:
       "Конструкция гибридных станков LinkPrint новой серии позволяет реализовать как планшетную, так и рулонную функцию машины на самом высоком профессиональном уровне.",
-    link: "/products/p320n",
+    link: "/products/p320n.html",
     bigImg: "/img/jpg/p-200-5.jpg",
     linkVideo: "p320n",
     images: ["/img/png/p320n-1.png", "/img/png/p320n-2.png"],
@@ -958,15 +1099,26 @@ export default [
         },
         { name: "Высота подъема каретки", value: "100 мм" },
       ],
-      printWidth: [{name:"2100 mm", value: "2100mm"},
-      {name:"3200 mm", value: "3200mm"}],
+      printWidth: [
+        { name: "2100 mm", value: "2100mm" },
+        { name: "3200 mm", value: "3200mm" },
+      ],
       headType: [
-        {name: "RICOH GEN5 (MH5420/5440 - 7pl)", value: "RICOH GEN5 (MH5420/5440 - 7pl)"},
-        {name: "RICOH Gen5s (MH5220 - 2.5pl)", value: "RICOH Gen5s (MH5220 - 2.5pl)"},
-        {name: "RICOH Gen6 (MH5320 - 5pl)", value: "RICOH Gen6 (MH5320 - 5pl)"},
-        {name: "KM1024i (6pl)", value: "KM1024i (6pl)"},
-        {name: "KM1024i (13pl)", value: "KM1024i (13pl)"},
-        {name: "KM1800i (3,5pl)", value: "KM1800i (3,5pl)"},
+        {
+          name: "RICOH GEN5 (MH5420/5440 - 7pl)",
+          value: "RICOH GEN5 (MH5420/5440 - 7pl)",
+        },
+        {
+          name: "RICOH Gen5s (MH5220 - 2.5pl)",
+          value: "RICOH Gen5s (MH5220 - 2.5pl)",
+        },
+        {
+          name: "RICOH Gen6 (MH5320 - 5pl)",
+          value: "RICOH Gen6 (MH5320 - 5pl)",
+        },
+        { name: "KM1024i (6pl)", value: "KM1024i (6pl)" },
+        { name: "KM1024i (13pl)", value: "KM1024i (13pl)" },
+        { name: "KM1800i (3,5pl)", value: "KM1800i (3,5pl)" },
       ],
       headsQuantityMax: 18,
       info2: [
@@ -984,27 +1136,53 @@ export default [
         { name: "Защита от столкновения", value: "датчик удара на каретке" },
       ],
       features: [
-        {name: "Защита от статического заряда, ионизатор на каретке", value: "ionizatorNaKaretke"},
-        {name: "Подкатные столы для подачи-приемки материала", value: "podkatniyStol"},
-        {name: "Подмотка для рулонных материалов", value: "podmotkaRulonov"},
+        {
+          name: "Защита от статического заряда, ионизатор на каретке",
+          value: "ionizatorNaKaretke",
+        },
+        {
+          name: "Подкатные столы для подачи-приемки материала",
+          value: "podkatniyStol",
+        },
+        { name: "Подмотка для рулонных материалов", value: "podmotkaRulonov" },
       ],
       rip: [
-        {name: "ONYX PosterShop", value: "ONYXPosterShop", img: "/img/png/onyx.png"},
-        {name: "Caldera COPYRIP", value: "CalderaCOPYRIP", img: "/img/jpg/caldera.jpg"},
-        {name: "Система автоматической чистки голов", value: 'autoHeadCleaning', img: "/img/png/autocleaning.png"},
-        {name: "Рабочая станция для RIP (опционально)", value: 'workstation', img: "/img/jpg/workstation.jpg"},
-        {name: "Дополнительный стол для планшетной печати DUO (опционально)", value: 'DUOtable', img: "/img/png/duotable.png"}
+        {
+          name: "ONYX PosterShop",
+          value: "ONYXPosterShop",
+          img: "/img/png/onyx.png",
+        },
+        {
+          name: "Caldera COPYRIP",
+          value: "CalderaCOPYRIP",
+          img: "/img/jpg/caldera.jpg",
+        },
+        {
+          name: "Система автоматической чистки голов",
+          value: "autoHeadCleaning",
+          img: "/img/png/autocleaning.png",
+        },
+        {
+          name: "Рабочая станция для RIP (опционально)",
+          value: "workstation",
+          img: "/img/jpg/workstation.jpg",
+        },
+        {
+          name: "Дополнительный стол для планшетной печати DUO (опционально)",
+          value: "DUOtable",
+          img: "/img/png/duotable.png",
+        },
       ],
       info3: [
-        {name: "Требования к сети", value: "50/60 Гц 220 В"},
-        {name: "Мощность, Вт", value: "до 2,5 кВт"},
-        {name: "Габариты (ШхГхВ), мм", value: "3650×800×1300"},
-        {name: "Вес, кг", value: "690 кг"},
-        {name: "Рабочая температура, С", value: "до 15-28 С"},
-        {name: "Рекомендованная влажность", value: "40%-60%"},
+        { name: "Требования к сети", value: "50/60 Гц 220 В" },
+        { name: "Мощность, Вт", value: "до 2,5 кВт" },
+        { name: "Габариты (ШхГхВ), мм", value: "3650×800×1300" },
+        { name: "Вес, кг", value: "690 кг" },
+        { name: "Рабочая температура, С", value: "до 15-28 С" },
+        { name: "Рекомендованная влажность", value: "40%-60%" },
       ],
     },
-    link: "/products/p200duo",
+    link: "/products/p200duo.html",
     linkVideo: "p200duo",
     videos: ["r78cnxa6pII", "DfljychzHbI"],
     images: ["/img/png/p200duo-1.png", "/img/png/p200duo-2.png"],
@@ -1155,10 +1333,19 @@ export default [
         { name: "Высота подъема каретки", value: "100 мм" },
       ],
       headType: [
-        {name: "RICOH GEN5 (MH5420/5440 - 7pl)", value: "RICOH GEN5 (MH5420/5440 - 7pl)"},
-        {name: "RICOH Gen5s (MH5220 - 2.5pl)", value: "RICOH Gen5s (MH5220 - 2.5pl)"},
-        {name: "RICOH Gen6 (MH5320 - 5pl)", value: "RICOH Gen6 (MH5320 - 5pl)"},
-        {name: "KM1024i", value: "KM1024i"},
+        {
+          name: "RICOH GEN5 (MH5420/5440 - 7pl)",
+          value: "RICOH GEN5 (MH5420/5440 - 7pl)",
+        },
+        {
+          name: "RICOH Gen5s (MH5220 - 2.5pl)",
+          value: "RICOH Gen5s (MH5220 - 2.5pl)",
+        },
+        {
+          name: "RICOH Gen6 (MH5320 - 5pl)",
+          value: "RICOH Gen6 (MH5320 - 5pl)",
+        },
+        { name: "KM1024i", value: "KM1024i" },
       ],
       headsQuantityMax: 18,
       info2: [
@@ -1178,26 +1365,44 @@ export default [
         { name: "Защита от столкновения", value: "датчик удара на каретке" },
       ],
       features: [
-        {name: "Защита от статического заряда, ионизатор на каретке", value: "ionizatorNaKaretke"},
-        {name: "Датчик определения высоты материала", value: "datchikVisoty"},
-        {name: "Система автоматической чистки голов", value: "autoHeadCleaner"},
+        {
+          name: "Защита от статического заряда, ионизатор на каретке",
+          value: "ionizatorNaKaretke",
+        },
+        { name: "Датчик определения высоты материала", value: "datchikVisoty" },
+        {
+          name: "Система автоматической чистки голов",
+          value: "autoHeadCleaner",
+        },
       ],
       rip: [
-        {name: "ONYX PosterShop", value: "ONYXPosterShop", img: "/img/png/onyx.png"},
-        {name: "Caldera COPYRIP", value: "CalderaCOPYRIP", img: "/img/jpg/caldera.jpg"},
-        {name: "Рабочая станция для RIP (опционально)", value: 'workstation', img: "/img/jpg/workstation.jpg"},
+        {
+          name: "ONYX PosterShop",
+          value: "ONYXPosterShop",
+          img: "/img/png/onyx.png",
+        },
+        {
+          name: "Caldera COPYRIP",
+          value: "CalderaCOPYRIP",
+          img: "/img/jpg/caldera.jpg",
+        },
+        {
+          name: "Рабочая станция для RIP (опционально)",
+          value: "workstation",
+          img: "/img/jpg/workstation.jpg",
+        },
       ],
       info3: [
-        {name: "Требования к сети", value: "50/60 Гц 220 В"},
-        {name: "Мощность, Вт", value: "до 2,5 кВт"},
-        {name: "Габариты (ШхГхВ), мм", value: "3650×800×1300"},
-        {name: "Вес, кг", value: "780 кг"},
-        {name: "Рабочая температура, С", value: "до 15-28 С"},
-        {name: "Рекомендованная влажность", value: "40%-60%"},
+        { name: "Требования к сети", value: "50/60 Гц 220 В" },
+        { name: "Мощность, Вт", value: "до 2,5 кВт" },
+        { name: "Габариты (ШхГхВ), мм", value: "3650×800×1300" },
+        { name: "Вес, кг", value: "780 кг" },
+        { name: "Рабочая температура, С", value: "до 15-28 С" },
+        { name: "Рекомендованная влажность", value: "40%-60%" },
       ],
     },
     videos: ["ASWYgonK8KM"],
-    link: "/products/fb210",
+    link: "/products/fb210.html",
     linkVideo: "fb210",
     images: ["/img/png/fb210-1.png", "/img/png/fb690-2.png"],
   },
@@ -1241,7 +1446,7 @@ export default [
     ],
     description:
       "Высоко эффективный, быстрый, легко перенастраиваемый на разные тиражи, с возможностью объемной печати",
-    link: "/products/c200",
+    link: "/products/c200.html",
     bigImg: "/img/png/c200-1.png",
     linkVideo: "c200",
     videos: ["D_G8XdrRvKE"],
@@ -1263,7 +1468,7 @@ export default [
     ],
     description:
       "Одновременная печать и защита изображения от внешних воздействий",
-    link: "/products/rp520",
+    link: "/products/rp520.html",
     linkVideo: "rp520",
     videos: ["BqcfS-8o_tQ"],
     bigImg: "/img/png/rp520-1.png",

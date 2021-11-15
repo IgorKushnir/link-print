@@ -1,92 +1,92 @@
-@import '../../styles/variables.scss';
-@import '../../styles/placeholders.scss';
+@import "../../styles/variables.scss";
+@import "../../styles/placeholders.scss";
 
 .infoSpan {
-    font-size: 20px;
-    font-weight: 600;
-    margin-right: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 12px;
 
-    @media (max-width: 615px) {
-        display: block; 
-        margin-bottom: 10px;
-       }
+  @media (max-width: 615px) {
+    display: block;
+    margin-bottom: 10px;
+  }
 }
 
 .infoBlock {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .characteristicsList {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
 }
 
 .characteristicsItem {
-    flex-basis: 50%;
-    margin-bottom: 6px;
+  flex-basis: 50%;
+  margin-bottom: 6px;
 }
 
 .constructHeading {
-    font-size: 24px;
-    font-weight: 500;
-    max-width: 500px;
-    text-align: center;
-    margin: 40px auto 60px;
+  font-size: 24px;
+  font-weight: 500;
+  max-width: 500px;
+  text-align: center;
+  margin: 40px auto 60px;
 }
 
 .constructName {
-    font-size: 18px;
-    margin-bottom: 30px;
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 
 .infoSpan2 {
-    font-size: 20px;
-    font-weight: 600;
-    
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 12px;
 
-    @media (max-width: 615px) {
-        display: block;
-        margin-bottom: 10px;  
-       }
+  @media (max-width: 615px) {
+    display: block;
+    margin-bottom: 10px;
+  }
 }
 
 .constructSubheading {
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
 .radio {
-    width: 1px;
-    height: 1px;
-    position: relative;
-    appearance: none;
-    cursor: pointer;
+  width: 1px;
+  height: 1px;
+  position: relative;
+  appearance: none;
+  cursor: pointer;
 
-    &::before {
-        content: '';
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        border: 1px solid #000;
-        position: absolute;
-        top: -15px;
-        left: -5px;
-    }
+  &::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    position: absolute;
+    top: -15px;
+    left: -5px;
+  }
 
-    &:checked {
-        &::after {
-            content: '';
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #000;
-            position: absolute;
-            top: -11px;
-            left: -1px;
-        }
+  &:checked {
+    &::after {
+      content: "";
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #000;
+      position: absolute;
+      top: -11px;
+      left: -1px;
     }
+  }
 }
 
 .radioLabel {
@@ -101,158 +101,161 @@
 }
 
 .radioWrap {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .rangeInput {
-    width: 100%;
-    appearance: none;
-    background-color: #636363;
+  width: 100%;
+  appearance: none;
+  background-color: #636363;
 
-    &::-webkit-slider-runnable-track {
-        border-radius: 2px;
-        height: 2px;
-        background-color: #000;
-      }
-      &::-webkit-slider-thumb {
-        background: #000;
-        border-radius: 50%;
-        cursor: pointer;
-        width:20px;
-        height: 20px;
-        -webkit-appearance: none;
-        transform: translateY(-50%);
-      }
-  
-      &::-moz-range-track {
-        border-radius: 2px;
-        height: 2px;
-        background-color: #000;
-      }
-     &::-moz-range-thumb {
-          background: #000;
-          border-radius: 50%;
-          cursor: pointer;
-          width:20px;
-        height: 20px;
-        transform: translateY(-50%);
-      }
+  &::-webkit-slider-runnable-track {
+    border-radius: 2px;
+    height: 2px;
+    background-color: #000;
+  }
+  &::-webkit-slider-thumb {
+    background: #000;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    transform: translateY(-50%);
+  }
+
+  &::-moz-range-track {
+    border-radius: 2px;
+    height: 2px;
+    background-color: #000;
+  }
+  &::-moz-range-thumb {
+    background: #000;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    transform: translateY(-50%);
+  }
 }
 
 .rangeInfoWrapper {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px 0px;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0px;
 }
 
 .rangeMainInfoWrapper {
-    display: flex;
-    justify-content: center;
-    padding-top: 12px;
+  display: flex;
+  justify-content: center;
+  padding-top: 12px;
 }
 
 .checkboxLabel {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 
-    & p {
-padding-left: 30px;
-    }
+  & p {
+    padding-left: 30px;
+  }
 }
 
 .checkboxInput {
-    width: 1px;
-    height: 1px;
-    margin-right: 12px;
-    position: relative;
+  width: 1px;
+  height: 1px;
+  margin-right: 12px;
+  position: relative;
 
-    &::before {
-        content: '';position: absolute;
-        top: 3px; left: 0px; 
-        border: 2px solid #000;
-        width: 14px; height: 14px;
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    border: 2px solid #000;
+    width: 14px;
+    height: 14px;
+  }
 
-    &:checked {
-        &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            left: 7px;
-            top: 6px;
-            width: 3px;
-            height: 8px;
-            border: solid #000;
-            border-width: 0 2px 2px 0;transform: rotate(45deg);
-        }
+  &:checked {
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 7px;
+      top: 6px;
+      width: 3px;
+      height: 8px;
+      border: solid #000;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
     }
+  }
 }
 
 .ripImg {
-    width: 350px;
-    max-height: 400px;
-    margin-top: 16px;
+  width: 350px;
+  max-height: 400px;
+  margin-top: 16px;
 }
 
 .ripWrapper {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .labelRip {
-    font-size: 20px;
-    margin-right: 40px;
-    margin-bottom: 20px;
+  font-size: 20px;
+  margin-right: 40px;
+  margin-bottom: 20px;
 }
 
 .checkboxRip {
-    width: 1px;
-    height: 1px;
+  width: 1px;
+  height: 1px;
 }
 
 .checkboxRip:checked {
-    position: relative;
+  position: relative;
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 30px;
-        left: 10px;
-        display: block;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: #212121;
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #212121;
+  }
 
-    &::after {
-        content: '';
-        position: absolute;
-        top: 40px;
-        left: 17px;
-        display: block;
-        width: 18px;
-        height: 13px;
-        background-image: url('/img/svg/check.svg');
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 17px;
+    display: block;
+    width: 18px;
+    height: 13px;
+    background-image: url("/img/svg/check.svg");
+  }
 }
 
-
 .inputWrapper {
-    display: block;
-    
-    &:not(:last-child) {
-        margin-right: 10px;
-    }
+  display: block;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 
 .textLabel {
-    font-size: $font-size-subheading;
-    display: block;
-    margin-bottom: 20px;
-    
-    &:not(:last-child) {
-        margin-right: 10px;
-    }
+  font-size: $font-size-subheading;
+  display: block;
+  margin-bottom: 20px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 
 .textInput {
@@ -271,20 +274,20 @@ padding-left: 30px;
 }
 
 .button {
-    @extend %button;
-    @extend %buttonMd;
-    display: block;
-    width: 136px;
-    color: #fff;
+  @extend %button;
+  @extend %buttonMd;
+  display: block;
+  width: 136px;
+  color: #fff;
 }
 
 .errors {
-    display: block;
-    height: 20px;
-    font-size: 14px;
-    color: red;
+  display: block;
+  height: 20px;
+  font-size: 14px;
+  color: red;
 }
 
 .errorsPatch {
-    height: 20px;
+  height: 20px;
 }
