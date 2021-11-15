@@ -23,7 +23,6 @@
   margin-bottom: 60px;
 
   @media (max-width: 615px) {
-    padding-left: 40px;
     justify-content: flex-start;
   }
 }
@@ -43,10 +42,16 @@
 }
 
 .text {
-  display: block;
+  margin-right: 12px;
 
-  &:not(:last-of-type) {
-    margin-bottom: 12px;
+  @media (max-width: 615px) {
+    display: block;
+    margin-right: 0px;
+    margin-bottom: 10px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 6px;
+    }
   }
 }
 
@@ -58,4 +63,12 @@
 
 .infoWrap {
   display: flex;
+}
+
+.leftColumn {
+  width: 120px;
+
+  @media (max-width: 615px) {
+    vertical-align: top;
+  }
 }
