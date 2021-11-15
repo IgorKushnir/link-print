@@ -1,88 +1,88 @@
-@import '../../styles/placeholders.scss';
-@import '../../styles/variables.scss';
+@import "../../styles/placeholders.scss";
+@import "../../styles/variables.scss";
 
 .mainNav {
-    width: 100%;
-    position: fixed;
-    padding: 10px 0px;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 90;
+  width: 100%;
+  position: fixed;
+  padding: 10px 0px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 90;
 
-    @media (max-width: 768px) {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-
-.navWrapper {
-    @extend %container;
+  @media (max-width: 768px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 10px;
-    border-bottom: 1px solid $color-light;
+  }
+}
 
-    @media (max-width: 768px) {
-        display: none;        
-    }
+.navWrapper {
+  @extend %container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $color-light;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .logoLink {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .logoImg {
-    cursor: pointer;
-    width: 130px;
-    height: 35px;
+  cursor: pointer;
+  width: 130px;
+  height: 35px;
 }
 
 .navList {
-    flex-grow: 1;
-    display: flex;
-    justify-content: space-around;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
 }
 
 .navItem {
-    font-weight: 700;
-    color: $color-light;
+  font-weight: 700;
+  color: $color-light;
 }
 
 .telWrapper {
-    flex-grow: 1;
-    display: none;
-    color: #fff;
+  flex-grow: 1;
+  display: none;
+  color: #fff;
 
-    & a {
-        padding-left: 94px;
-    }
+  & a {
+    padding-left: 64px;
+  }
 
-    @media (max-width: 768px) {
-        display: flex;
-        justify-content: center;
-    }
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .burgerWrapper {
-    padding: 10px 30px;
-    display: none;
-    justify-content: flex-end;
+  padding: 10px 30px;
+  display: none;
+  justify-content: flex-end;
 
-    @media (max-width: 768px) {
-        display: flex;
-    }
+  @media (max-width: 768px) {
+    display: flex;
+  }
 }
 
 .burgerButton {
-    width: 35px;
-    height: 35px;
-    background: transparent;
-    border: none;
-    outline: none;
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  border: none;
+  outline: none;
 }
 
 .burger {
-    width: 35px;
-    height: 35px;
+  width: 35px;
+  height: 35px;
 }

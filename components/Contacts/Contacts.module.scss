@@ -43,7 +43,11 @@
 }
 
 .text {
-  margin-bottom: 12px;
+  display: block;
+
+  &:not(:last-of-type) {
+    margin-bottom: 12px;
+  }
 }
 
 .span {
