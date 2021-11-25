@@ -64,9 +64,10 @@ export default function ProductPage({currentProduct}) {
   const container = useRef(null);
 
   useEffect(() => {
+    const containerWidth = container.current.clientWidth
 
-    const width = "75 vw";
-    const height = "45 vw";
+    const width = containerWidth * 0.9;
+    const height = containerWidth * 0.9 / 16 * 9;
 
     setOpts({
       height,
@@ -75,7 +76,9 @@ export default function ProductPage({currentProduct}) {
         autoplay: 1,
       },
     });
-  }, []);
+  }, [container.current]);
+
+
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -177,7 +180,7 @@ export default function ProductPage({currentProduct}) {
             {currentProduct?.videos?.length > 0 && (
               <div className="container">
                 <h3 className={styles.videoTitle}>Видео работы принтера</h3>
-                <ul>
+                <ul className={styles.videosList}>
                   {currentProduct?.videos?.map((video, i) => (
                     <li key={`video_${i}`} className={styles.videoItem}>
                       {opts && <YouTube videoId={video} opts={opts} onReady={onReady} className={styles.video} />}

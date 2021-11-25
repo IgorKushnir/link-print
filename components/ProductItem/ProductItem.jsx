@@ -14,6 +14,10 @@ export function ProductItem({ product, setIsPopupOpened}) {
                             <img className={styles.imageBack} src={product.images[1]} alt={product.title} />
                         </div>
                     </div>
+                    <div className={styles.imagesWrapperMobile}>
+                            <img className={styles.image} src={product.images[0]} alt={product.title} />
+                            <img className={styles.imageBack} src={product.images[1]} alt={product.title} />
+                        </div>
                    <ul className={styles.featuresList}>
                         {product.featuresInfo.map ( (feature, i) => (
                             <li key={`${product.title}_feature_${i}`} className={styles.featuresItem}>
