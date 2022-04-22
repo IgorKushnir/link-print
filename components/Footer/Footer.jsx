@@ -63,19 +63,31 @@ export default function Footer({ setIsDownloadPopupOpened, setIsPopupOpened }) {
           </div>
         </div>
         <div className={styles.bottomWrapper}>
-        <Link href='/' className={styles.logoLink}>
-                <img
-                  className={styles.logoImg}
-                  src='/img/png/logo.png'
-                  alt='link print logo'
-                />
-              </Link>
-              <button onClick={() => setIsDownloadPopupOpened(true)} className={styles.downloadButton}>Скачать каталог</button>
-              <button onClick={() => setIsPopupOpened(true)} className={styles.infoButton}>Получить консультацию</button>
-              <div className={styles.phoneWrapper}>
-                  <a href="tel:+380 99 188 16 89" className={styles.phone}>+380 99 188 16 89</a><a href="tel:+380 96 383 03 11" className={styles.phone}>+380 96 383 03 11</a>
-                  <p className={styles.name}>Елена</p>
-              </div>
+          <Link href="/" className={styles.logoLink}>
+            <img
+              className={styles.logoImg}
+              src="/img/png/logo.png"
+              alt="link print logo"
+            />
+          </Link>
+          <button
+            onClick={() => setIsDownloadPopupOpened(true)}
+            className={styles.downloadButton}
+          >
+            Скачать каталог
+          </button>
+          <button
+            onClick={() => setIsPopupOpened(true)}
+            className={styles.infoButton}
+          >
+            Получить консультацию
+          </button>
+          <div className={styles.phoneWrapper}>
+            <a href="tel:+380 99 188 16 89" className={styles.phone}>
+              +380 99 188 16 89
+            </a>
+            <p className={styles.name}>Елена</p>
+          </div>
         </div>
       </div>
     </footer>

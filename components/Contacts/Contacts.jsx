@@ -38,9 +38,6 @@ export default function Contacts() {
                       <a href={`tel:${contact.phone1}`} className={styles.text}>
                         {contact.phone1}
                       </a>
-                      <a href={`tel:${contact.phone2}`} className={styles.text}>
-                        {contact.phone2}
-                      </a>
                     </td>
                   </tr>
                   <tr className={styles.tableRow}>
